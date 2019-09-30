@@ -32,7 +32,7 @@
 	margin: 1.5em auto;
 }
 
-@include media-breakpoint-up('xs') {
+@include media-breakpoint-up('sm') {
 	.alignleft {
 		float: left;
 		margin: 0 45px 15px 0;
@@ -44,7 +44,7 @@
 	margin: 1.5em auto;
 }
 
-@include media-breakpoint-up('xs') {
+@include media-breakpoint-up('sm') {
 	.alignright {
 		float: right;
 		margin: 0 0 15px 45px;

@@ -25,17 +25,19 @@
   display: block;
   margin: 1.5em auto; }
 
-.alignleft {
-  float: left;
-  margin: 0 45px 15px 0; }
+@media (min-width: 576px) {
+  .alignleft {
+    float: left;
+    margin: 0 45px 15px 0; } }
 
 .alignright {
   display: block;
   margin: 1.5em auto; }
 
-.alignright {
-  float: right;
-  margin: 0 0 15px 45px; }
+@media (min-width: 576px) {
+  .alignright {
+    float: right;
+    margin: 0 0 15px 45px; } }
 
 .aligncenter {
   display: block;
