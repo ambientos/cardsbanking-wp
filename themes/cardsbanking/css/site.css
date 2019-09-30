@@ -974,44 +974,52 @@ blockquote.danger {
     .footer-info {
       margin: 1em auto; } }
 
-.footer-menu {
-  margin-bottom: 0; }
-  .footer-menu-container {
-    margin-top: 1em; }
-    @media (max-width: 991.98px) {
-      .footer-menu-container {
-        text-align: center; } }
-  .footer-menu-title {
-    font-weight: 500; }
-    .footer-menu-title::after {
-      display: block;
-      margin: .2em 0 1em;
-      width: 66px;
-      content: '';
-      border-top: 1px solid #fff; }
-      @media (max-width: 991.98px) {
-        .footer-menu-title::after {
-          margin-left: auto;
-          margin-right: auto; } }
-  .footer-menu-sub {
+.footer-menu-container {
+  margin-top: 1em; }
+  @media (max-width: 991.98px) {
+    .footer-menu-container {
+      text-align: center; } }
+  .footer-menu-container .menu {
     margin-bottom: 0;
-    text-align: right; }
-    .footer-menu-sub li:not(:first-child)::before {
-      margin: 0 .5em;
-      content: '|'; }
-    .footer-menu-sub a {
-      color: inherit; }
-      .footer-menu-sub a:hover {
-        color: #262626; }
-  .footer-menu li {
+    padding-left: 0; }
+  .footer-menu-container li {
     margin: .2em 0;
     font-size: .875rem;
     font-weight: 300;
-    color: #cccccc; }
-  .footer-menu a {
-    color: inherit; }
-    .footer-menu a:hover {
+    color: #cccccc;
+    list-style: none; }
+    .footer-menu-container li.current-menu-item a {
       color: #fec803; }
+  .footer-menu-container a {
+    color: inherit; }
+    .footer-menu-container a:hover {
+      color: #fec803; }
+
+.footer-menu-title {
+  font-weight: 500; }
+  .footer-menu-title::after {
+    display: block;
+    margin: .2em 0 1em;
+    width: 66px;
+    content: '';
+    border-top: 1px solid #fff; }
+    @media (max-width: 991.98px) {
+      .footer-menu-title::after {
+        margin-left: auto;
+        margin-right: auto; } }
+
+.footer-menu-sub {
+  margin-bottom: 0;
+  text-align: right; }
+  .footer-menu-sub li:not(:first-child)::before {
+    margin: 0 .5em;
+    content: '|'; }
+  .footer-menu-sub li.current-menu-item a {
+    color: #262626; }
+  .footer-menu-sub a {
+    color: inherit; }
+    .footer-menu-sub a:hover {
+      color: #262626; }
 
 .footer-sub {
   margin: 15px 0;

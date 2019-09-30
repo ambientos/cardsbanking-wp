@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CardsBanking Theme 1.0\n"
-"POT-Creation-Date: 2019-09-30 11:07+0500\n"
-"PO-Revision-Date: 2019-09-30 11:07+0500\n"
+"POT-Creation-Date: 2019-09-30 22:10+0500\n"
+"PO-Revision-Date: 2019-09-30 22:10+0500\n"
 "Last-Translator: Anton Grakhov <ant.grakhov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -41,6 +41,10 @@ msgstr ""
 #: 404.php:13
 #, php-format
 msgid "Go to <a href=\"%1$s\">Homepage</a>."
+msgstr ""
+
+#: acf/init.php:13 acf/init.php:14
+msgid "Additional Options"
 msgstr ""
 
 #: comments.php:18 template-parts/content-single.php:86
@@ -89,7 +93,11 @@ msgid ""
 "Save my name, email, and website in this browser for the next time I comment."
 msgstr ""
 
-#: footer.php:115
+#: footer.php:50 header.php:24
+msgid "Credit Card Navigator"
+msgstr "Навигатор по банковским картам"
+
+#: footer.php:125
 msgid "To Top"
 msgstr "Вверх"
 
@@ -100,6 +108,14 @@ msgstr ""
 #: functions.php:136
 msgid "Card Ratings"
 msgstr "Рейтинги карт"
+
+#: index.php:6
+msgid "New Posts"
+msgstr "Новые материалы"
+
+#: index.php:7
+msgid "Current reviews of banking products"
+msgstr "Актуальные обзоры банковских продуктов"
 
 #: search.php:16
 #, php-format

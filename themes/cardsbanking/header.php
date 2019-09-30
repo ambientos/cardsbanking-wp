@@ -21,7 +21,7 @@
                     <picture class="logo-thumb _aside"><img src="<?php echo get_stylesheet_directory_uri() ?>/i/logo.png" srcset="<?php echo get_stylesheet_directory_uri() ?>/i/logo.png, <?php echo get_stylesheet_directory_uri() ?>/i/logo@2x.png 2x" width="56" alt="<?php echo get_bloginfo('name') ?>"></picture>
                     <div class="logo-title">
                         <b>CardsBanking.ru</b> 
-                        <span>Навигатор по банковским картам</span>
+                        <span><?php _e( 'Credit Card Navigator', 'cardsbanking' ); ?></span>
                     </div>
                 </a>
             </div>
@@ -42,43 +42,17 @@
 </header>
 
 <?php if ( is_front_page() ) : ?>
-    <aside class="widget" style="background-image:url(<?php echo get_stylesheet_directory_uri() ?>/t/1.jpg)">
-        <div class="container">
-            <div class="widget-title _main"><b>Путеводитель</b> в мире банковских карт</div>
-            <div class="category-menu-container">
-                <ul class="category-menu d-flex flex-wrap list-unstyled">
-                    <li class="category-menu-item d-flex"><a class="category-menu-item-link" href="/"><span class="category-menu-item-i" style="background-image:url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/credit.svg)"></span><span class="category-menu-item-title">Кредитные карты</span></a></li>
-                    <li class="category-menu-item d-flex"><a class="category-menu-item-link" href="/"><span class="category-menu-item-i" style="background-image:url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/debit.svg)"></span><span class="category-menu-item-title">Дебетовые карты</span></a></li>
-                    <li class="category-menu-item d-flex"><a class="category-menu-item-link" href="/"><span class="category-menu-item-i" style="background-image:url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/cashback.svg)"></span><span class="category-menu-item-title">С кэшбэком</span></a></li>
-                    <li class="category-menu-item d-flex"><a class="category-menu-item-link" href="/"><span class="category-menu-item-i" style="background-image:url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/free.svg)"></span><span class="category-menu-item-title">С бесплатным обслуживанием</span></a></li>
-                    <li class="category-menu-item d-flex"><a class="category-menu-item-link" href="/"><span class="category-menu-item-i" style="background-image:url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/grace.svg)"></span><span class="category-menu-item-title">С льготным периодом</span></a></li>
-                    <li class="category-menu-item d-flex"><a class="category-menu-item-link" href="/"><span class="category-menu-item-i" style="background-image:url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/salary.svg)"></span><span class="category-menu-item-title">Зарплатные</span></a></li>
-                    <li class="category-menu-item d-flex"><a class="category-menu-item-link" href="/"><span class="category-menu-item-i" style="background-image:url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/fund.svg)"></span><span class="category-menu-item-title">Накопительные</span></a></li>
-                    <li class="category-menu-item d-flex"><a class="category-menu-item-link" href="/"><span class="category-menu-item-i" style="background-image:url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/virtual.svg)"></span><span class="category-menu-item-title">Виртуальные</span></a></li>
-                    <li class="category-menu-item d-flex"><a class="category-menu-item-link" href="/"><span class="category-menu-item-i" style="background-image:url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/senior.svg)"></span><span class="category-menu-item-title">Для пенсионеров</span></a></li>
-                    <li class="category-menu-item d-flex"><a class="category-menu-item-link" href="/"><span class="category-menu-item-i" style="background-image:url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/currency.svg)"></span><span class="category-menu-item-title">Валютные</span></a></li>
-                    <li class="category-menu-item d-flex"><a class="category-menu-item-link" href="/"><span class="category-menu-item-i" style="background-image:url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/delivery.svg)"></span><span class="category-menu-item-title">С доставкой на дом</span></a></li>
-                    <li class="category-menu-item d-flex"><a class="category-menu-item-link" href="/"><span class="category-menu-item-i" style="background-image:url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/post.svg)"></span><span class="category-menu-item-title">С доставкой по почте</span></a></li>
-                </ul>
-            </div>
-        </div>
-    </aside>
-    <aside class="widget" style="background-image:url(<?php echo get_stylesheet_directory_uri() ?>t/9.jpg)">
-        <div class="container">
-            <h2 class="widget-title">Информационнные разделы</h2>
-            <div class="info-list">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/all.svg)"></span><span class="info-item-title">Обзоры карт всех банков</span></a></div>
-                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/cdebit.svg)"></span><span class="info-item-title">Дебетовые карты</span></a></div>
-                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/ccredit.svg)"></span><span class="info-item-title">Кредитные карты</span></a></div>
-                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/instruct.svg)"></span><span class="info-item-title">Инструкции</span></a></div>
-                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/transfer.svg)"></span><span class="info-item-title">Переводы и оплата</span></a></div>
-                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/qa.svg)"></span><span class="info-item-title">Вопросы и ответы</span></a></div>
-                </div>
-            </div>
-        </div>
-    </aside>
+
+    <?php if ( function_exists('the_field') ) : ?>
+
+        <?php get_template_part( 'template-parts/boxes/menu-rating', 'home' ); ?>
+
+        <?php get_template_part( 'template-parts/boxes/menu-info' ); ?>
+
+    <?php endif; ?>
+
 <?php else : ?>
+
     <nav class="header-menu-container navbar navbar-expand-lg navbar-light">
         <div class="container">
             <?php wp_nav_menu( array(
@@ -91,6 +65,7 @@
             ) ); ?>
         </div>
     </nav>
+
 <?php endif; ?>
 
 <?php
@@ -121,10 +96,10 @@
     }
 
     if ( ! wp_is_mobile() && ! empty( $ad_options['r_before_site_content'] ) && $show_ad ) {
-        echo '<div class="b-r b-r--before-site-content">' . do_shortcode( $ad_options['r_before_site_content'] ) . '</div>';
+        echo '<div class="container"><div class="b-r b-r--before-site-content">' . do_shortcode( $ad_options['r_before_site_content'] ) . '</div></div>';
     }
 
     if ( wp_is_mobile() && ! empty( $ad_options['r_before_site_content_mob'] ) && $show_ad ) {
-        echo '<div class="b-r b-r--before-site-content">' . do_shortcode( $ad_options['r_before_site_content_mob'] ) . '</div>';
+        echo '<div class="container"><div class="b-r b-r--before-site-content">' . do_shortcode( $ad_options['r_before_site_content_mob'] ) . '</div></div>';
     }
 ?>

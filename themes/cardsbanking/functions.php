@@ -9,6 +9,7 @@ function cb_setup() {
 
 	register_nav_menus( array(
 		'cb_header_menu' => __( 'Header Menu', 'cardsbanking' ),
+		'cb_footer_menu' => __( 'Footer Menu', 'cardsbanking' ),
 	) );
 }
 
@@ -53,6 +54,27 @@ function cb_init() {
 }
 
 add_action( 'init', 'cb_init' );
+
+
+/**
+ * Register sidebars
+ */
+
+function cb_register_sidebars(){
+	register_sidebar(
+		array(
+			'name'          => __( 'Footer Menu List', 'cardsbanking' ),
+			'id'            => 'footer-menu-list',
+			'description'   => '',
+			'before_widget' => ' <div class="col-sm"><div class="footer-menu-container">',
+			'after_widget'  => '</div></div>',
+			'before_title'  => '<div class="footer-menu-title">',
+			'after_title'   => '</div>',
+		)
+	);
+}
+
+add_action( 'widgets_init', 'cb_register_sidebars' );
 
 
 /**
@@ -199,6 +221,13 @@ function cb_allow_upload_svg( $type_and_ext, $file, $filename, $mimes ){
 
 add_action('upload_mimes', 'cb_add_file_types_to_uploads');
 add_filter('wp_check_filetype_and_ext', 'cb_allow_upload_svg', 10, 4);
+
+
+/**
+ * ACF
+ */
+
+require 'acf/init.php';
 
 
 /**

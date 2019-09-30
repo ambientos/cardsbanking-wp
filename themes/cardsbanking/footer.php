@@ -28,11 +28,11 @@
     }
 
     if ( ! wp_is_mobile() && ! empty( $ad_options['r_after_site_content'] ) && $show_ad ) {
-        echo '<div class="b-r--after-site-content container">' . do_shortcode( $ad_options['r_after_site_content'] ) . '</div>';
+        echo '<div class="container"><div class="b-r--after-site-content container">' . do_shortcode( $ad_options['r_after_site_content'] ) . '</div></div>';
     }
 
     if ( wp_is_mobile() && ! empty( $ad_options['r_after_site_content_mob'] ) && $show_ad ) {
-        echo '<div class="b-r--after-site-content container">' . do_shortcode( $ad_options['r_after_site_content_mob'] ) . '</div>';
+        echo '<div class="container"><div class="b-r--after-site-content container">' . do_shortcode( $ad_options['r_after_site_content_mob'] ) . '</div></div>';
     }
 
     $is_show_arrow = 'yes' == root_get_option( 'structure_arrow' );
@@ -47,63 +47,40 @@
                         <picture class="logo-thumb _top"><img src="<?php echo get_stylesheet_directory_uri() ?>/i/logo-white.png" srcset="<?php echo get_stylesheet_directory_uri() ?>/i/logo-white.png, <?php echo get_stylesheet_directory_uri() ?>/i/logo-white@2x.png 2x" width="56" alt="<?php echo get_bloginfo('name') ?>"></picture>
                         <div class="logo-title">
                             <b>CardsBanking.ru</b> 
-                            <span>Навигатор по банковским картам</span>
+                            <span><?php _e( 'Credit Card Navigator', 'cardsbanking' ); ?></span>
                         </div>
                     </a>
-                    <div class="footer-info">Содержание сайта не является рекомендацией или офертой и носит информационно-справочный характер</div>
+                    <?php if ( function_exists('the_field') ) : ?>
+                        <div class="footer-info"><?php the_field('f-i', 'option') ?></div>
+                    <?php endif; ?>
                 </div>
-                <div class="col-sm">
-                    <div class="footer-menu-container">
-                        <div class="footer-menu-title">Дебетовые карты</div>
-                        <ul class="footer-menu list-unstyled">
-                            <li><a href="/">Кредитные карты</a></li>
-                            <li><a href="/">Сравнение кредиток</a></li>
-                            <li><a href="/">Ссылка 1</a></li>
-                            <li><a href="/">Ссылка 2</a></li>
-                            <li><a href="/">Ссылка 3</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="footer-menu-container">
-                        <div class="footer-menu-title">Кредитные карты</div>
-                        <ul class="footer-menu list-unstyled">
-                            <li><a href="/">Кредитные карты</a></li>
-                            <li><a href="/">Сравнение кредиток</a></li>
-                            <li><a href="/">Ссылка 1</a></li>
-                            <li><a href="/">Ссылка 2</a></li>
-                            <li><a href="/">Ссылка 3</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="footer-menu-container">
-                        <div class="footer-menu-title">Кредитные карты</div>
-                        <ul class="footer-menu list-unstyled">
-                            <li><a href="/">Кредитные карты</a></li>
-                            <li><a href="/">Сравнение кредиток</a></li>
-                            <li><a href="/">Ссылка 1</a></li>
-                            <li><a href="/">Ссылка 2</a></li>
-                            <li><a href="/">Ссылка 3</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <?php if ( is_active_sidebar( 'footer-menu-list' ) ) : ?>
+                    <?php dynamic_sidebar( 'footer-menu-list' ); ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>
     <div class="footer-sub">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
-                    <div class="footer-copy">© 2019 | CardsBanking.ru</div>
-                </div>
+                <?php if ( function_exists('the_field') ) : ?>
+                    <div class="col-lg-3">
+                        <div class="footer-copy"><?php
+
+                        $copyrights = str_replace('%%year%%', date('Y'), get_field('f-c', 'option'));
+
+                        echo $copyrights;
+
+                        ?></div>
+                    </div>
+                <?php endif; ?>
                 <div class="col-lg">
-                    <ul class="footer-menu-sub list-unstyled d-flex flex-wrap justify-content-md-end justify-content-center">
-                        <li><a href="/">О сайте</a></li>
-                        <li><a href="/">Карта сайта</a></li>
-                        <li><a href="/">Политика конфиденциальности</a></li>
-                        <li><a href="/">Пользовательское соглашение</a></li>
-                    </ul>
+                     <?php wp_nav_menu( array(
+                        'theme_location' => 'cb_footer_menu',
+                        'menu_class'     => 'footer-menu-sub list-unstyled d-flex flex-wrap justify-content-md-end justify-content-center',
+                        'item_spacing'   => 'discard',
+                        'container'      => false,
+                    ) ); ?>
                 </div>
             </div>
         </div>
