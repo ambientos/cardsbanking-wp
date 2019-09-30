@@ -147,6 +147,27 @@ add_filter( 'wp_nav_menu_items', 'cb_change_nav_menu_items', 10, 2 );
 
 
 /**
+ * Remove current item for singular
+ */
+
+function cb_bcnext_remove_current_item($trail) {
+	if ( is_singular() ) {
+		//Check to ensure the breadcrumb we're going to play with exists in the trail
+		if(isset($trail->breadcrumbs[0]) && $trail->breadcrumbs[0] instanceof bcn_breadcrumb) {
+			$types = $trail->breadcrumbs[0]->get_types();
+			//Make sure we have a type and it is a current-item
+			if(is_array($types) && in_array('current-item', $types)) {
+				//Shift the current item off the front
+				array_shift($trail->breadcrumbs);
+			}
+		}
+	}
+}
+
+add_action('bcn_after_fill', 'cb_bcnext_remove_current_item');
+
+
+/**
  * Additional Classes
  */
 
