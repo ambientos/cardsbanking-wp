@@ -1,0 +1,76 @@
+%icon {
+	position: relative;
+	padding: {
+		top: 1.25em;
+		right: 2em;
+		bottom: 1.25em;
+	}
+
+	@include media-breakpoint-down('md') {
+		padding-left: $grid-gutter-width * 1.7;
+	}
+
+	@include media-breakpoint-up('lg') {
+		padding-left: $grid-gutter-width * 2.3;
+	}
+
+	&:not(:first-child) {
+		margin-top: $paragraph-margin-bottom;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: $paragraph-margin-bottom;
+	}
+
+	&::before {
+		display: block;
+		position: absolute;
+		top: $grid-gutter-width * .6;
+		content: '';
+		border: {
+			width: 2px;
+			style: solid;
+			radius: 50%;
+		}
+		background: {
+			repeat: no-repeat;
+			position: 50% 50%;
+			size: auto 50%;
+		}
+
+		@include media-breakpoint-down('md') {
+			$size: $grid-gutter-width * .7;
+
+			left: $grid-gutter-width * .4;
+			width: $size;
+			height: $size;
+		}
+
+		@include media-breakpoint-up('lg') {
+			$size: $grid-gutter-width;
+
+			left: $grid-gutter-width * .7;
+			width: $size;
+			height: $size;
+		}
+	}
+
+	p:not(:last-child) {
+		margin-bottom: .5em;
+	}
+}
+
+blockquote {
+	@each $snippet, $color in $snippet-icons {
+		&.#{$snippet} {
+			background-color: lighten($color, 40%);
+
+			@extend %icon;
+
+			&::before {
+				border-color: $color;
+				background-image: url('#{$img-dir}#{$snippet}.svg');
+			}
+		}
+	}
+}

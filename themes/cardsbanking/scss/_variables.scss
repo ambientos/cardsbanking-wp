@@ -1,0 +1,36 @@
+//
+// Image Directory
+//
+
+$img-dir: '../i/';
+
+
+//
+// Fonts Variables
+//
+
+$font-dir:	 '../fonts/';
+
+$font-main:  'GothamPro';
+
+$fonts:	(
+	( $font-main, 'light',        normal, 300, 20190930 ),
+	( $font-main, 'light-italic', italic, 300, 20190930 ),
+	( $font-main, 'regular',      normal, 400, 20190930 ),
+	( $font-main, 'italic',       italic, 400, 20190930 ),
+	( $font-main, 'medium',       normal, 500, 20190930 ),
+	( $font-main, 'bold',         normal, 700, 20190930 ),
+);
+
+
+//
+// Icons
+//
+
+$snippet-icons: (
+	'check':   #1dc84e,
+	'info':    #409f9f,
+	'quote':   #536ead,
+	'warning': #daac00,
+	'danger':  #fc0606
+);

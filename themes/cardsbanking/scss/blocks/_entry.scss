@@ -1,0 +1,146 @@
+.entry {
+	padding: 3.5em 0 1em;
+	font-weight: $font-weight-light;
+
+	&-title {
+		margin-bottom: 1.5em;
+	}
+
+	&-content {
+		margin-top: $grid-gutter-width;
+		overflow-x: hidden;
+
+		.wp-caption {
+			max-width: 100%;
+
+			&-text {
+				margin-top: .5em;
+				font-size: 80%;
+				text-align: center;
+			}
+		}
+
+		img {
+			$width: 100%;
+
+			max-width: $width;
+			width: $width;
+			height: auto;
+		}
+
+		table {
+			@include media-breakpoint-down('md') {
+				display: block;
+				max-width: min-content;
+				overflow-x: auto;
+				-webkit-overflow-scrolling: touch;
+			}
+		}
+	}
+
+	&-social {
+		margin-bottom: 2.5em;
+		padding: 1.5em;
+		border: $grid-gutter-width * .5 solid $gray-100;
+
+		&-title {
+			margin-bottom: 1em;
+		}
+
+		&-ico {
+			$size: $grid-gutter-width;
+
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			width: $size;
+			height: $size;
+			margin: 0 .2em;
+			color: $gray-500;
+			border: {
+				width: 1px;
+				style: solid;
+				color: currentColor;
+				radius: 50%;
+			}
+			cursor: pointer;
+
+			@include transition;
+
+			&:hover {
+				color: $gray-900;
+			}
+
+			svg {
+				max-height: 70%;
+
+				@include transition;
+			}
+		}
+	}
+
+	ul,
+	ol {
+		padding-left: $grid-gutter-width * .667;
+
+		li {
+			position: relative;
+			list-style: none;
+
+			&::before {
+				display: block;
+				position: absolute;
+				left: 0;
+			}
+		}
+	}
+
+	ul {
+		li {
+			margin: .3em 0;
+			padding-left: $grid-gutter-width * .4;
+
+			&::before {
+				$size: 5px;
+
+				top: .6em;
+				width: $size;
+				height: $size;
+				content: '';
+				background-color: $blue;
+			}
+		}
+	}
+
+	ol {
+		counter-reset: ol-list;
+
+		li {
+			margin: 1.5em 0;
+			padding-left: $grid-gutter-width * 1.6;
+
+			&::before {
+				$size: $grid-gutter-width;
+
+				top: -.2em;
+				width: $size;
+				height: $size;
+				font: {
+					size: 1.125rem;
+					weight: $font-weight-medium;
+				}
+				text-align: center;
+				color: lighten($blue, 30%);
+				counter-increment: ol-list;
+				content: counter(ol-list);
+				border: {
+					width: 2px;
+					style: solid;
+					color: currentColor;
+					radius: 50%;
+				}
+			}
+		}
+	}
+}

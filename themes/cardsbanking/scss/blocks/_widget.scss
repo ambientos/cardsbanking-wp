@@ -1,0 +1,114 @@
+.widget {
+	background: {
+		repeat: no-repeat;
+		position: 50% 50%;
+		size: cover;
+	}
+
+	@include media-breakpoint-down('md') {
+		padding: 2em 0;
+	}
+
+	@include media-breakpoint-up('lg') {
+		padding: 3.5em 0;
+	}
+
+	&._gray {
+		background-color: $gray-100;
+	}
+
+	&-title {
+		margin-bottom: 1em;
+		font-weight: $font-weight-medium;
+
+		&:not(.h3) {
+			@include media-breakpoint-down('md') {
+				font-size: 1.25rem;
+			}
+
+			@include media-breakpoint-up('lg') {
+				font-size: 1.625rem;
+			}
+		}
+
+		&._main {
+			font-weight: $font-weight-light;
+
+			@include media-breakpoint-down('md') {
+				font-size: 1.25rem;
+			}
+
+			@include media-breakpoint-up('lg') {
+				font-size: 1.875rem;
+			}
+		}
+	}
+
+	&-subtitle {
+		margin-bottom: 2em;
+		font-weight: $font-weight-light;
+
+		@include media-breakpoint-down('md') {
+			margin-top: -.5em;
+			font-size: 1rem;
+			line-height: 1;
+		}
+
+		@include media-breakpoint-up('lg') {
+			margin-top: -1.5em;
+			font-size: 1.125rem;
+		}
+	}
+
+	&-custom {
+		&._expert {
+			margin-bottom: 1.5em;
+			padding-top: .1em;
+			background-color: $gray-100;
+
+			@include media-breakpoint-down('md') {
+				margin-top: 1.5em;
+			}
+
+			@include media-breakpoint-up('lg') {
+				margin-top: 7.5em;
+			}
+
+			.container {
+				@include media-breakpoint-down('md') {
+					padding: {
+						top: 1.5em;
+						bottom: 1.5em;
+					}
+				}
+
+				@include media-breakpoint-up('lg') {
+					$thumb-width: 471px;
+
+					position: relative;
+					min-height: 230px;
+					padding: 1.5em 0 1.5em #{$thumb-width - 75px};
+
+					&::before {
+						position: absolute;
+						left: -55px;
+						top: -5.4em;
+						display: block;
+						width: $thumb-width;
+						height: 298px;
+						content: '';
+						background: {
+							repeat: no-repeat;
+							image: url('#{$img-dir}expert-thumb.jpg');
+							size: contain;
+						}
+					}
+				}
+			}
+
+			p {
+				position: relative;
+			}
+		}
+	}
+}

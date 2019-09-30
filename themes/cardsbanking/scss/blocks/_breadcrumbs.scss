@@ -1,0 +1,26 @@
+.breadcrumbs {
+	margin: 2.2em 0 0;
+	font: {
+		size: .75rem;
+		weight: $font-weight-medium;
+	}
+	text-transform: uppercase;
+	color: $gray-400;
+
+	.delimiter {
+		margin: 0 .8em 0 .5em;
+		vertical-align: top;
+	}
+
+	.current-item {
+		color: $black;
+	}
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $gray-900;
+		}
+	}
+}

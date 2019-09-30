@@ -1,0 +1,131 @@
+$menu-active-z: 1000;
+
+.header {
+	position: relative;
+	padding: 1.5em 0 0;
+	background-color: $white;
+	z-index: $menu-active-z +1;
+
+	&-logo,
+	&-search,
+	.navbar-toggler {
+		margin-bottom: $grid-gutter-width;
+	}
+
+	&-search {
+		&-control {
+			height: auto;
+			padding-right: $grid-gutter-width * 1.5;
+			background: {
+				color: $white;
+				repeat: no-repeat;
+				position: calc(100% - #{$grid-gutter-width * .5}) 50%;
+				image: url('#{$img-dir}search.svg');
+				size: $grid-gutter-width * .5 auto;
+			}
+
+			@include media-breakpoint-down('md') {
+				$padding-y: .607em;
+
+				padding: {
+					top: $padding-y;
+					bottom: $padding-y;
+				}
+			}
+		}
+	}
+
+	&-menu {
+		position: relative;
+		width: 100%;
+		border-top: 1px solid $gray-200;
+
+		&-container {
+			position: relative;
+			padding: {
+				top: 1px;
+				bottom: 0;
+			}
+			box-shadow: 0 0 32px 0 rgba($black, .1);
+			background-color: $white;
+			z-index: $menu-active-z;
+
+			@include media-breakpoint-down('md') {
+				.navbar-collapse {
+					padding-bottom: 1em;
+				}
+			}
+		}
+
+		> .nav-item {
+			position: relative;
+
+			&:hover {
+				.dropdown-menu {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+
+			> .nav-link {
+				font-weight: $font-weight-bold;
+
+				@include media-breakpoint-down('md') {
+					padding: 1em 0;
+				}
+
+				@include media-breakpoint-up('lg') {
+					padding: 1.5715em 0;
+				}
+			}
+		}
+
+		.nav-item {
+			font-size: .875rem;
+			text-transform: uppercase;
+		}
+
+		> .nav-item > .header-menu-item-rate {
+			$padding-x: $grid-gutter-width * .5;
+			$bg-color: $primary;
+
+			padding: {
+				left: $padding-x;
+				right: $padding-x;
+			}
+			color: $gray-700;
+			background-color: $bg-color;
+
+			&:hover {
+				background-color: lighten($bg-color, 10%);
+			}
+		}
+
+		.dropdown-menu {
+			background-color: $white;
+
+			@include media-breakpoint-down('md') {
+				margin: -1em 1em 1em 2em;
+			}
+
+			@include media-breakpoint-up('lg') {
+				position: absolute;
+				left: 0;
+				top: 100%;
+				margin-top: -1px;
+				padding: $grid-gutter-width * .5 $grid-gutter-width * 1.3;
+				opacity: 0;
+				visibility: hidden;
+			}
+
+			@include transition;
+
+			a {
+				display: block;
+				margin: 1em 0;
+				font-weight: $font-weight-bold;
+				color: $black;
+			}
+		}
+	}
+}

@@ -1,0 +1,173 @@
+.comment {
+	margin: 1.5em 0;
+
+	&s {
+		&-title {
+			margin: 1.5em 0 1em;
+			padding-bottom: .2em;
+			font: {
+				size: 1.375rem;
+				weight: $font-weight-medium;
+			}
+			border-bottom: 1px solid $gray-200;
+		}
+
+		&-area {
+			padding-bottom: 3em;
+		}
+	}
+
+	&-list {
+		padding-left: 0;
+
+		li {
+			list-style: none;
+		}
+	}
+
+	&-header {
+		margin-bottom: 1em;
+	}
+
+	&-author {
+		font: {
+			weight: $font-weight-medium;
+			style: normal;
+		}
+	}
+
+	&-time {
+		margin-left: .5em;
+		font-size: .875rem;
+		color: $gray-550;
+	}
+
+	&-text {
+		font-size: .875rem;
+		color: $gray-600;
+
+		a {
+			border: {
+				bottom: {
+					width: 1px;
+					style: dotted;
+				}
+			}
+		}
+	}
+
+	&-footer {
+		margin-top: .5em;
+	}
+
+	&-reply {
+		&-link {
+			display: inline-block;
+			font: {
+				size: .875rem;
+				weight: $font-weight-bold;
+			}
+			line-height: 1;
+			text-transform: uppercase;
+			color: $gray-400;
+			cursor: pointer;
+			border-bottom: 1px solid rgba($gray-400, .3);
+
+			@include transition;
+
+			&:hover {
+				color: $gray-900;
+				border-color: currentColor;
+			}
+		}
+
+		&-title {
+			margin-bottom: 1em;
+			font: {
+				size: 1.25rem;
+				weight: $font-weight-medium;
+			}
+
+			small {
+				margin-left: 1em;
+				font-size: 70%;
+
+				a {
+					border-bottom: {
+						width: 1px;
+						style: dotted;
+					}
+				}
+			}
+		}
+	}
+
+	.comment-respond {
+		margin-bottom: 3em;
+	}
+
+	&-respond {
+		margin-top: 3em;
+	}
+
+	&-form {
+		margin-bottom: 1.5em;
+
+		.comment-form-cookies-consent {
+			display: flex;
+			align-items: center;
+			font-size: .75rem;
+
+			label {
+				margin: {
+					left: 1em;
+					bottom: 0;
+				}
+			}
+		}
+	}
+
+	.children {
+		$border-color: darken($gray-100, 2%);
+		$bg-color: $white;
+
+		position: relative;
+		margin: {
+			left: $grid-gutter-width;
+			top: 1.5em;
+		}
+		padding: 1px $grid-gutter-width;
+		border: 8px solid $border-color;
+		background-color: $bg-color;
+
+		&::after,
+		&::before {
+			position: absolute;
+			bottom: 100%;
+			left: 120px;
+			width: 0;
+			height: 0;
+			border: solid transparent;
+			content: '';
+			pointer-events: none;
+		}
+
+		&::after {
+			margin-left: -20px;
+			border: {
+				color: transparent;
+				bottom-color: $bg-color;
+				width: 20px 20px 20px 11px;
+			}
+		}
+
+		&::before {
+			margin-left: -31px;
+			border: {
+				color: transparent;
+				bottom-color: $border-color;
+				width: 31px 31px 31px 21px;
+			}
+		}
+	}
+}

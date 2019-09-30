@@ -1,0 +1,50 @@
+#toc_container {
+	margin-bottom: $grid-gutter-width;
+	padding: $grid-gutter-width * .8 $grid-gutter-width;
+	border: 1px solid $gray-200;
+}
+
+.toc_title {
+	margin-bottom: 1em;
+	font-weight: $font-weight-medium;
+	text-transform: uppercase;
+
+	@include media-breakpoint-down('md') {
+		font-size: 1rem;
+	}
+
+	@include media-breakpoint-up('lg') {
+		font-size: 1.125rem;
+	}
+}
+
+ul.toc_list {
+	margin-bottom: 0;
+	padding-left: 0;
+
+	li {
+		margin: .3em 0;
+		padding-left: 0;
+		font-size: .875rem;
+
+		&::before {
+			display: none;
+		}
+	}
+
+	> li {
+		list-style: none;
+
+		> a {
+			font-weight: $font-weight-medium;
+		}
+	}
+
+	ul {
+		padding-left: 2em;
+
+		li {
+			list-style: disc;
+		}
+	}
+}

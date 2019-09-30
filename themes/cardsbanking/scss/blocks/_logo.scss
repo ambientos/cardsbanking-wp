@@ -1,0 +1,50 @@
+.logo {
+	display: inline-block;
+
+	&,
+	&:hover {
+		color: inherit;
+	}
+
+	&-thumb {
+		&._aside {
+			margin-right: .5em;
+		}
+		&._top {
+			display: block;
+			margin: {
+				left: .5em;
+				bottom: .5em;
+			}
+		}
+
+		img {
+			@include media-breakpoint-down('sm') {
+				max-width: 35px;
+			}
+		}
+	}
+
+	&-title {
+		@include media-breakpoint-down('md') {
+			font-size: .625rem;
+		}
+
+		@include media-breakpoint-up('lg') {
+			font-size: .75rem;
+		}
+
+		b {
+			display: block;
+			line-height: 1.2;
+
+			@include media-breakpoint-down('md') {
+				font-size: 1.125rem;
+			}
+
+			@include media-breakpoint-up('lg') {
+				font-size: 1.375rem;
+			}
+		}
+	}
+}

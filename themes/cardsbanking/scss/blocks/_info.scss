@@ -1,0 +1,95 @@
+.info {
+	&-item {
+		display: block;
+		position: relative;
+		width: 100%;
+		margin-top: $grid-gutter-width * .6;
+
+		@include media-breakpoint-down('md') {
+			padding: $grid-gutter-width * .5 $grid-gutter-width;
+		}
+
+		@include media-breakpoint-up('lg') {
+			padding: $grid-gutter-width $grid-gutter-width * 1.2;
+		}
+
+		&:hover {
+			color: inherit;
+
+			&::before {
+				opacity: 0;
+			}
+
+			&::after {
+				opacity: 1;
+			}
+		}
+
+		&::before,
+		&::after {
+			$size: 13px;
+			$margin: $grid-gutter-width * .7;
+
+			position: absolute;
+			top: $margin;
+			right: $margin;
+			width: $size;
+			height: $size;
+			content: '';
+			background: {
+				repeat: no-repeat;
+				position: 50% 50%;
+				size: contain;
+			}
+
+			@include transition;
+		}
+
+		&::before {
+			background-image: url('#{$img-dir}arrow-rt.svg');
+		}
+
+		&::after {
+			opacity: 0;
+			background-image: url('#{$img-dir}arrow-rt-hover.svg');
+		}
+
+		&-i {
+			$size: $grid-gutter-width * 1.2;
+
+			display: block;
+			position: relative;
+			width: $size;
+			height: $size;
+			margin-bottom: 1.5em;
+			border-radius: 50%;
+			background-color: $primary;
+
+			&::before {
+				$size: $grid-gutter-width * 1.2;
+				$margin: .8em;
+
+				position: absolute;
+				left: $margin;
+				top: $margin;
+				width: $size;
+				height: $size;
+				content: '';
+				background: {
+					repeat: no-repeat;
+					image: var(--icon);
+					size: contain;
+				}
+			}
+		}
+
+		&-title {
+			display: block;
+			position: relative;
+			font: {
+				size: 1.125rem;
+				weight: $font-weight-medium;
+			}
+		}
+	}
+}
