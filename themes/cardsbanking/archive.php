@@ -14,7 +14,7 @@
                 <?php the_archive_title( '<h1 class="widget-title">', '</h1>' ); ?>
                 <?php do_action( 'root_archive_after_title' ); ?>
 
-                <?php if ( root_get_option( 'structure_child_categories' ) == 'yes' && is_category() ) {
+                <?php /* if ( root_get_option( 'structure_child_categories' ) == 'yes' && is_category() ) {
 
                     $cat = get_query_var('cat');
 
@@ -32,7 +32,7 @@
                         }
                         echo '</ul></div>';
                     }
-                } ?>
+                }*/ ?>
                     
                 <?php if ( 'top' == root_get_option( 'structure_archive_description' ) && ! is_paged() ) the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
             </header>

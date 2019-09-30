@@ -68,12 +68,12 @@
             <h2 class="widget-title">Информационнные разделы</h2>
             <div class="info-list">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(../t/icons/all.svg)"></span><span class="info-item-title">Обзоры карт всех банков</span></a></div>
-                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(../t/icons/cdebit.svg)"></span><span class="info-item-title">Дебетовые карты</span></a></div>
-                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(../t/icons/ccredit.svg)"></span><span class="info-item-title">Кредитные карты</span></a></div>
-                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(../t/icons/instruct.svg)"></span><span class="info-item-title">Инструкции</span></a></div>
-                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(../t/icons/transfer.svg)"></span><span class="info-item-title">Переводы и оплата</span></a></div>
-                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(../t/icons/qa.svg)"></span><span class="info-item-title">Вопросы и ответы</span></a></div>
+                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/all.svg)"></span><span class="info-item-title">Обзоры карт всех банков</span></a></div>
+                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/cdebit.svg)"></span><span class="info-item-title">Дебетовые карты</span></a></div>
+                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/ccredit.svg)"></span><span class="info-item-title">Кредитные карты</span></a></div>
+                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/instruct.svg)"></span><span class="info-item-title">Инструкции</span></a></div>
+                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/transfer.svg)"></span><span class="info-item-title">Переводы и оплата</span></a></div>
+                    <div class="col-lg-4 col-md-6 d-flex"><a class="info-item box-item" href="/"><span class="info-item-i" style="--icon: url(<?php echo get_stylesheet_directory_uri() ?>/t/icons/qa.svg)"></span><span class="info-item-title">Вопросы и ответы</span></a></div>
                 </div>
             </div>
         </div>

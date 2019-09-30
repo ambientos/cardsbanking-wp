@@ -19,7 +19,16 @@ $is_show_excerpt    = 'yes' == root_get_option( 'structure_posts_excerpt' );
     </header>
 
     <?php if ( $is_show_excerpt ) : ?>
-        <div class="posts-item-excerpt" itemprop="articleBody"><?php the_excerpt(); ?></div>
+        <div class="posts-item-excerpt" itemprop="articleBody">
+            <?php //the_excerpt(); ?>
+            <?php
+
+            add_filter('get_the_excerpt', 'remove_the_content_add_ad_filter', 9);
+            echo do_excerpt( get_the_excerpt(), 14 );
+            add_filter('get_the_excerpt', 'add_the_content_add_ad_filter', 11);
+
+            ?>
+        </div>
     <?php endif; ?>
 
     <?php if ( ! $is_show_excerpt ) { ?>
