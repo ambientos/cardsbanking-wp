@@ -42,6 +42,7 @@
 
 		&-title {
 			margin-bottom: 1em;
+			font-size: 1.125rem;
 		}
 
 		&-ico {
@@ -73,6 +74,25 @@
 				max-height: 70%;
 
 				@include transition;
+			}
+		}
+
+		&-rating {
+			@include media-breakpoint-down('xs') {
+				margin-top: 1em;
+			}
+		}
+
+		.post-ratings {
+			font-size: 80%;
+			color: $gray-800;
+
+			&-text {
+				position: absolute;
+			}
+
+			img {
+				vertical-align: top;
 			}
 		}
 	}

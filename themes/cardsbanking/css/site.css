@@ -424,7 +424,8 @@
     padding: 1.5em;
     border: 15px solid #f9f9f9; }
     .entry-social-title {
-      margin-bottom: 1em; }
+      margin-bottom: 1em;
+      font-size: 1.125rem; }
     .entry-social-ico {
       display: -webkit-inline-box;
       display: -ms-inline-flexbox;
@@ -461,6 +462,16 @@
           .entry-social-ico svg {
             -webkit-transition: none;
             transition: none; } }
+    @media (max-width: 575.98px) {
+      .entry-social-rating {
+        margin-top: 1em; } }
+    .entry-social .post-ratings {
+      font-size: 80%;
+      color: #343a40; }
+      .entry-social .post-ratings-text {
+        position: absolute; }
+      .entry-social .post-ratings img {
+        vertical-align: top; }
   .entry ul,
   .entry ol {
     padding-left: 20.01px; }

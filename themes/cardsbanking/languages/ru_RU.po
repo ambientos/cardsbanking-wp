@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CardsBanking Theme 1.0\n"
-"POT-Creation-Date: 2019-09-30 22:10+0500\n"
-"PO-Revision-Date: 2019-09-30 22:10+0500\n"
+"POT-Creation-Date: 2019-10-01 21:57+0500\n"
+"PO-Revision-Date: 2019-10-01 21:58+0500\n"
 "Last-Translator: Anton Grakhov <ant.grakhov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Credit Card Navigator"
 msgstr "Навигатор по банковским картам"
 
-#: footer.php:125
+#: footer.php:92
 msgid "To Top"
 msgstr "Вверх"
 
@@ -105,7 +105,15 @@ msgstr "Вверх"
 msgid "Header Menu"
 msgstr ""
 
-#: functions.php:136
+#: functions.php:12
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:103
+msgid "Footer Menu List"
+msgstr ""
+
+#: functions.php:196
 msgid "Card Ratings"
 msgstr "Рейтинги карт"
 
@@ -142,9 +150,9 @@ msgstr ""
 msgid "Source"
 msgstr ""
 
-#: template-parts/content-single.php:128
-msgid "Like this post? Please share to your friends:"
-msgstr ""
+#: template-parts/content-single.php:129
+msgid "Like this post? Please rate and share to your friends:"
+msgstr "Понравилась статья? Оцените её и поделитесь с друзьями:"
 
 #: template-parts/related-posts.php:98
 msgid "Related articles"

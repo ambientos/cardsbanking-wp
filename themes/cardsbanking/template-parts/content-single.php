@@ -125,12 +125,24 @@ $share_bottom_hide      = 'checked' == get_post_meta( $post->ID, 'share_bottom_h
 
     <div class="entry-social">
         <?php if ( apply_filters( 'root_social_share_title_show', true ) ) : ?>
-        <div class="entry-social-title b-share__title"><?php echo apply_filters( 'root_social_share_title', __('Like this post? Please share to your friends:', 'root') ) ?></div>
+            <div class="entry-social-title b-share__title">
+                <?php _e('Like this post? Please rate and share to your friends:', 'cardsbanking') ?>
+            </div>
         <?php endif; ?>
 
-        <?php do_action( 'root_single_before_social' ) ?>
-        <?php get_template_part( 'template-parts/social', 'buttons' ) ?>
-        <?php do_action( 'root_single_after_social' ) ?>
+        <div class="d-sm-flex justify-content-sm-between">
+            <div class="d-flex order-sm-1">
+                <?php do_action( 'root_single_before_social' ) ?>
+                <?php get_template_part( 'template-parts/social', 'buttons' ) ?>
+                <?php do_action( 'root_single_after_social' ) ?>
+            </div>
+
+            <?php if ( function_exists('the_ratings') ) : ?>
+                <div class="entry-social-rating">
+                    <?php the_ratings(); ?>
+                </div>
+            <?php endif; ?>
+        </div>
     </div>
 
 <?php } ?>
