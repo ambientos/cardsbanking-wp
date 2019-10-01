@@ -14,25 +14,13 @@
                 <?php the_archive_title( '<h1 class="widget-title">', '</h1>' ); ?>
                 <?php do_action( 'root_archive_after_title' ); ?>
 
-                <?php /* if ( root_get_option( 'structure_child_categories' ) == 'yes' && is_category() ) {
-
-                    $cat = get_query_var('cat');
-
-                    $categories = get_categories( array(
-                        'parent' => $cat
-                    ) );
-
-                    if ( ! empty( $categories ) ) {
-
-                        echo '<div class="child-categories"><ul>';
-                        foreach ($categories as $category) {
-                            echo '<li>';
-                            echo '<a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a>';
-                            echo '</li>';
-                        }
-                        echo '</ul></div>';
-                    }
-                }*/ ?>
+                <?php $taxonomy_description = get_the_archive_description(); if ( ! empty( $taxonomy_description ) ) : ?>
+                    <div class="important">
+                        <div class="important-inner">
+                            <?php echo $taxonomy_description; ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
                     
                 <?php if ( 'top' == root_get_option( 'structure_archive_description' ) && ! is_paged() ) the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
             </header>
@@ -49,11 +37,11 @@
         </div>
     </div>
 
-    <?php if ( 'bottom' == root_get_option( 'structure_archive_description' ) && ! is_paged() ) : ?>
-        <?php $taxonomy_description = get_the_archive_description(); if ( ! empty( $taxonomy_description ) ) : ?>
+    <?php if ( 'bottom' == root_get_option( 'structure_archive_description' ) && ! is_paged() && function_exists('get_field') ) : ?>
+        <?php $addict_description = get_field('c-d', get_queried_object()); if ( ! empty($addict_description) ) : ?>
             <div class="widget _gray">
                 <div class="container">
-                    <?php echo $taxonomy_description; ?>
+                    <?php echo $addict_description ?>
                 </div>
             </div>
         <?php endif; ?>

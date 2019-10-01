@@ -48,27 +48,31 @@
   max-height: 20px;
   width: auto; }
 
+.important::before, .important-inner p:last-child::after {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  content: '';
+  background-size: contain; }
+
 .important {
   position: relative;
   margin: 2em 0;
   padding: 1em 0; }
-  .important::before, .important::after {
-    position: absolute;
-    width: 34px;
-    height: 34px;
-    content: '';
-    background-size: contain; }
   .important::before {
     left: -15px;
     top: 0;
     background-image: url("../i/important-before.svg"); }
-  .important::after {
-    right: -15px;
-    bottom: 0;
-    background-image: url("../i/important-after.svg"); }
   .important-inner {
-    position: relative;
-    z-index: 1; }
+    position: relative; }
+    .important-inner p:last-child {
+      position: relative;
+      display: inline-block; }
+      .important-inner p:last-child::after {
+        right: -15px;
+        bottom: -.8em;
+        background-image: url("../i/important-after.svg");
+        z-index: -1; }
 
 .currencyconverter-minimalistic-single-currency {
   display: -webkit-box;
