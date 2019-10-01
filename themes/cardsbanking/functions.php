@@ -72,25 +72,25 @@ add_filter( 'mce_external_plugins', 'cb_enqueue_plugin_scripts' );
 
 
 function cb_register_buttons_editor( $buttons ) {
-    //register buttons with their id.
-    array_push(
-        $buttons,
-        //'col_6',
-        //'col_4',
-        'blockquote_warning',
-        'blockquote_info',
-        'blockquote_danger',
-        'blockquote_check',
-        'blockquote_quote',
-        'blockquote_important',
-        'content_btn',
-        'spoiler_btn',
-        'mark_btn',
-        'mask_link'
-    );
-    return $buttons;
+	//register buttons with their id.
+	array_push(
+		$buttons,
+		//'col_6',
+		//'col_4',
+		'blockquote_warning',
+		'blockquote_info',
+		'blockquote_danger',
+		'blockquote_check',
+		'blockquote_quote',
+		'blockquote_important',
+		'content_btn',
+		'spoiler_btn',
+		'mark_btn',
+		'mask_link'
+	);
+	return $buttons;
 }
-add_filter( 'mce_buttons_3', 'cb_register_buttons_editor', 11 );
+add_filter( 'mce_buttons_3', 'cb_register_buttons_editor' );
 
 
 /**
@@ -192,7 +192,24 @@ function cb_change_nav_menu_items( $items, $args ) {
 
 		?>
 
-		<li class="nav-item"><a class="header-menu-item-rate nav-link" href="<?php echo esc_url( site_url('/') ) ?>"><?php _e( 'Card Ratings', 'cardsbanking' ) ?></a></li>
+		<li class="nav-item menu-item-has-children dropdown _dropdown-wide">
+			<a class="header-menu-item-rate nav-link" href="<?php echo esc_url( site_url('/') ) ?>"><?php _e( 'Card Ratings', 'cardsbanking' ) ?></a>
+
+			<?php if ( function_exists('have_rows') && have_rows('mr', 'option') ) : ?>
+				<div class="dropdown-menu _wide">
+					<div class="category-menu d-flex flex-wrap">
+						<?php while( have_rows('mr', 'option') ): the_row(); ?>
+							<div class="category-menu-item d-flex col-xl-2 col-lg-3 col-md-4 col-12">
+								<a class="category-menu-item-link _sm d-flex align-items-center" href="<?php the_sub_field('mr-l', 'option') ?>">
+									<span class="category-menu-item-i _side" style="background-image:url(<?php the_sub_field('mr-i') ?>)"></span>
+									<span class="category-menu-item-title"><?php the_sub_field('mr-t') ?></span>
+								</a>
+							</div>
+						<?php endwhile; ?>
+					</div>
+				</div>
+			<?php endif; ?>
+		</li>
 
 		<?php
 

@@ -5,20 +5,9 @@
 				right: -1px;
 				bottom: -1px;
 			}
+			padding: 0;
 			border: 1px solid $gray-200;
 			background: $white;
-
-			@include media-breakpoint-up('lg') {
-				@include flex-width(16.667%);
-			}
-
-			@include media-breakpoint-between('md', 'md') {
-				@include flex-width(25%);
-			}
-
-			@include media-breakpoint-down('sm') {
-				@include flex-width(50%);
-			}
 
 			&-link,
 			&-title,
@@ -31,13 +20,24 @@
 				padding: $grid-gutter-width * .5;
 				transform: scale(1.02); // Fix parent visible borderds
 
-				@include media-breakpoint-up('xl') {
-					min-height: 150px;
-					padding: $grid-gutter-width;
+				&._sm {
+					@include media-breakpoint-up('xl') {
+						padding: {
+							top: $grid-gutter-width;
+							bottom: $grid-gutter-width;
+						}
+					}
 				}
 
-				@include media-breakpoint-down('lg') {
-					font-size: .875rem;
+				&._lg {
+					@include media-breakpoint-up('xl') {
+						min-height: 150px;
+						padding: $grid-gutter-width;
+					}
+
+					@include media-breakpoint-down('lg') {
+						font-size: .875rem;
+					}
 				}
 
 				&:hover {
@@ -48,31 +48,54 @@
 			}
 
 			&-i {
-				height: $grid-gutter-width * .8;
+				$size: $grid-gutter-width * .8;
+
+				height: $size;
 				background: {
 					repeat: no-repeat;
 					size: auto 100%;
+				}
+
+				&._side {
+					@include flex-width($size);
+
+					margin-right: .5em;
+					background: {
+						position: 50% 50%;
+						size: contain;
+					}
 				}
 			}
 
 			&-title {
 				line-height: 1.2;
 
-				&::before {
-					display: block;
-					width: $grid-gutter-width;
-					margin: .7em 0;
-					content: '';
-					border-top: 1px solid $primary;
-
-					@include transition;
-				}
-
-				:hover > & {
+				&._sep {
 					&::before {
-						border-color: inherit;
+						display: block;
+						width: $grid-gutter-width;
+						margin: .7em 0;
+						content: '';
+						border-top: 1px solid $primary;
+
+						@include transition;
+					}
+
+					:hover > & {
+						&::before {
+							border-color: inherit;
+						}
 					}
 				}
+			}
+
+			a._sm {
+				margin: 0;
+				font: {
+					size: .875rem;
+					weight: $font-weight-normal;
+				}
+				text-transform: none;
 			}
 		}
 	}

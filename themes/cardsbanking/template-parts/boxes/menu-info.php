@@ -4,7 +4,6 @@
             <h2 class="widget-title"><?php the_field('ir-h', 'option') ?></h2>
             <div class="info-list">
                 <div class="row">
-
                     <?php while( have_rows('ir', 'option') ): the_row(); ?>
                         <div class="col-lg-4 col-md-6 d-flex">
                             <a class="info-item box-item" href="<?php the_sub_field('ir-l', 'option') ?>">
@@ -13,7 +12,6 @@
                             </a>
                         </div>
                     <?php endwhile; ?>
-
                 </div>
             </div>
         </div>

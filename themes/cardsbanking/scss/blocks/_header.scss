@@ -60,6 +60,33 @@ $menu-active-z: 1000;
 		> .nav-item {
 			position: relative;
 
+			@include media-breakpoint-down('md') {
+				&.menu-item-has-children::after {
+					position: absolute;
+					right: 0;
+					top: 1em;
+					content: '\bb';
+					cursor: pointer;
+				}
+
+				&.open {
+					&::after {
+						color: $primary;
+						transform: rotate(-90deg);
+					}
+
+					.dropdown-menu {
+						display: block;
+					}
+				}
+			}
+
+			&._dropdown-wide {
+				@include media-breakpoint-up('lg') {
+					position: static;
+				}
+			}
+
 			&:hover {
 				.dropdown-menu {
 					visibility: visible;
@@ -68,6 +95,7 @@ $menu-active-z: 1000;
 			}
 
 			> .nav-link {
+				display: inline-block;
 				font-weight: $font-weight-bold;
 
 				@include media-breakpoint-down('md') {
@@ -103,9 +131,18 @@ $menu-active-z: 1000;
 
 		.dropdown-menu {
 			background-color: $white;
-			box-shadow: inset 1px 5px 15px 0 rgba($black, 0.1);
+
+			&._wide {
+				$padding-y: $grid-gutter-width;
+
+				padding: {
+					top: $padding-y;
+					bottom: $padding-y;
+				}
+			}
 
 			@include media-breakpoint-down('md') {
+				display: none;
 				margin: -1em 1em 1em 2em;
 			}
 
@@ -117,6 +154,7 @@ $menu-active-z: 1000;
 				padding: $grid-gutter-width * .5 $grid-gutter-width * 1.3;
 				opacity: 0;
 				visibility: hidden;
+				box-shadow: inset 1px 5px 15px 0 rgba($black, 0.1);
 			}
 
 			@include transition;
