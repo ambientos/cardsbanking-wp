@@ -9,7 +9,7 @@ $menu-active-z: 1000;
 	&-logo,
 	&-search,
 	.navbar-toggler {
-		margin-bottom: $grid-gutter-width;
+		margin-bottom: $grid-gutter-width * .5;
 	}
 
 	&-search {
