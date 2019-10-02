@@ -164,7 +164,6 @@ function cb_scripts_styles() {
 	 */
 
 	wp_enqueue_style( 'cardsbanking-bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.css', array(), '20190930' );
-	wp_enqueue_style( 'cardsbanking-owl-carousel', get_stylesheet_directory_uri() . '/css/owl-carousel.css', array(), '20190930' );
 	wp_enqueue_style( 'cardsbanking-site', get_stylesheet_directory_uri() . '/css/site.css', array(), '20190930' );
 
 
@@ -175,7 +174,6 @@ function cb_scripts_styles() {
 	wp_enqueue_script( 'cardsbanking-bs-util-js', get_stylesheet_directory_uri() . '/js/bootstrap/util.js', array('jquery'), '4.3.1', true );
 	wp_enqueue_script( 'cardsbanking-bs-collapse-js', get_stylesheet_directory_uri() . '/js/bootstrap/collapse.js', array('jquery'), '4.3.1', true );
 
-	wp_enqueue_script( 'cardsbanking-owl-carousel-js', get_stylesheet_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), '2.3.4', true );
 	wp_enqueue_script( 'cardsbanking-superembed-js', get_stylesheet_directory_uri() . '/js/superembed.min.js', array('jquery'), '1', true );
 	wp_enqueue_script( 'cardsbanking-site-js', get_stylesheet_directory_uri() .'/js/site.js', array('jquery'), '20190930', true );
 }
