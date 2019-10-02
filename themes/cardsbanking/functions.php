@@ -9,6 +9,7 @@ function cb_setup() {
 
 	register_nav_menus( array(
 		'cb_header_menu' => __( 'Header Menu', 'cardsbanking' ),
+		'cb_pages_menu'  => __( 'Pages Menu', 'cardsbanking' ),
 		'cb_footer_menu' => __( 'Footer Menu', 'cardsbanking' ),
 	) );
 }
@@ -63,7 +64,7 @@ add_action( 'init', 'cb_init' );
  */
 
 function cb_enqueue_plugin_scripts( $plugin_array ) {
-	$plugin_array['blockquote_button_plugin'] = get_stylesheet_directory_uri() . '/js/tinymce-plugin.js';
+	$plugin_array['blockquote_button_plugin'] = get_stylesheet_directory_uri() . '/js/tinymce/tinymce-plugin.js';
 
 	return $plugin_array;
 }
@@ -83,7 +84,7 @@ function cb_register_buttons_editor( $buttons ) {
 		'blockquote_check',
 		'blockquote_quote',
 		'blockquote_important',
-		'content_btn',
+		//'content_btn',
 		'spoiler_btn',
 		'mark_btn',
 		'mask_link'
@@ -275,6 +276,40 @@ function cb_allow_upload_svg( $type_and_ext, $file, $filename, $mimes ){
 
 add_action('upload_mimes', 'cb_add_file_types_to_uploads');
 add_filter('wp_check_filetype_and_ext', 'cb_allow_upload_svg', 10, 4);
+
+
+/**
+ * PNG
+ */
+
+function cb_rating_image_extension() {
+    return 'png';
+}
+add_filter( 'wp_postratings_image_extension', 'cb_rating_image_extension' );
+
+
+/**
+ * Pages Menu
+ */
+
+function cb_pages_menu_func(){
+	$content = '';
+
+	ob_start();
+
+	wp_nav_menu( array(
+        'theme_location' => 'cb_pages_menu',
+        'menu_class'     => 'entry-pages-menu',
+        'item_spacing'   => 'discard',
+        'container'      => false,
+    ) );
+
+	$content = ob_get_clean();
+
+	return $content;
+}
+
+add_shortcode( 'pages_menu', 'cb_pages_menu_func' );
 
 
 /**

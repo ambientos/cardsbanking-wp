@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CardsBanking Theme 1.0\n"
-"POT-Creation-Date: 2019-10-01 21:57+0500\n"
-"PO-Revision-Date: 2019-10-01 21:58+0500\n"
+"POT-Creation-Date: 2019-10-02 18:28+0500\n"
+"PO-Revision-Date: 2019-10-02 18:28+0500\n"
 "Last-Translator: Anton Grakhov <ant.grakhov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -45,7 +45,7 @@ msgstr ""
 
 #: acf/init.php:13 acf/init.php:14
 msgid "Additional Options"
-msgstr ""
+msgstr "Дополнительные настройки"
 
 #: comments.php:18 template-parts/content-single.php:86
 msgid "Comments"

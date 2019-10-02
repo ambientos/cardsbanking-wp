@@ -96,6 +96,7 @@
 <div class="overlay"></div>
 
 <?php wp_footer(); ?>
+<?php echo root_get_option( 'footer_counters' ) ?>
 <?php echo root_get_option( 'code_body' ) ?>
 
 </body>

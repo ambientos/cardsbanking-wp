@@ -4,66 +4,68 @@
         //url argument holds the absolute url of our plugin directory
         init : function(ed, url) {
 
+            url += '/'
+
             //add new button
             ed.addButton("col_6", {
                 title : "Колоки 1/2",
                 cmd : "col_6_command",
-                image : url + '/../images/admin/col-6-6.png'
+                image : url + 'images/col-6-6.png'
             });
 
             //add new button
             ed.addButton("col_4", {
                 title : "Колоки 1/3",
                 cmd : "col_4_command",
-                image : url + '/../images/admin/col-4-4-4.png'
+                image : url + 'images/col-4-4-4.png'
             });
 
             //add new button
             ed.addButton("blockquote_warning", {
                 title : "Цитата с восклицательным знаком",
                 cmd : "blockquote_warning_command",
-                image : url + '/../images/admin/blockquote-warning-ico.png'
+                image : url + 'images/blockquote-warning-ico.png'
             });
 
             //add new button
             ed.addButton("blockquote_info", {
                 title : "Цитата с знаком i",
                 cmd : "blockquote_info_command",
-                image : url + '/../images/admin/blockquote-info-ico.png'
+                image : url + 'images/blockquote-info-ico.png'
             });
 
             //add new button
             ed.addButton("blockquote_danger", {
                 title : "Цитата с красным крестом",
                 cmd : "blockquote_danger_command",
-                image : url + '/../images/admin/blockquote-danger-ico.png'
+                image : url + 'images/blockquote-danger-ico.png'
             });
 
             //add new button
             ed.addButton("blockquote_check", {
                 title : "Цитата с галочкой",
                 cmd : "blockquote_check_command",
-                image : url + '/../images/admin/blockquote-check-ico.png'
+                image : url + 'images/blockquote-check-ico.png'
             });
 
             //add new button
             ed.addButton("blockquote_quote", {
                 title : "Цитата с кавычкой",
                 cmd : "blockquote_quote_command",
-                image : url + '/../images/admin/blockquote-quote-ico.png'
+                image : url + 'images/blockquote-quote-ico.png'
             });
 
             //add new button
             ed.addButton("blockquote_important", {
                 title : "Цитата с вниманием",
                 cmd : "blockquote_important_command",
-                image : url + '/../images/admin/blockquote-quote-ico.png'
+                image : url + 'images/blockquote-quote-important.png'
             });
 
             //add new button
             ed.addButton("content_btn", {
                 title : "Добавить кнопку",
-                image : url + '/../images/admin/tinymce-button.png',
+                image : url + 'images/tinymce-button.png',
                 onclick: function() {
                     ed.windowManager.open( {
                         title: 'Вставить кнопку',
@@ -109,9 +111,9 @@
                                 ]
                             }],
                         onsubmit: function( e ) {
-							
-							var button_atts = '';
-							
+                            
+                            var button_atts = '';
+                            
                             if ( e.data.text.length === 0 ) {
                                 e.data.text = 'Button';
                             }
@@ -121,8 +123,8 @@
                             }
 
                             if ( e.data.color.length !== 0 ) {
-								button_atts += ' color="' + e.data.color + '"';
-							}
+                                button_atts += ' color="' + e.data.color + '"';
+                            }
                             ed.insertContent( '[button href="' + e.data.href + '" ' + button_atts + ' size="' + e.data.size + '" target="' + e.data.target + '"]' + e.data.text + '[/button]');
                         }
                     });
@@ -133,14 +135,14 @@
             ed.addButton("spoiler_btn", {
                 title : "Спойлер",
                 cmd : "spoiler_btn_command",
-                image : url + '/../images/admin/spoiler-ico.png'
+                image : url + 'images/spoiler-ico.png'
             });
 
             //add new button
             ed.addButton("mask_link", {
                 title : "Замаскировать ссылку",
                 cmd : "mask_link_command",
-                image : url + '/../images/admin/link.png'
+                image : url + 'images/link.png'
             });
 
 
@@ -199,7 +201,7 @@
 
             ed.addCommand("blockquote_important_command", function(ui, v) {
                 var selected_text = ed.selection.getContent({format : 'html'});
-                var return_text = '<div class="important"><div class="important-inner"><p>' + selected_text + '</p></div></div>'
+                var return_text = '<blockquote class="important"><div class="important-inner"><p>' + selected_text + '</p></div></blockquote>'
                 ed.execCommand("mceInsertContent", 0, return_text);
             });
 
@@ -245,7 +247,7 @@
             //add new button
             ed.addButton("mark_btn", {
                 title : "Выделить текст",
-                image : url + '/../images/admin/tinymce-mark.png',
+                image : url + 'images/tinymce-mark.png',
                 onclick: function() {
 
                     var selected_text = ed.selection.getContent({
@@ -319,19 +321,19 @@
 var editor = tinymce.activeEditor;
 
 function createColorPickAction() {
-	var colorPickerCallback = editor.settings.color_picker_callback;
+    var colorPickerCallback = editor.settings.color_picker_callback;
 
-	if (colorPickerCallback) {
-		return function() {
-			var self = this;
+    if (colorPickerCallback) {
+        return function() {
+            var self = this;
 
-			colorPickerCallback.call(
-				editor,
-				function(value) {
-					self.value(value).fire('change');
-				},
-				self.value()
-			);
-		};
-	}
+            colorPickerCallback.call(
+                editor,
+                function(value) {
+                    self.value(value).fire('change');
+                },
+                self.value()
+            );
+        };
+    }
 }

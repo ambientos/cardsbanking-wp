@@ -1,4 +1,6 @@
 .footer {
+	position: relative;
+
 	&-main {
 		color: $white;
 		background-color: $gray-900;
@@ -119,9 +121,11 @@
 	}
 
 	&-sub {
-		margin: $grid-gutter-width * .5 0;
+		position: relative;
+		padding: $grid-gutter-width * .5 0;
 		font-size: .875rem;
 		color: $gray-550;
+		background-color: $white;
 
 		@include media-breakpoint-down('md') {
 			text-align: center;

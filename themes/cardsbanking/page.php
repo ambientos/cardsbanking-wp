@@ -10,15 +10,19 @@ $share_top_hide   = 'checked' == get_post_meta( $post->ID, 'share_top_hide', tru
 $comments_hide    = 'checked' == get_post_meta( $post->ID, 'comments_hide', true );
 ?>
 
-<?php if ( ! $breadcrumbs_hide ) : ?>
+<?php //if ( ! $breadcrumbs_hide ) : ?>
     <div class="container">
         <?php get_template_part( 'template-parts/boxes/breadcrumbs' ); ?>
     </div>
-<?php endif; ?>
+<?php //endif; ?>
 
 <div class="container">
-    <div class="row">
-        <main class="main col-lg-8">
+    <?php if ( root_get_option( 'structure_page_sidebar' ) != 'none' && 'checked' != get_post_meta( $post->ID, 'sidebar_hide', true ) ) : ?>
+        <div class="row"><main class="main col-lg-8">
+    <?php else : ?>
+        <main class="main">
+    <?php endif; ?>
+        <div class="widget">
             <?php
 
                 the_post();
@@ -31,13 +35,14 @@ $comments_hide    = 'checked' == get_post_meta( $post->ID, 'comments_hide', true
                         comments_template();
                     endif;
                 }
-
-                ?>
             ?>
-        </main>
+        </div>
+    </main>
 
-        <?php get_sidebar(); ?>
-    </div>
+    <?php if ( root_get_option( 'structure_page_sidebar' ) != 'none' && 'checked' != get_post_meta( $post->ID, 'sidebar_hide', true ) ) : ?>
+            <?php get_sidebar(); ?>
+        </div>
+    <?php endif; ?>
 </div>
 
 <?php get_footer(); ?>

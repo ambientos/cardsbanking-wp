@@ -8,7 +8,7 @@
 
             <?php get_template_part( 'template-parts/layout/archive' ); ?>
 
-            <?php the_posts_pagination(); ?>
+            <?php //the_posts_pagination(); ?>
 
         <?php else : ?>
 

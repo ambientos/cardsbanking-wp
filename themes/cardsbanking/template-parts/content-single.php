@@ -130,7 +130,7 @@ $share_bottom_hide      = 'checked' == get_post_meta( $post->ID, 'share_bottom_h
             </div>
         <?php endif; ?>
 
-        <div class="d-sm-flex justify-content-sm-between">
+        <div class="d-sm-flex align-items-sm-center justify-content-sm-between">
             <div class="d-flex order-sm-1">
                 <?php do_action( 'root_single_before_social' ) ?>
                 <?php get_template_part( 'template-parts/social', 'buttons' ) ?>
