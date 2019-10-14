@@ -1,5 +1,5 @@
 <?php if(function_exists('bcn_display')) : ?>
 	<div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
 		<?php bcn_display(); ?>
-	<?php endif; ?>
-</div>
+	</div>
+<?php endif; ?>
