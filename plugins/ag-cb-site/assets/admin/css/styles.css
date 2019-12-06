@@ -1,0 +1,20 @@
+/**
+ * Group label
+ */
+.post-type-cb_card .acf-field-group > .acf-label {
+	font-size: 120%;
+}
+
+/**
+ * Group content
+ */
+.post-type-cb_card .acf-field-group > .acf-input > .acf-fields.-border {
+	border-color: #a1a1a1;
+}
+
+/**
+ * Label Yes/No (yellow light)
+ */
+.post-type-cb_card .acf-field-true-false .acf-label {
+	background-color: #fcf6da;
+}

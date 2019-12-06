@@ -1,0 +1,19 @@
+{
+    "name": "ag/cb-site",
+    "description": "Special plugin for Cardsbanking site",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Anton Grakhov",
+            "email": "ant.grakhov@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AG_Cb_Site\\": "core/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
