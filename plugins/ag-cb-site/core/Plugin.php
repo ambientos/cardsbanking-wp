@@ -51,7 +51,7 @@ class Plugin {
 			'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes', ),
 			'has_archive'         => false,
 			'rewrite'             => array(
-				'slug'            => 'card',
+				'slug'            => 'cards',
 				'with_front'      => false,
 				'feeds'           => false,
 			),

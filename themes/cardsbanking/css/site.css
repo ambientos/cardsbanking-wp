@@ -191,7 +191,7 @@
   padding: 1.5em 0 0;
   background-color: #fff;
   z-index: 1001; }
-  .header-logo, .header-search,
+  .header-nav, .header-logo, .header-search,
   .header .navbar-toggler {
     margin-bottom: 15px; }
   .header-search-control {
@@ -210,6 +210,9 @@
     position: relative;
     width: 100%;
     border-top: 1px solid #e8e8e8; }
+    @media (max-width: 991.98px) {
+      .header-menu {
+        padding-bottom: 15px; } }
     .header-menu-container {
       position: relative;
       padding-top: 1px;
@@ -222,9 +225,6 @@
         .header-menu-container {
           padding-left: 0;
           padding-right: 0; } }
-      @media (max-width: 991.98px) {
-        .header-menu-container .navbar-collapse {
-          padding-bottom: 1em; } }
     .header-menu > .nav-item {
       position: relative; }
       @media (max-width: 991.98px) {
@@ -272,8 +272,7 @@
       -webkit-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }
       .header-menu .dropdown-menu._wide {
-        padding-top: 30px;
-        padding-bottom: 30px; }
+        padding-top: 30px; }
       @media (max-width: 991.98px) {
         .header-menu .dropdown-menu {
           display: none;
@@ -298,6 +297,33 @@
         margin: 1em 0;
         font-weight: 700;
         color: #000; }
+  .header-nav-item {
+    font-size: .875rem; }
+    .header-nav-item:not(:first-child) {
+      margin-left: 1.4em; }
+  .header-nav-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    line-height: 1.2; }
+    .header-nav-link::before {
+      min-width: 30px;
+      height: 30px;
+      margin-right: .3em;
+      content: '';
+      border-radius: 50%;
+      background-color: #fec803;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 60% auto; }
+    .header-nav-link._comparison::before {
+      background-image: url("../i/comparison.svg"); }
+    .header-nav-link._favorites::before {
+      background-image: url("../i/favorites.svg"); }
 
 .logo {
   display: inline-block; }

@@ -25,23 +25,31 @@
                     </div>
                 </a>
             </div>
-            <div class="d-none d-md-block col-md-5">
+            <div class="d-none d-md-block col-md-5 col-lg-4">
                 <div class="header-search">
                     <form action="<?php echo esc_url( home_url( '/' ) ) ?>" method="get" role="search">
                         <input class="header-search-control form-control" type="text" name="s" placeholder="Поиск по сайту" value="">
                     </form>
                 </div>
             </div>
-            <?php if ( ! is_front_page() ) : ?>
-                <div class="d-flex d-lg-none justify-content-end col-3 col-md navbar-light">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Раскрыть меню"><span class="navbar-toggler-icon"></span></button>
-                </div>
-            <?php endif; ?>
+            <div class="d-none d-lg-block col-lg-4">
+                <?php get_template_part( 'template-parts/header/nav' ); ?>
+            </div>
+            <div class="d-flex d-lg-none justify-content-end col-3 col-md navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Раскрыть меню"><span class="navbar-toggler-icon"></span></button>
+            </div>
         </div>
     </div>
 </header>
 
 <?php if ( is_front_page() ) : ?>
+    <nav class="header-menu-container navbar navbar-light">
+        <div class="container">
+            <div id="main-navbar" class="collapse navbar-collapse">
+                <?php get_template_part( 'template-parts/header/nav' ); ?>
+            </div>
+        </div>
+    </nav>
 
     <?php if ( function_exists('the_field') ) : ?>
 
@@ -55,14 +63,19 @@
 
     <nav class="header-menu-container navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <?php wp_nav_menu( array(
-                'theme_location'  => 'cb_header_menu',
-                'menu_class'      => 'header-menu navbar-nav justify-content-between',
-                'item_spacing'    => 'discard',
-                'container_id'    => 'main-navbar',
-                'container_class' => 'collapse navbar-collapse',
-                'walker'          => new bs4navwalker(),
-            ) ); ?>
+            <div id="main-navbar" class="collapse navbar-collapse">
+                <?php wp_nav_menu( array(
+                    'theme_location'  => 'cb_header_menu',
+                    'menu_class'      => 'header-menu navbar-nav justify-content-between',
+                    'item_spacing'    => 'discard',
+                    'container'       => false,
+                    'walker'          => new bs4navwalker(),
+                ) ); ?>
+
+                <div class="d-lg-none">
+                    <?php get_template_part( 'template-parts/header/nav' ); ?>
+                </div>
+            </div>
         </div>
     </nav>
 
