@@ -40,6 +40,70 @@
 				-webkit-overflow-scrolling: touch;
 			}
 		}
+
+		ul,
+		ol {
+			padding-left: $grid-gutter-width * .667;
+
+			li {
+				position: relative;
+				list-style: none;
+
+				&::before {
+					display: block;
+					position: absolute;
+					left: 0;
+				}
+			}
+		}
+
+		ul {
+			li {
+				margin: .3em 0;
+				padding-left: $grid-gutter-width * .4;
+
+				&::before {
+					$size: 5px;
+
+					top: .6em;
+					width: $size;
+					height: $size;
+					content: '';
+					background-color: $blue;
+				}
+			}
+		}
+
+		ol {
+			counter-reset: ol-list;
+
+			li {
+				margin: 1.5em 0;
+				padding-left: $grid-gutter-width * 1.6;
+
+				&::before {
+					$size: $grid-gutter-width;
+
+					top: -.2em;
+					width: $size;
+					height: $size;
+					font: {
+						size: 1.125rem;
+						weight: $font-weight-medium;
+					}
+					text-align: center;
+					color: lighten($blue, 30%);
+					counter-increment: ol-list;
+					content: counter(ol-list);
+					border: {
+						width: 2px;
+						style: solid;
+						color: currentColor;
+						radius: 50%;
+					}
+				}
+			}
+		}
 	}
 
 	&-social {
@@ -163,70 +227,6 @@
 			&:hover {
 				color: $gray-900;
 				border-color: $primary;
-			}
-		}
-	}
-
-	ul,
-	ol {
-		padding-left: $grid-gutter-width * .667;
-
-		li {
-			position: relative;
-			list-style: none;
-
-			&::before {
-				display: block;
-				position: absolute;
-				left: 0;
-			}
-		}
-	}
-
-	ul {
-		li {
-			margin: .3em 0;
-			padding-left: $grid-gutter-width * .4;
-
-			&::before {
-				$size: 5px;
-
-				top: .6em;
-				width: $size;
-				height: $size;
-				content: '';
-				background-color: $blue;
-			}
-		}
-	}
-
-	ol {
-		counter-reset: ol-list;
-
-		li {
-			margin: 1.5em 0;
-			padding-left: $grid-gutter-width * 1.6;
-
-			&::before {
-				$size: $grid-gutter-width;
-
-				top: -.2em;
-				width: $size;
-				height: $size;
-				font: {
-					size: 1.125rem;
-					weight: $font-weight-medium;
-				}
-				text-align: center;
-				color: lighten($blue, 30%);
-				counter-increment: ol-list;
-				content: counter(ol-list);
-				border: {
-					width: 2px;
-					style: solid;
-					color: currentColor;
-					radius: 50%;
-				}
 			}
 		}
 	}

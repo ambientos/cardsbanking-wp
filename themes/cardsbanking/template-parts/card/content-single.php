@@ -8,6 +8,10 @@ $is_show_author         = 'yes' == root_get_option( 'structure_single_author' );
 ?>
 
 <div class="entry-content" itemprop="articleBody">
+    <?php get_template_part( 'template-parts/card/single/intro' ); ?>
+
+    <?php get_template_part( 'template-parts/card/single/chars' ); ?>
+
     <?php
 
         do_action( 'root_single_before_the_content' );

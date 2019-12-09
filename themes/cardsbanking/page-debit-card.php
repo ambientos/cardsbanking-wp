@@ -20,11 +20,11 @@ $breadcrumbs_hide = 'checked' == get_post_meta( $post->ID, 'breadcrumbs_hide', t
 
 <div class="container">
     <main>
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/Article">
-            <?php get_template_part( 'template-parts/card/title', 'single' ); ?>
+        <article id="post-<?php the_ID(); ?>" <?php post_class('entry'); ?> itemscope itemtype="http://schema.org/Article">
+            <?php get_template_part( 'template-parts/card/single/title' ); ?>
 
             <div class="row">
-                <div class="main entry col-lg-8">
+                <div class="main col-lg-8">
                     <?php
                         the_post();
 

@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CardsBanking Theme 1.0\n"
-"POT-Creation-Date: 2019-12-09 05:43+0500\n"
-"PO-Revision-Date: 2019-12-09 05:45+0500\n"
+"POT-Creation-Date: 2019-12-09 19:35+0500\n"
+"PO-Revision-Date: 2019-12-09 19:36+0500\n"
 "Last-Translator: Anton Grakhov <ant.grakhov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -190,16 +190,44 @@ msgstr "Актуальные обзоры банковских продукто�
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/card/content-single.php:18 template-parts/content-page.php:47
+#: template-parts/card/content-single.php:22 template-parts/content-page.php:47
 #: template-parts/content-single.php:61
 msgid "Pages:"
 msgstr ""
 
-#: template-parts/card/title-single.php:27
+#: template-parts/card/single/chars.php:1
+msgid "Characteristics"
+msgstr "Характеристика"
+
+#: template-parts/card/single/chars.php:75
+#, php-format
+msgid "%s year"
+msgid_plural "%s years"
+msgstr[0] "%s год"
+msgstr[1] "%s года"
+msgstr[2] "%s лет"
+
+#: template-parts/card/single/chars.php:76
+#, php-format
+msgid "%s month"
+msgid_plural "%s months"
+msgstr[0] "%s месяц"
+msgstr[1] "%s месяца"
+msgstr[2] "%s месяцев"
+
+#: template-parts/card/single/chars.php:84
+msgid "Validity"
+msgstr "Срок действия"
+
+#: template-parts/card/single/intro.php:10
+msgid "Introduction"
+msgstr "Описание"
+
+#: template-parts/card/single/title.php:27
 msgid "Order Card"
 msgstr "Оформить карту"
 
-#: template-parts/card/title-single.php:28
+#: template-parts/card/single/title.php:28
 msgid "Compare"
 msgstr "Сравнить"
 
