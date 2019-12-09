@@ -2426,10 +2426,13 @@ fieldset:disabled a.btn {
   .btn-block + .btn-block {
     margin-top: 0.5rem; }
 
-input[type="submit"].btn-block,
-input[type="reset"].btn-block,
-input[type="button"].btn-block {
-  width: 100%; }
+.btn-contrast {
+  color: #fec803;
+  border-color: #fec803;
+  background-color: #fff; }
+  .btn-contrast:hover {
+    border-color: #ffe99b;
+    background-color: #ffe99b; }
 
 .fade {
   -webkit-transition: opacity 0.15s linear;

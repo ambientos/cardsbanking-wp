@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CardsBanking Theme 1.0\n"
-"POT-Creation-Date: 2019-12-08 02:25+0500\n"
-"PO-Revision-Date: 2019-12-08 02:26+0500\n"
+"POT-Creation-Date: 2019-12-09 05:43+0500\n"
+"PO-Revision-Date: 2019-12-09 05:45+0500\n"
 "Last-Translator: Anton Grakhov <ant.grakhov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -113,21 +113,69 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:104
+#: functions.php:106
 msgid "Footer Menu List"
 msgstr ""
 
-#: functions.php:195
+#: functions.php:197
 msgid "Card Ratings"
 msgstr "Рейтинги карт"
 
-#: header.php:38
-msgid "Сard comparison"
-msgstr "Сравнение карт"
+#: inc/card_functions.php:7 inc/card_functions.php:8
+msgid "Service cost"
+msgstr "Стоимость обслуживания"
 
-#: header.php:41
-msgid "Favorites"
-msgstr "Избранное"
+#: inc/card_functions.php:12 inc/card_functions.php:13
+msgid "Requirements"
+msgstr "Требования"
+
+#: inc/card_functions.php:17 inc/card_functions.php:18
+msgid "Cashback"
+msgstr "Кэшбэк"
+
+#: inc/card_functions.php:22
+msgid "Miles"
+msgstr "Мили"
+
+#: inc/card_functions.php:23
+msgid "Earning miles"
+msgstr "Начисление миль"
+
+#: inc/card_functions.php:27
+msgid "Bonuses for purchases"
+msgstr "Бонусы за покупки"
+
+#: inc/card_functions.php:28
+msgid "Bonuses"
+msgstr "Бонусы"
+
+#: inc/card_functions.php:32 inc/card_functions.php:33
+msgid "Percent on balance"
+msgstr "Процент на остаток"
+
+#: inc/card_functions.php:37 inc/card_functions.php:38
+msgid "Overdraft"
+msgstr "Овердрафт"
+
+#: inc/card_functions.php:42 inc/card_functions.php:43
+msgid "Cash withdrawal"
+msgstr "Снятие наличных"
+
+#: inc/card_functions.php:47 inc/card_functions.php:48
+msgid "Percent rate"
+msgstr "Процентная ставка"
+
+#: inc/card_functions.php:52
+msgid "Limit"
+msgstr "Лимит"
+
+#: inc/card_functions.php:53
+msgid "Credit limit"
+msgstr "Кредитный лимит"
+
+#: inc/card_functions.php:57 inc/card_functions.php:58
+msgid "Grace period"
+msgstr "Льготный период"
 
 #: index.php:6
 msgid "New Posts"
@@ -142,10 +190,18 @@ msgstr "Актуальные обзоры банковских продукто�
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/card/content-card.php:44 template-parts/content-page.php:47
+#: template-parts/card/content-single.php:18 template-parts/content-page.php:47
 #: template-parts/content-single.php:61
 msgid "Pages:"
 msgstr ""
+
+#: template-parts/card/title-single.php:27
+msgid "Order Card"
+msgstr "Оформить карту"
+
+#: template-parts/card/title-single.php:28
+msgid "Compare"
+msgstr "Сравнить"
 
 #: template-parts/content-page.php:59 template-parts/content-single.php:75
 msgid "Rating"
@@ -166,6 +222,14 @@ msgstr ""
 #: template-parts/content-single.php:129
 msgid "Like this post? Please rate and share to your friends:"
 msgstr "Понравилась статья? Оцените её и поделитесь с друзьями:"
+
+#: template-parts/header/nav.php:3
+msgid "Сard comparison"
+msgstr "Сравнение карт"
+
+#: template-parts/header/nav.php:6
+msgid "Favorites"
+msgstr "Избранное"
 
 #: template-parts/related-posts.php:98
 msgid "Related articles"

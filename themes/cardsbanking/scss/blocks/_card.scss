@@ -1,0 +1,59 @@
+.card {
+	&-single {
+		&-thumb {
+			max-width: 315px;
+		}
+
+		&-buttons {
+			margin-top: 2em;
+		}
+	}
+
+	&-option {
+		&-item {
+			&:not(:last-child) {
+				margin-bottom: .4em;
+			}
+
+			&::before {
+				content: '';
+				border-radius: 50%;
+				background: {
+					color: lighten($primary, 30%);
+					repeat: no-repeat;
+					position: 50% 50%;
+					size: 60% auto;
+				}
+			}
+
+			@each $icon in $card-option-icons {
+				&._#{$icon}::before {
+					background-image: url('#{$img-dir}card/#{$icon}.svg');
+				}
+			}
+
+			&._single {
+				font: {
+					size: .875rem;
+					weight: $font-weight-light;
+				}
+
+				&::before {
+					$size: 2.4em;
+
+					min-width: $size;
+					min-height: $size;
+					margin-right: 1em;
+				}
+
+				b {
+					margin-left: .5em;
+					font: {
+						size: 1.125rem;
+						weight: $font-weight-medium;
+					}
+				}
+			}
+		}
+	}
+}

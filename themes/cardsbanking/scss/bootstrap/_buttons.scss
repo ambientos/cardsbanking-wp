@@ -127,11 +127,20 @@ fieldset:disabled a.btn {
   }
 }
 
-// Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  &.btn-block {
-    width: 100%;
+
+//
+// Contrast
+//
+
+.btn-contrast {
+  color: $primary;
+  border-color: $primary;
+  background-color: $white;
+
+  @include hover {
+    $bg-color: lighten($primary, 30%);
+
+    border-color: $bg-color;
+    background-color: $bg-color;
   }
 }

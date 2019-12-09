@@ -5,14 +5,11 @@
  * Template Post Type: cb_card
  */
 
+set_query_var( 'card_type', 'debit' );
+
 get_header();
 
-$is_show_thumb = ( 'yes' == root_get_option( 'structure_single_thumb' ) ? true : false );
-
-$thumb_hide       = 'checked' == get_post_meta( $post->ID, 'thumb_hide', true );
 $breadcrumbs_hide = 'checked' == get_post_meta( $post->ID, 'breadcrumbs_hide', true );
-$h1_hide          = 'checked' == get_post_meta( $post->ID, 'h1_hide', true );
-$comments_hide    = 'checked' == get_post_meta( $post->ID, 'comments_hide', true );
 ?>
 
 <?php if ( ! $breadcrumbs_hide ) : ?>
@@ -22,17 +19,23 @@ $comments_hide    = 'checked' == get_post_meta( $post->ID, 'comments_hide', true
 <?php endif; ?>
 
 <div class="container">
-    <div class="row">
-        <main class="main col-lg-8">
-            <?php
-                the_post();
+    <main>
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/Article">
+            <?php get_template_part( 'template-parts/card/title', 'single' ); ?>
 
-                get_template_part( 'template-parts/card/content', 'single' );
-            ?>
-        </main>
+            <div class="row">
+                <div class="main entry col-lg-8">
+                    <?php
+                        the_post();
 
-        <?php get_sidebar(); ?>
-    </div>
+                        get_template_part( 'template-parts/card/content', 'single' );
+                    ?>
+                </div>
+
+                <?php get_sidebar(); ?>
+            </div>
+        </article>
+    </main>
 </div>
 
 <?php get_footer(); ?>

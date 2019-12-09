@@ -12,6 +12,8 @@ function cb_setup() {
 		'cb_pages_menu'  => __( 'Pages Menu', 'cardsbanking' ),
 		'cb_footer_menu' => __( 'Footer Menu', 'cardsbanking' ),
 	) );
+
+	add_image_size( 'card-thumb', 315, 199, false );
 }
 
 add_action( 'after_setup_theme', 'cb_setup' );
@@ -91,7 +93,7 @@ function cb_register_buttons_editor( $buttons ) {
 	);
 	return $buttons;
 }
-add_filter( 'mce_buttons_3', 'cb_register_buttons_editor' );
+add_filter( 'mce_buttons', 'cb_register_buttons_editor' );
 
 
 /**
@@ -315,6 +317,13 @@ add_shortcode( 'pages_menu', 'cb_pages_menu_func' );
  */
 
 require 'acf/init.php';
+
+
+/**
+ * Includes
+ */
+
+require 'inc/card_functions.php';
 
 
 /**

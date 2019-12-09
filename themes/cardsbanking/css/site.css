@@ -1062,6 +1062,68 @@ blockquote.danger {
     .promo-item-text:hover {
       color: inherit; }
 
+.card-single-thumb {
+  max-width: 315px; }
+
+.card-single-buttons {
+  margin-top: 2em; }
+
+.card-option-item:not(:last-child) {
+  margin-bottom: .4em; }
+
+.card-option-item::before {
+  content: '';
+  border-radius: 50%;
+  background-color: #ffe99b;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 60% auto; }
+
+.card-option-item._pservice::before {
+  background-image: url("../i/card/pservice.svg"); }
+
+.card-option-item._require::before {
+  background-image: url("../i/card/require.svg"); }
+
+.card-option-item._cashback::before {
+  background-image: url("../i/card/cashback.svg"); }
+
+.card-option-item._miles::before {
+  background-image: url("../i/card/miles.svg"); }
+
+.card-option-item._bonus::before {
+  background-image: url("../i/card/bonus.svg"); }
+
+.card-option-item._pbalance::before {
+  background-image: url("../i/card/pbalance.svg"); }
+
+.card-option-item._odraft::before {
+  background-image: url("../i/card/odraft.svg"); }
+
+.card-option-item._cashw::before {
+  background-image: url("../i/card/cashw.svg"); }
+
+.card-option-item._prate::before {
+  background-image: url("../i/card/prate.svg"); }
+
+.card-option-item._limit::before {
+  background-image: url("../i/card/limit.svg"); }
+
+.card-option-item._grace::before {
+  background-image: url("../i/card/grace.svg"); }
+
+.card-option-item._single {
+  font-size: .875rem;
+  font-weight: 300; }
+  .card-option-item._single::before {
+    min-width: 2.4em;
+    min-height: 2.4em;
+    margin-right: 1em; }
+  .card-option-item._single b {
+    margin-left: .5em;
+    font-size: 1.125rem;
+    font-weight: 500; }
+
 .footer {
   position: relative; }
   .footer-main {
