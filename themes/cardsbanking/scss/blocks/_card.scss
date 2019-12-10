@@ -1,3 +1,17 @@
+%title-with-icon {
+	position: relative;
+
+	&::before {
+		display: block;
+		position: absolute;
+		content: '';
+		background: {
+			repeat: no-repeat;
+			position: 50% 50%;
+		}
+	}
+}
+
 .card {
 	&-single {
 		&-thumb {
@@ -19,45 +33,127 @@
 			background-color: $gray-100;
 		}
 
-		&-chars {
-			&-item {
-				width: 100%;
-				height: 100%;
-				border: 1px solid $border-color;
+		&-box {
+			width: 100%;
+			height: 100%;
+			border: 1px solid $border-color;
 
-				&-wrap {
-					margin-bottom: 1.2em;
+			&-wrap,
+			&-bg {
+				margin-bottom: 1.2em;
+			}
+
+			&-inner {
+				width: 100%;
+				padding: $grid-gutter-width;
+				color: $gray-600;
+
+				b,
+				strong {
+					color: $body-color;
+				}
+			}
+
+			&-bg {
+				padding: 1em $grid-gutter-width;
+
+				&.d-flex {
+					margin-bottom: 0;
+					border: none;
+
+					&._adv,
+					&._dis {
+						position: relative;
+						padding: 3.5em 1em 1em;
+
+						&::before {
+							$size: 1.6em;
+
+							position: absolute;
+							top: 1.2em;
+							left: 1.5em;
+							width: $size;
+							height: $size;
+							content: '';
+							border: 1px solid $body-color;
+							border-radius: 50%;
+							background: {
+								repeat: no-repeat;
+								position: 50% 50%;
+								size: 60% auto;
+							}
+						}
+					}
+
+					@each $icon in $card-advdis-icons {
+						&._#{$icon}::before {
+							background-image: url('#{$img-dir}card/#{$icon}.svg');
+						}
+					}
+				}
+
+				&._gray {
+					background-color: lighten($purple, 47%);
+				}
+
+				&._teal {
+					background-color: lighten($teal, 50%);
+				}
+
+				&._adv {
+					background-color: lighten($green, 50%);
+				}
+
+				&._dis {
+					background-color: lighten($red, 41%);
 				}
 
 				&-inner {
-					width: 100%;
-					padding: $grid-gutter-width $grid-gutter-width $grid-gutter-width $grid-gutter-width * 3;
-					font-size: .875rem;
-					color: $gray-600;
+					font: {
+						size: .875rem;
+						weight: $font-weight-light;
+					}
+				}
+			}
+
+			&-title {
+				margin-bottom: 1em;
+				font-size: 1.125rem;
+				color: $body-color;
+
+				&:not(:first-child) {
+					margin-top: 1.5em;
+				}
+			}
+
+			&-row {
+				&:not(:last-child) {
+					margin-bottom: .5em;
+				}
+			}
+		}
+
+		&-chars {
+			&-item {
+				padding-left: $grid-gutter-width * 2;
+				font-size: .875rem;
+
+				&:not(:first-child) {
+					margin-top: 2.5em;
 				}
 
 				&-title {
-					position: relative;
-					font-size: 1.125rem;
-					color: $body-color;
-
 					&::before {
 						$size: 2em;
 
-						display: block;
-						position: absolute;
 						left: -$size - .5em;
 						top: -.4em;
 						width: $size;
 						height: $size;
-						content: '';
-						opacity: .7;
-						background: {
-							repeat: no-repeat;
-							position: 50% 50%;
-							size: 90% auto;
-						}
+						background-size: 90% auto;
 					}
+
+					@extend %title-with-icon;
 
 					@each $icon in $card-chars-icons {
 						&._#{$icon}::before {
@@ -70,6 +166,10 @@
 					margin-bottom: 0;
 					padding-left: 0 !important;
 
+					&.row {
+						margin-left: 0;
+					}
+
 					&._wide {
 						display: flex;
 						flex-wrap: wrap;
@@ -77,6 +177,22 @@
 						li {
 							width: calc(25% - #{$grid-gutter-width});
 							margin-right: $grid-gutter-width;
+						}
+					}
+
+					&._check {
+						li {
+							padding-left: 1em;
+
+							&::before {
+								top: 0;
+								width: auto !important;
+								height: auto !important;
+								font-size: 130%;
+								line-height: 1;
+								content: '\2714';
+								background-color: transparent !important;
+							}
 						}
 					}
 
@@ -116,6 +232,36 @@
 					}
 				}
 			}
+		}
+
+		&-slist {
+			&-item {
+				&-title {
+					&::before {
+						$size: 2.5em;
+
+						left: -$size - .5em;
+						top: -.6em;
+						width: $size;
+						height: $size;
+						border: $border-width solid lighten($blue, 41%);
+						border-radius: 50%;
+						background-size: 60% auto;
+					}
+
+					@extend %title-with-icon;
+
+					@each $icon in $card-slist-icons {
+						&._#{$icon}::before {
+							background-image: url('#{$img-dir}card/#{$icon}.svg');
+						}
+					}
+				}
+			}
+		}
+
+		&-content {
+			margin-top: 3em;
 		}
 	}
 

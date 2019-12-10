@@ -1,30 +1,36 @@
 <?php
 
-global $big_thumbnail_image;
-
 $is_show_thumb          = 'yes' == root_get_option( 'structure_single_thumb' );
 $is_show_date           = 'yes' == root_get_option( 'structure_single_date' );
 $is_show_author         = 'yes' == root_get_option( 'structure_single_author' );
 ?>
 
 <div class="entry-content" itemprop="articleBody">
-    <?php get_template_part( 'template-parts/card/single/intro' ); ?>
-
-    <?php get_template_part( 'template-parts/card/single/chars' ); ?>
-
     <?php
+
+    get_template_part( 'template-parts/card/single/intro' );
+
+    get_template_part( 'template-parts/card/single/chars' );
+
+    get_template_part( 'template-parts/card/single/conditions' );
+
+    get_template_part( 'template-parts/card/single/withdrawdep' );
+
+    get_template_part( 'template-parts/card/single/bonuses' );
+
+    get_template_part( 'template-parts/card/single/advdis' );
+
+    ?>
+
+    <div class="card-single-content">
+        <?php
 
         do_action( 'root_single_before_the_content' );
         the_content();
         do_action( 'root_single_after_the_content' );
 
-        wp_link_pages( array(
-            'before'        => '<div class="page-links">' . esc_html__( 'Pages:', 'root' ),
-            'after'         => '</div>',
-            'link_before'   => '<span class="page-links__item">',
-            'link_after'    => '</span>',
-        ) );
-    ?>
+        ?>
+    </div>
 </div>
 
 

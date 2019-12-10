@@ -361,9 +361,9 @@ $table-hover-bg:              rgba($black, .075) !default;
 $table-active-bg:             $table-hover-bg !default;
 
 $table-border-width:          $border-width !default;
-$table-border-color:          $border-color !default;
+$table-border-color:          $gray-100 !default;
 
-$table-head-bg:               $gray-200 !default;
+$table-head-bg:               $gray-100 !default;
 $table-head-color:            $gray-700 !default;
 
 $table-dark-color:            $white !default;

@@ -31,7 +31,7 @@ $thumb_hide    = 'checked' == get_post_meta( $post->ID, 'thumb_hide', true );
         </div>
     <?php endif; ?>
 
-    <div class="col-md-5">
+    <div class="col-md-6">
         <?php
 
         $card_options = get_card_options();

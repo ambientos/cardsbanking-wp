@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CardsBanking Theme 1.0\n"
-"POT-Creation-Date: 2019-12-09 19:35+0500\n"
-"PO-Revision-Date: 2019-12-09 19:36+0500\n"
+"POT-Creation-Date: 2019-12-10 18:43+0500\n"
+"PO-Revision-Date: 2019-12-10 18:43+0500\n"
 "Last-Translator: Anton Grakhov <ant.grakhov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -190,16 +190,23 @@ msgstr "Актуальные обзоры банковских продукто�
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/card/content-single.php:22 template-parts/content-page.php:47
-#: template-parts/content-single.php:61
-msgid "Pages:"
-msgstr ""
+#: template-parts/card/single/advdis.php:27
+msgid "Advantages and disadvantages"
+msgstr "Преимущества и недостатки"
+
+#: template-parts/card/single/bonuses.php:55
+msgid "Bonus Programs"
+msgstr "Бонусные программы"
 
 #: template-parts/card/single/chars.php:1
 msgid "Characteristics"
 msgstr "Характеристика"
 
-#: template-parts/card/single/chars.php:75
+#: template-parts/card/single/chars.php:83
+msgid "Validity"
+msgstr "Срок действия"
+
+#: template-parts/card/single/chars.php:88
 #, php-format
 msgid "%s year"
 msgid_plural "%s years"
@@ -207,7 +214,7 @@ msgstr[0] "%s год"
 msgstr[1] "%s года"
 msgstr[2] "%s лет"
 
-#: template-parts/card/single/chars.php:76
+#: template-parts/card/single/chars.php:89
 #, php-format
 msgid "%s month"
 msgid_plural "%s months"
@@ -215,9 +222,36 @@ msgstr[0] "%s месяц"
 msgstr[1] "%s месяца"
 msgstr[2] "%s месяцев"
 
-#: template-parts/card/single/chars.php:84
-msgid "Validity"
-msgstr "Срок действия"
+#: template-parts/card/single/conditions.php:1
+msgid "Conditions"
+msgstr "Условия"
+
+#: template-parts/card/single/conditions.php:28
+#: template-parts/card/single/conditions.php:68
+#, php-format
+msgid "from %s"
+msgstr "от %s"
+
+#: template-parts/card/single/conditions.php:32
+#, php-format
+msgid "to %s"
+msgstr "до %s"
+
+#: template-parts/card/single/conditions.php:70
+#, php-format
+msgid "to %s year"
+msgid_plural "to %s years"
+msgstr[0] "до %s года"
+msgstr[1] "до %s лет"
+msgstr[2] "до %s лет"
+
+#: template-parts/card/single/conditions.php:73
+msgid "Age"
+msgstr "Возраст"
+
+#: template-parts/card/single/conditions.php:126
+msgid "Required documents"
+msgstr "Необходимые документы"
 
 #: template-parts/card/single/intro.php:10
 msgid "Introduction"
@@ -230,6 +264,14 @@ msgstr "Оформить карту"
 #: template-parts/card/single/title.php:28
 msgid "Compare"
 msgstr "Сравнить"
+
+#: template-parts/card/single/withdrawdep.php:1
+msgid "Cash withdrawals and deposits"
+msgstr "Снятие и внесение наличных"
+
+#: template-parts/content-page.php:47 template-parts/content-single.php:61
+msgid "Pages:"
+msgstr ""
 
 #: template-parts/content-page.php:59 template-parts/content-single.php:75
 msgid "Rating"

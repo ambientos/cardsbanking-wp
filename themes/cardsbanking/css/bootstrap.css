@@ -1270,16 +1270,16 @@ mark,
   .tablepress td {
     padding: 0.75rem;
     vertical-align: top;
-    border-top: 1px solid #dee2e6; }
+    border-top: 1px solid #f9f9f9; }
   .table thead th,
   .tablepress thead th {
     font-weight: 500;
     vertical-align: bottom;
-    border-bottom: 2px solid #dee2e6;
+    border-bottom: 2px solid #f9f9f9;
     background-color: #f4f4f4; }
   .table tbody + tbody,
   .tablepress tbody + tbody {
-    border-top: 2px solid #dee2e6; }
+    border-top: 2px solid #f9f9f9; }
 
 .table-sm th,
 .table-sm td {
@@ -1287,12 +1287,12 @@ mark,
 
 .table-bordered,
 .tablepress {
-  border: 1px solid #dee2e6; }
+  border: 1px solid #f9f9f9; }
   .table-bordered th,
   .table-bordered td,
   .tablepress th,
   .tablepress td {
-    border: 1px solid #dee2e6; }
+    border: 1px solid #f9f9f9; }
   .table-bordered thead th,
   .table-bordered thead td,
   .tablepress thead th,
@@ -1459,6 +1459,11 @@ mark,
   .table-hover .table-active:hover > th {
     background-color: rgba(0, 0, 0, 0.075); }
 
+.table .thead-dark,
+.table .thead-light {
+  font-size: .875rem;
+  text-transform: uppercase; }
+
 .table .thead-dark th {
   color: #fff;
   background-color: #343a40;
@@ -1466,8 +1471,8 @@ mark,
 
 .table .thead-light th {
   color: #495057;
-  background-color: #e8e8e8;
-  border-color: #dee2e6; }
+  background-color: #f9f9f9;
+  border-color: #f9f9f9; }
 
 .table-dark {
   color: #fff;
@@ -3693,7 +3698,7 @@ fieldset:disabled a.btn {
     .table-dark td,
     .table-dark thead th,
     .table-dark tbody + tbody {
-      border-color: #dee2e6; }
+      border-color: #f9f9f9; }
   .table .thead-dark th {
     color: inherit;
-    border-color: #dee2e6; } }
+    border-color: #f9f9f9; } }

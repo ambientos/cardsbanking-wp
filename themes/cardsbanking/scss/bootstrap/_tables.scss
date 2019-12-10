@@ -114,6 +114,12 @@
 
 // stylelint-disable-next-line no-duplicate-selectors
 .table {
+  .thead-dark,
+  .thead-light {
+    font-size: .875rem;
+    text-transform: uppercase;
+  }
+
   .thead-dark {
     th {
       color: $table-dark-color;
