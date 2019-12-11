@@ -41,13 +41,6 @@ $thumb_hide    = 'checked' == get_post_meta( $post->ID, 'thumb_hide', true );
             <?php foreach ($card_options['common'] as $card_option_id => $card_option_data) : ?>
                 <?php
 
-                /**
-                 * Not show 'Requirements'
-                 */
-                if ( 'tr' === $card_option_id ) {
-                    continue;
-                }
-
                 $card_option_value = get_post_meta( get_the_ID(), 'c-l-'. $card_option_id, true );
 
                 if ( ! empty($card_option_value) ) :
