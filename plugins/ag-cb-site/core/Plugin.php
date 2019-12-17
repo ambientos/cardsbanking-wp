@@ -22,6 +22,11 @@ class Plugin {
 		 * 'plugins_loaded' action
 		 */
 		add_action( 'plugins_loaded', array( __CLASS__, 'plugins_loaded' ) );
+
+		/**
+		 * Include field type for ACF5
+		 */
+		add_action( 'acf/include_field_types', array( __CLASS__, 'include_field_types' ) );
 	}
 
 	/**
@@ -80,5 +85,12 @@ class Plugin {
 	 */
 	public static function admin_enqueue_scripts() {
 		wp_enqueue_style( 'ag-cb-styles', PLUGIN_URI .'/assets/admin/css/styles.css', false, '1' );
+	}
+
+	/**
+	 * Include field type
+	 */
+	public static function include_field_types() {
+		new Card_Shortcode_ACF_Field();
 	}
 }
