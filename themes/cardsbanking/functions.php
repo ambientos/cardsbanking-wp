@@ -5,13 +5,35 @@
  */
 
 function cb_setup() {
+
+	/**
+	 * Load translations
+	 */
+
 	load_theme_textdomain( 'cardsbanking', get_stylesheet_directory() . '/languages' );
+
+
+	/**
+	 * Add menu slots for output
+	 */
 
 	register_nav_menus( array(
 		'cb_header_menu' => __( 'Header Menu', 'cardsbanking' ),
 		'cb_pages_menu'  => __( 'Pages Menu', 'cardsbanking' ),
 		'cb_footer_menu' => __( 'Footer Menu', 'cardsbanking' ),
 	) );
+
+
+	/**
+	 * Bank thumb
+	 */
+
+	add_image_size( 'bank-thumb', 190, 50, false );
+
+
+	/**
+	 * Card thumb
+	 */
 
 	add_image_size( 'card-thumb', 315, 199, false );
 }

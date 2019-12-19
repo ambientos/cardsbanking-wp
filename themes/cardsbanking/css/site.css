@@ -684,6 +684,9 @@ ul.toc_list {
     font-weight: 400;
     text-transform: none; }
 
+.category-description {
+  margin-bottom: 2.5em; }
+
 .breadcrumbs {
   margin: 2.2em 0 0;
   font-size: .75rem;
@@ -777,11 +780,18 @@ ul.toc_list {
     font-weight: 500; }
 
 .posts-item {
+  width: 100%;
   margin-bottom: 30px;
   padding-bottom: 21px; }
   .posts-item-thumbnail {
     position: relative;
     margin-bottom: 21px; }
+    .posts-item-thumbnail._short {
+      height: 90px;
+      margin-bottom: 0;
+      background-color: #fafafa; }
+      .posts-item-thumbnail._short img {
+        max-height: 100%; }
     .posts-item-thumbnail a {
       display: block; }
   .posts-item-category {
@@ -796,6 +806,13 @@ ul.toc_list {
     margin: 0 21px 0.3em;
     font-weight: 500;
     line-height: 1.2; }
+    .posts-item-title._short {
+      margin-bottom: 0;
+      padding-top: 1.5em;
+      font-size: .875rem;
+      text-align: center;
+      text-transform: uppercase;
+      color: #000; }
     .posts-item-title a {
       color: inherit;
       text-decoration: underline; }

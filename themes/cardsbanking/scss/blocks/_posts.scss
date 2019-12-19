@@ -2,12 +2,23 @@
 	&-item {
 		$padding: $grid-gutter-width * .7;
 
+		width: 100%;
 		margin-bottom: $grid-gutter-width;
 		padding-bottom: $padding;
 
 		&-thumbnail {
 			position: relative;
 			margin-bottom: $padding;
+
+			&._short {
+				height: 90px;
+				margin-bottom: 0;
+				background-color: lighten($gray-100, .5%);
+
+				img {
+					max-height: 100%;
+				}
+			}
 
 			a {
 				display: block;
@@ -30,6 +41,17 @@
 			margin: 0 $padding .3em;
 			font-weight: $font-weight-medium;
 			line-height: 1.2;
+
+			&._short {
+				margin-bottom: 0;
+				padding-top: 1.5em;
+				font-size: .875rem;
+				text: {
+					align: center;
+					transform: uppercase;
+				}
+				color: $body-color;
+			}
 
 			a {
 				color: inherit;
