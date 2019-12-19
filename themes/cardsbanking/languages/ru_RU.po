@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CardsBanking Theme 1.0\n"
-"POT-Creation-Date: 2019-12-10 18:43+0500\n"
-"PO-Revision-Date: 2019-12-10 18:43+0500\n"
+"POT-Creation-Date: 2019-12-19 05:03+0500\n"
+"PO-Revision-Date: 2019-12-19 05:03+0500\n"
 "Last-Translator: Anton Grakhov <ant.grakhov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -190,11 +190,19 @@ msgstr "Актуальные обзоры банковских продукто�
 msgid "Search Results for: %s"
 msgstr ""
 
+#: template-parts/card/loop/item-wide.php:34
+msgid "Order"
+msgstr "Оформить"
+
+#: template-parts/card/loop/item-wide.php:38
+msgid "More"
+msgstr "Подробнее"
+
 #: template-parts/card/single/advdis.php:27
 msgid "Advantages and disadvantages"
 msgstr "Преимущества и недостатки"
 
-#: template-parts/card/single/bonuses.php:55
+#: template-parts/card/single/bonuses.php:59
 msgid "Bonus Programs"
 msgstr "Бонусные программы"
 
@@ -226,18 +234,20 @@ msgstr[2] "%s месяцев"
 msgid "Conditions"
 msgstr "Условия"
 
-#: template-parts/card/single/conditions.php:28
-#: template-parts/card/single/conditions.php:68
+#: template-parts/card/single/conditions.php:29
+#: template-parts/card/single/conditions.php:52
+#: template-parts/card/single/conditions.php:87
 #, php-format
 msgid "from %s"
 msgstr "от %s"
 
-#: template-parts/card/single/conditions.php:32
+#: template-parts/card/single/conditions.php:33
+#: template-parts/card/single/conditions.php:56
 #, php-format
 msgid "to %s"
 msgstr "до %s"
 
-#: template-parts/card/single/conditions.php:70
+#: template-parts/card/single/conditions.php:89
 #, php-format
 msgid "to %s year"
 msgid_plural "to %s years"
@@ -245,11 +255,11 @@ msgstr[0] "до %s года"
 msgstr[1] "до %s лет"
 msgstr[2] "до %s лет"
 
-#: template-parts/card/single/conditions.php:73
+#: template-parts/card/single/conditions.php:92
 msgid "Age"
 msgstr "Возраст"
 
-#: template-parts/card/single/conditions.php:126
+#: template-parts/card/single/conditions.php:145
 msgid "Required documents"
 msgstr "Необходимые документы"
 

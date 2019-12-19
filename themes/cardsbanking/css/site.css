@@ -1251,10 +1251,19 @@ blockquote.danger {
 .card-single-content {
   margin-top: 3em; }
 
+.card-option-list.row._sm {
+  margin-left: -5px;
+  margin-right: -5px; }
+
+.card-option-list._column {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #f9f9f9; }
+
 .card-option-item:not(:last-child) {
   margin-bottom: .4em; }
 
-.card-option-item::before {
+.card-option-item-icon::before {
   content: '';
   border-radius: 50%;
   background-color: #ffe99b;
@@ -1262,50 +1271,118 @@ blockquote.danger {
   background-position: 50% 50%;
   background-size: 60% auto; }
 
-.card-option-item._pservice::before {
+.card-option-item-icon._single::before {
+  min-width: 2.4em;
+  min-height: 2.4em;
+  margin-right: 1em; }
+
+.card-option-item-icon._column._sm::before {
+  min-width: 2.4em;
+  min-height: 2.4em;
+  margin-right: .5em; }
+
+.card-option-item-icon._pservice::before {
   background-image: url("../i/card/pservice.svg"); }
 
-.card-option-item._require::before {
+.card-option-item-icon._require::before {
   background-image: url("../i/card/require.svg"); }
 
-.card-option-item._cashback::before {
+.card-option-item-icon._cashback::before {
   background-image: url("../i/card/cashback.svg"); }
 
-.card-option-item._miles::before {
+.card-option-item-icon._miles::before {
   background-image: url("../i/card/miles.svg"); }
 
-.card-option-item._bonus::before {
+.card-option-item-icon._bonus::before {
   background-image: url("../i/card/bonus.svg"); }
 
-.card-option-item._pbalance::before {
+.card-option-item-icon._pbalance::before {
   background-image: url("../i/card/pbalance.svg"); }
 
-.card-option-item._odraft::before {
+.card-option-item-icon._odraft::before {
   background-image: url("../i/card/odraft.svg"); }
 
-.card-option-item._cashw::before {
+.card-option-item-icon._cashw::before {
   background-image: url("../i/card/cashw.svg"); }
 
-.card-option-item._prate::before {
+.card-option-item-icon._prate::before {
   background-image: url("../i/card/prate.svg"); }
 
-.card-option-item._limit::before {
+.card-option-item-icon._limit::before {
   background-image: url("../i/card/limit.svg"); }
 
-.card-option-item._grace::before {
+.card-option-item-icon._grace::before {
   background-image: url("../i/card/grace.svg"); }
 
-.card-option-item._single {
-  font-size: .875rem;
+.card-option-item._sm, .card-option-item._single {
   font-weight: 300; }
-  .card-option-item._single::before {
-    min-width: 2.4em;
-    min-height: 2.4em;
-    margin-right: 1em; }
+
+.card-option-item._single {
+  font-size: .875rem; }
   .card-option-item._single b {
     margin-left: .5em;
     font-size: 1.125rem;
     font-weight: 500; }
+
+.card-option-item._column b {
+  display: block; }
+
+.card-option-item._sm {
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: .75rem; }
+  .card-option-item._sm b {
+    font-size: .875rem;
+    font-weight: 500; }
+
+.card-item-container._column {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  @media (prefers-reduced-motion: reduce) {
+    .card-item-container._column {
+      -webkit-transition: none;
+      transition: none; } }
+  .card-item-container._column:hover {
+    -webkit-box-shadow: 1px 5px 29px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 5px 29px 0 rgba(0, 0, 0, 0.1); }
+
+.card-item-container._column._sm {
+  position: relative;
+  min-width: 800px;
+  margin-bottom: 2em; }
+  .card-item-container._column._sm::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1em;
+    content: '';
+    border-bottom: 1px solid #e8e8e8; }
+
+.card-item-title._sm {
+  margin-bottom: 1.5em;
+  font-size: .9375rem; }
+
+.card-item-thumb {
+  margin-bottom: 0; }
+  .card-item-thumb._column img {
+    max-width: calc(100% + 15px);
+    margin-right: -15px;
+    padding: 15px;
+    background-color: #f9f9f9; }
+
+.card-item-content._column._sm {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.card-item-order._column {
+  margin-right: 1em; }
+
+.card-item-more a {
+  color: #cccccc; }
+  .card-item-more a::after {
+    margin-left: .5em;
+    content: '\2192'; }
 
 .footer {
   position: relative; }

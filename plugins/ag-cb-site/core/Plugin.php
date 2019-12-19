@@ -27,6 +27,11 @@ class Plugin {
 		 * Include field type for ACF5
 		 */
 		add_action( 'acf/include_field_types', array( __CLASS__, 'include_field_types' ) );
+
+		/**
+		 * Add shortcodes to show Card Item
+		 */
+		add_shortcode( 'card_b', array( __CLASS__, 'card_b_shortcode_func' ) );
 	}
 
 	/**
@@ -92,5 +97,66 @@ class Plugin {
 	 */
 	public static function include_field_types() {
 		new Card_Shortcode_ACF_Field();
+	}
+
+	/**
+	 * Add shortcode to show Card Item
+	 */
+	public static function card_b_shortcode_func( $atts ) {
+		$atts = shortcode_atts( array(
+			'id'   => 0,
+			'size' => 'sm',
+		), $atts );
+
+		/**
+		 * Size
+		 */
+		set_query_var( 'card-size', $atts['size'] );
+
+		/**
+		 * Add custom type additional class
+		 */
+		set_query_var( 'card-type', 'column' );
+
+		/**
+		 * Options with icons
+		 */
+		set_query_var( 'card-icon', 'yes' );
+
+		/**
+		 * Card Post ID
+		 *
+		 * @var integer
+		 */
+		$post_id = (int) $atts['id'];
+
+		/**
+		 * Return nothing if Post ID is zero
+		 */
+		if ( $post_id === 0 ) {
+			return;
+		}
+
+		/**
+		 * Get Card Post data
+		 * @var object WP_Query
+		 */
+		$card_object = new \WP_Query( array(
+			'post_type' => self::CARD_POST_TYPE,
+			'p'         => $post_id,
+		) );
+
+		/**
+		 * Echo content
+		 */
+		ob_start();
+
+		$card_object->the_post();
+
+		get_template_part( 'template-parts/card/loop/item', 'wide' );
+
+		wp_reset_postdata();
+
+		return ob_get_clean();
 	}
 }
