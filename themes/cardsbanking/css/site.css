@@ -780,6 +780,7 @@ ul.toc_list {
     font-weight: 500; }
 
 .posts-item {
+  display: block;
   width: 100%;
   margin-bottom: 30px;
   padding-bottom: 21px; }
