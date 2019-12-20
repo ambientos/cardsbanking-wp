@@ -24,6 +24,11 @@ class Plugin {
 		add_action( 'plugins_loaded', array( __CLASS__, 'plugins_loaded' ) );
 
 		/**
+		 * Add ACF Options page
+		 */
+		add_action('acf/init', array( __CLASS__, 'register_acf_options_pages' ) );
+
+		/**
 		 * Include field type for ACF5
 		 */
 		add_action( 'acf/include_field_types', array( __CLASS__, 'include_field_types' ) );
@@ -90,6 +95,22 @@ class Plugin {
 	 */
 	public static function admin_enqueue_scripts() {
 		wp_enqueue_style( 'ag-cb-styles', PLUGIN_URI .'/assets/admin/css/styles.css', false, '1' );
+	}
+
+	/**
+	 * 1
+	 */
+	public static function register_acf_options_pages() {
+		if ( ! function_exists('acf_add_options_page') ) {
+			return;
+		}
+
+		acf_add_options_page( array(
+			'page_title'  => __( 'Additional Options', TEXT_DOMAIN ),
+			'menu_title'  => __( 'Additional Options', TEXT_DOMAIN ),
+			'menu_slug'   => 'addict-options',
+			'parent_slug' => 'themes.php',
+		));
 	}
 
 	/**
