@@ -335,13 +335,6 @@ add_shortcode( 'pages_menu', 'cb_pages_menu_func' );
 
 
 /**
- * ACF
- */
-
-require 'acf/init.php';
-
-
-/**
  * Includes
  */
 
