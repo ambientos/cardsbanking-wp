@@ -1,9 +1,9 @@
 {
-    "key": "group_5de92e30d46b7",
-    "title": "Поля дебетовой карты",
+    "key": "group_5dfc31330e36d",
+    "title": "Поля кредитной карты",
     "fields": [
         {
-            "key": "field_5de92e30dcfbc",
+            "key": "field_5de8e065189d6",
             "label": "Ссылка на оформление карты",
             "name": "c-order",
             "type": "url",
@@ -19,7 +19,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_5de92e30dcfc8",
+            "key": "field_5de8e0c9189d7",
             "label": "Подробный обзор",
             "name": "c-overview",
             "type": "url",
@@ -35,7 +35,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_5df8e55bc22c4",
+            "key": "field_5df8f6a736117",
             "label": "Шорткоды",
             "name": "shortcodes",
             "type": "card_shortcodes",
@@ -49,7 +49,7 @@
             }
         },
         {
-            "key": "field_5de92e30dcfd2",
+            "key": "field_5de867a7b3b30",
             "label": "Основные характеристики",
             "name": "",
             "type": "accordion",
@@ -66,7 +66,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5de92e30dcfe0",
+            "key": "field_5de869fd2ba17",
             "label": "Краткий заголовок для карточки",
             "name": "c-s",
             "type": "text",
@@ -85,7 +85,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd002",
+            "key": "field_5de86d419d919",
             "label": "Кратко",
             "name": "",
             "type": "tab",
@@ -101,9 +101,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_5de92e30dd00e",
-            "label": "Процент на остаток",
-            "name": "c-s-p",
+            "key": "field_5de86e579d91a",
+            "label": "Процентная ставка",
+            "name": "c-s-ps",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -120,9 +120,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd018",
-            "label": "Снятие наличных",
-            "name": "c-s-ca",
+            "key": "field_5de86e885ba55",
+            "label": "Лимит",
+            "name": "c-s-l",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -139,9 +139,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd023",
-            "label": "Овердрафт",
-            "name": "c-s-od",
+            "key": "field_5de86ea65ba56",
+            "label": "Льготный период",
+            "name": "c-s-lp",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -158,7 +158,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd02e",
+            "key": "field_5de86feb5ba57",
             "label": "Стоимость обслуживания",
             "name": "c-s-po",
             "type": "text",
@@ -177,7 +177,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd039",
+            "key": "field_5de8701e5ba58",
             "label": "Требования",
             "name": "c-s-tr",
             "type": "text",
@@ -196,7 +196,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd044",
+            "key": "field_5de8702c5ba59",
             "label": "Кэшбэк",
             "name": "c-s-cb",
             "type": "text",
@@ -215,7 +215,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd04e",
+            "key": "field_5de8703e5ba5a",
             "label": "Мили",
             "name": "c-s-m",
             "type": "text",
@@ -234,7 +234,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd059",
+            "key": "field_5de870575ba5b",
             "label": "Развернуто",
             "name": "",
             "type": "tab",
@@ -250,9 +250,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_5de92e30dd064",
-            "label": "Процент на остаток",
-            "name": "c-l-p",
+            "key": "field_5de870905ba5c",
+            "label": "Процентная ставка",
+            "name": "c-l-ps",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -269,9 +269,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd06f",
-            "label": "Снятие наличных",
-            "name": "c-l-ca",
+            "key": "field_5de870b15ba5d",
+            "label": "Лимит",
+            "name": "c-l-l",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -288,9 +288,9 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd07a",
-            "label": "Овердрафт",
-            "name": "c-l-od",
+            "key": "field_5de870c15ba5e",
+            "label": "Льготный период",
+            "name": "c-l-lp",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -307,7 +307,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd085",
+            "key": "field_5de870cb5ba5f",
             "label": "Стоимость обслуживания",
             "name": "c-l-po",
             "type": "text",
@@ -326,7 +326,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd090",
+            "key": "field_5de870e35ba60",
             "label": "Требования",
             "name": "c-l-tr",
             "type": "text",
@@ -345,7 +345,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd09a",
+            "key": "field_5de870ef5ba61",
             "label": "Кэшбэк",
             "name": "c-l-cb",
             "type": "text",
@@ -364,7 +364,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd0a5",
+            "key": "field_5de871005ba62",
             "label": "Мили",
             "name": "c-l-m",
             "type": "text",
@@ -383,7 +383,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd0b0",
+            "key": "field_5de8710f5ba63",
             "label": "Бонусы за покупки",
             "name": "c-l-b",
             "type": "text",
@@ -402,7 +402,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_5de92e30dd0bb",
+            "key": "field_5de86a4421257",
             "label": "Подробные характеристики",
             "name": "",
             "type": "accordion",
@@ -419,7 +419,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5de92e30dd0c6",
+            "key": "field_5de872353ee47",
             "label": "Вводный блок",
             "name": "",
             "type": "tab",
@@ -435,7 +435,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5de92e30dd0d0",
+            "key": "field_5de872573ee48",
             "label": "Вывести на странице",
             "name": "c-v-c",
             "type": "true_false",
@@ -454,7 +454,7 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_5de92e30dd0db",
+            "key": "field_5de86a7021258",
             "label": "Текст вводного блока",
             "name": "c-t1",
             "type": "wysiwyg",
@@ -463,7 +463,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5de92e30dd0d0",
+                        "field": "field_5de872573ee48",
                         "operator": "==",
                         "value": "1"
                     }
@@ -481,7 +481,7 @@
             "delay": 0
         },
         {
-            "key": "field_5de92e30dd0e6",
+            "key": "field_5de872ae808fe",
             "label": "Характеристика",
             "name": "",
             "type": "tab",
@@ -497,7 +497,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5de92e30dd0f0",
+            "key": "field_5de8761ea8988",
             "label": "Срок действия (число)",
             "name": "c-h-pdn",
             "type": "number",
@@ -518,7 +518,7 @@
             "step": ""
         },
         {
-            "key": "field_5de92e30dd0fb",
+            "key": "field_5de8770897cdf",
             "label": "Срок действия (тип)",
             "name": "c-h-pdt",
             "type": "select",
@@ -543,7 +543,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_5de92e30dd105",
+            "key": "field_5de872de808ff",
             "label": "Платёжная система",
             "name": "c-h-ps",
             "type": "select",
@@ -597,7 +597,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_5de92e30dd110",
+            "key": "field_5de8766ea8989",
             "label": "Функции",
             "name": "c-h-f",
             "type": "select",
@@ -630,7 +630,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_5de92e30dd11b",
+            "key": "field_5de877c682331",
             "label": "Валюта",
             "name": "c-h-cy",
             "type": "select",
@@ -657,7 +657,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_5de92e30dd125",
+            "key": "field_5de8781682332",
             "label": "Зона действия",
             "name": "c-h-z",
             "type": "select",
@@ -682,7 +682,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_5de92e30dd130",
+            "key": "field_5de8e1fb212a1",
             "label": "Стоимость выпуска",
             "name": "c-h-pr",
             "type": "group",
@@ -697,7 +697,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5de92e3121dd0",
+                    "key": "field_5de8e32a212a2",
                     "label": "Бесплатно",
                     "name": "c-h-pr-f",
                     "type": "true_false",
@@ -716,7 +716,7 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_5de92e3121ddf",
+                    "key": "field_5de8e344212a3",
                     "label": "Цена",
                     "name": "c-h-pr-p",
                     "type": "text",
@@ -725,7 +725,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_5de92e3121dd0",
+                                "field": "field_5de8e32a212a2",
                                 "operator": "!=",
                                 "value": "1"
                             }
@@ -745,7 +745,7 @@
             ]
         },
         {
-            "key": "field_5de92e312668f",
+            "key": "field_5de8e4855715b",
             "label": "Стоимость обслуживания",
             "name": "c-h-pc",
             "type": "group",
@@ -760,7 +760,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5de92e3128375",
+                    "key": "field_5de8e5295715c",
                     "label": "Бесплатно",
                     "name": "c-h-pc-f",
                     "type": "true_false",
@@ -768,7 +768,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "18",
                         "class": "",
                         "id": ""
                     },
@@ -779,7 +779,7 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_5de92e3128382",
+                    "key": "field_5de8e5765715d",
                     "label": "Стоимость",
                     "name": "c-h-pc-r",
                     "type": "repeater",
@@ -788,14 +788,14 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_5de92e3128375",
+                                "field": "field_5de8e5295715c",
                                 "operator": "!=",
                                 "value": "1"
                             }
                         ]
                     ],
                     "wrapper": {
-                        "width": "50",
+                        "width": "82",
                         "class": "",
                         "id": ""
                     },
@@ -806,7 +806,7 @@
                     "button_label": "",
                     "sub_fields": [
                         {
-                            "key": "field_5de92e312b23b",
+                            "key": "field_5de8e5945715e",
                             "label": "Цена",
                             "name": "c-h-pc-rp",
                             "type": "text",
@@ -825,7 +825,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5de92e312b248",
+                            "key": "field_5de8e6415715f",
                             "label": "Срок",
                             "name": "c-h-pc-rs",
                             "type": "select",
@@ -852,38 +852,11 @@
                             "placeholder": ""
                         }
                     ]
-                },
-                {
-                    "key": "field_5de92feee25a7",
-                    "label": "Условие бесплатного обслуживания",
-                    "name": "c-h-pc-ft",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5de92e3128375",
-                                "operator": "==",
-                                "value": "1"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
                 }
             ]
         },
         {
-            "key": "field_5de92e313153d",
+            "key": "field_5de8e7f84c97a",
             "label": "SMS-уведомления",
             "name": "c-h-sms",
             "type": "group",
@@ -898,7 +871,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5de92e3132db3",
+                    "key": "field_5de8e8264c97b",
                     "label": "Бесплатно",
                     "name": "c-h-sms-f",
                     "type": "true_false",
@@ -917,7 +890,7 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_5de92e3132dc1",
+                    "key": "field_5de8e8f64c97d",
                     "label": "Цена",
                     "name": "c-h-sms-p",
                     "type": "text",
@@ -926,7 +899,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_5de92e3132db3",
+                                "field": "field_5de8e8264c97b",
                                 "operator": "!=",
                                 "value": "1"
                             }
@@ -944,7 +917,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5de92e3132dcc",
+                    "key": "field_5de8e9b44c97e",
                     "label": "Срок",
                     "name": "c-h-sms-s",
                     "type": "select",
@@ -953,7 +926,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_5de92e3132db3",
+                                "field": "field_5de8e8264c97b",
                                 "operator": "!=",
                                 "value": "1"
                             }
@@ -981,7 +954,7 @@
             ]
         },
         {
-            "key": "field_5de92e3138fef",
+            "key": "field_5de8ec2674aae",
             "label": "Онлайн-банк",
             "name": "c-h-ob",
             "type": "group",
@@ -996,7 +969,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5de92e313b2ed",
+                    "key": "field_5de8ece474aaf",
                     "label": "Бесплатно",
                     "name": "c-h-ob-f",
                     "type": "true_false",
@@ -1015,7 +988,7 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_5de92e313b2fd",
+                    "key": "field_5de8ecf974ab0",
                     "label": "Цена",
                     "name": "c-h-ob-p",
                     "type": "text",
@@ -1024,7 +997,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_5de92e313b2ed",
+                                "field": "field_5de8ece474aaf",
                                 "operator": "!=",
                                 "value": "1"
                             }
@@ -1042,7 +1015,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5de92e313b30a",
+                    "key": "field_5de8ed1e74ab1",
                     "label": "Срок",
                     "name": "c-h-ob-s",
                     "type": "select",
@@ -1051,7 +1024,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_5de92e313b2ed",
+                                "field": "field_5de8ece474aaf",
                                 "operator": "!=",
                                 "value": "1"
                             }
@@ -1079,7 +1052,7 @@
             ]
         },
         {
-            "key": "field_5de92e3142624",
+            "key": "field_5de8f100cc5bc",
             "label": "Условия",
             "name": "",
             "type": "tab",
@@ -1095,7 +1068,222 @@
             "endpoint": 0
         },
         {
-            "key": "field_5de92e3143aeb",
+            "key": "field_5def97f01f800",
+            "label": "Условия кредита по карте",
+            "name": "c-co-c",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5def97f01f807",
+                    "label": "Процент по кредиту",
+                    "name": "c-co-c-p",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5def97f01f808",
+                    "label": "Процент от",
+                    "name": "c-co-c-pf",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5def97f01f807",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "%",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5def97f01f809",
+                    "label": "Процент до",
+                    "name": "c-co-c-pt",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5def97f01f807",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "%",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5def97f01f80a",
+                    "label": "Льготный период",
+                    "name": "c-co-c-gp",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5def97f01f80b",
+                    "label": "Количество",
+                    "name": "c-co-c-gpn",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5def97f01f80a",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 100,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "дней без %",
+                    "min": 1,
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5def97f01f80c",
+                    "label": "Кредитный лимит",
+                    "name": "c-co-c-l",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5def97f01f80d",
+                    "label": "Кредитный лимит от",
+                    "name": "c-co-c-lf",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5def97f01f80c",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "руб.",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5def97f01f80e",
+                    "label": "Кредитный лимит до",
+                    "name": "c-co-c-lt",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5def97f01f80c",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "руб.",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5de8f1b1cc5bd",
             "label": "Условия получения",
             "name": "c-co-g",
             "type": "group",
@@ -1110,7 +1298,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5de92e31459e9",
+                    "key": "field_5de8fb1a9f64b",
                     "label": "Возраст от",
                     "name": "c-co-g-af",
                     "type": "text",
@@ -1129,7 +1317,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5de92e31459f3",
+                    "key": "field_5de8fb4e9f64c",
                     "label": "Возраст до",
                     "name": "c-co-g-at",
                     "type": "text",
@@ -1148,7 +1336,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5de92e31459fe",
+                    "key": "field_5de8fb7560a98",
                     "label": "Гражданство",
                     "name": "c-co-g-gr",
                     "type": "select",
@@ -1174,7 +1362,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_5de92e3145a08",
+                    "key": "field_5de8fbc660a99",
                     "label": "Регистрация в городе выдачи карты",
                     "name": "c-co-g-ci",
                     "type": "select",
@@ -1200,7 +1388,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_5de92e3145a1c",
+                    "key": "field_5de8fc6432c85",
                     "label": "Документы",
                     "name": "c-co-g-dt",
                     "type": "select",
@@ -1226,7 +1414,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_5de92e3145a27",
+                    "key": "field_5de8fc9832c86",
                     "label": "Доставка и получение",
                     "name": "c-co-g-dp",
                     "type": "select",
@@ -1254,9 +1442,9 @@
             ]
         },
         {
-            "key": "field_5de931d74bd48",
-            "label": "Процент на остаток",
-            "name": "c-co-po",
+            "key": "field_5def98da3fdd2",
+            "label": "Дополнительные требования",
+            "name": "c-co-ad",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1269,68 +1457,9 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5de931d74bd4b",
-                    "label": "Условия по начислению",
-                    "name": "c-co-po-u",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": 0,
-                    "max": 0,
-                    "layout": "table",
-                    "button_label": "",
-                    "sub_fields": [
-                        {
-                            "key": "field_5de932374bd4f",
-                            "label": "Сумма",
-                            "name": "c-co-po-usu",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5de9325a4bd50",
-                            "label": "Cтавка",
-                            "name": "c-co-po-usp",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "%",
-                            "maxlength": ""
-                        }
-                    ]
-                },
-                {
-                    "key": "field_5de931d74bd4e",
-                    "label": "Особенности начисления",
-                    "name": "c-co-po-o",
+                    "key": "field_5def98da3fddb",
+                    "label": "Показать",
+                    "name": "c-co-ad-c",
                     "type": "true_false",
                     "instructions": "",
                     "required": 0,
@@ -1347,16 +1476,16 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_5de969bae0f90",
-                    "label": "Особенности начисления (текст)",
-                    "name": "c-co-po-ot",
+                    "key": "field_5def98da3fddc",
+                    "label": "Дополнительные требования (текст)",
+                    "name": "c-co-ad-ct",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_5de931d74bd4e",
+                                "field": "field_5def98da3fddb",
                                 "operator": "==",
                                 "value": "1"
                             }
@@ -1376,9 +1505,9 @@
             ]
         },
         {
-            "key": "field_5de9336bf8821",
-            "label": "Овердрафт",
-            "name": "c-co-od",
+            "key": "field_5de8fd4de3501",
+            "label": "Условия пользования картой",
+            "name": "c-co-u",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1391,87 +1520,9 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5de9336bf8822",
-                    "label": "Условия предоставления",
-                    "name": "c-co-od-u",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": 0,
-                    "max": 0,
-                    "layout": "table",
-                    "button_label": "",
-                    "sub_fields": [
-                        {
-                            "key": "field_5de9336bf8823",
-                            "label": "Сумма",
-                            "name": "c-co-od-usu",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5de9338ff8826",
-                            "label": "Срок",
-                            "name": "c-co-od-usr",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5de9336bf8824",
-                            "label": "Комиссия",
-                            "name": "c-co-od-uc",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ]
-                },
-                {
-                    "key": "field_5de9336bf8825",
-                    "label": "Особенности пользования",
-                    "name": "c-co-od-o",
+                    "key": "field_5de8fd6ee3502",
+                    "label": "Погашение кредита",
+                    "name": "c-co-u-c",
                     "type": "true_false",
                     "instructions": "",
                     "required": 0,
@@ -1488,16 +1539,108 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_5de96a7af4cce",
-                    "label": "Особенности пользования (текст)",
-                    "name": "c-co-od-ot",
+                    "key": "field_5de8fdcbe259f",
+                    "label": "Погашение кредита (текст)",
+                    "name": "c-co-u-ct",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_5de9336bf8825",
+                                "field": "field_5de8fd6ee3502",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5de8fd86e3503",
+                    "label": "Штрафы",
+                    "name": "c-co-u-p",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5de8fdeee25a1",
+                    "label": "Штрафы (текст)",
+                    "name": "c-co-u-pt",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5de8fd86e3503",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5de8fd9ae3504",
+                    "label": "Особенности",
+                    "name": "c-co-u-o",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5de8fdede25a0",
+                    "label": "Особенности (текст)",
+                    "name": "c-co-u-ot",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5de8fd9ae3504",
                                 "operator": "==",
                                 "value": "1"
                             }
@@ -1517,53 +1660,7 @@
             ]
         },
         {
-            "key": "field_5de92e316e554",
-            "label": "Особенности карты",
-            "name": "c-co-o",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_5dea40dc46fb4",
-            "label": "Особенности карты (текст)",
-            "name": "c-co-ot",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5de92e316e554",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_5de92e31812e8",
+            "key": "field_5de91ab8b4040",
             "label": "Снятия и внесение наличных",
             "name": "",
             "type": "tab",
@@ -1579,7 +1676,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5de92e31832ba",
+            "key": "field_5de922c23a8ee",
             "label": "Снятие наличных с карты",
             "name": "c-ca",
             "type": "group",
@@ -1594,7 +1691,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5de92e3186089",
+                    "key": "field_5de9235b3a8ef",
                     "label": "Типы снятия наличных",
                     "name": "c-ca-t",
                     "type": "repeater",
@@ -1613,7 +1710,7 @@
                     "button_label": "",
                     "sub_fields": [
                         {
-                            "key": "field_5de92e3187ea7",
+                            "key": "field_5de9238c3a8f0",
                             "label": "Тип",
                             "name": "c-ca-tt",
                             "type": "select",
@@ -1639,7 +1736,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_5de92e3187eb4",
+                            "key": "field_5de923de3a8f1",
                             "label": "Процент",
                             "name": "c-ca-tp",
                             "type": "text",
@@ -1658,7 +1755,7 @@
                             "maxlength": ""
                         },
                         {
-                            "key": "field_5de92e3187ebf",
+                            "key": "field_5de9241c3a8f2",
                             "label": "+ фиксированные",
                             "name": "c-ca-tf",
                             "type": "text",
@@ -1679,7 +1776,7 @@
                     ]
                 },
                 {
-                    "key": "field_5de92e318ecd3",
+                    "key": "field_5de924bc0e41e",
                     "label": "Ограничения на снятие",
                     "name": "c-ca-l",
                     "type": "true_false",
@@ -1698,8 +1795,8 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_5de92e3190a96",
-                    "label": "Ограничения в день",
+                    "key": "field_5de924e30e41f",
+                    "label": "В день",
                     "name": "c-ca-ld",
                     "type": "text",
                     "instructions": "",
@@ -1707,7 +1804,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_5de92e318ecd3",
+                                "field": "field_5de924bc0e41e",
                                 "operator": "==",
                                 "value": "1"
                             }
@@ -1725,8 +1822,8 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5de92e31931cc",
-                    "label": "Ограничения в месяц",
+                    "key": "field_5de925520e420",
+                    "label": "В месяц",
                     "name": "c-ca-lm",
                     "type": "text",
                     "instructions": "",
@@ -1734,7 +1831,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_5de92e318ecd3",
+                                "field": "field_5de924bc0e41e",
                                 "operator": "==",
                                 "value": "1"
                             }
@@ -1752,7 +1849,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5de92e3195bc6",
+                    "key": "field_5de925b4f0eb1",
                     "label": "Информация по обналичиванию",
                     "name": "c-ca-ob",
                     "type": "true_false",
@@ -1771,7 +1868,7 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_5de92e3197777",
+                    "key": "field_5de9263925a98",
                     "label": "Информация по обналичиванию (текст)",
                     "name": "c-ca-obt",
                     "type": "wysiwyg",
@@ -1780,7 +1877,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_5de92e3195bc6",
+                                "field": "field_5de925b4f0eb1",
                                 "operator": "==",
                                 "value": "1"
                             }
@@ -1800,7 +1897,7 @@
             ]
         },
         {
-            "key": "field_5de92e319bfdc",
+            "key": "field_5de9267b37629",
             "label": "Пополнение карты",
             "name": "c-cr",
             "type": "group",
@@ -1815,7 +1912,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5de92e319e3f3",
+                    "key": "field_5de926d13762a",
                     "label": "Показать описание",
                     "name": "c-crc",
                     "type": "true_false",
@@ -1834,7 +1931,7 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_5de92e319e403",
+                    "key": "field_5de9271df7101",
                     "label": "Описание",
                     "name": "c-crt",
                     "type": "wysiwyg",
@@ -1843,7 +1940,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_5de92e319e3f3",
+                                "field": "field_5de926d13762a",
                                 "operator": "==",
                                 "value": "1"
                             }
@@ -1863,7 +1960,7 @@
             ]
         },
         {
-            "key": "field_5de92e31a957d",
+            "key": "field_5de928ef4c47c",
             "label": "Бонусные программы",
             "name": "",
             "type": "tab",
@@ -1879,7 +1976,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5de92e31ab555",
+            "key": "field_5de9290c4c47d",
             "label": "Кэшбэк",
             "name": "c-b-c",
             "type": "true_false",
@@ -1898,7 +1995,7 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_5de92e31ad19d",
+            "key": "field_5de92a584c480",
             "label": "Кэшбэк (текст)",
             "name": "c-b-ct",
             "type": "wysiwyg",
@@ -1907,7 +2004,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5de92e31ab555",
+                        "field": "field_5de9290c4c47d",
                         "operator": "==",
                         "value": "1"
                     }
@@ -1925,7 +2022,7 @@
             "delay": 0
         },
         {
-            "key": "field_5de92e31afdec",
+            "key": "field_5de929a14c47f",
             "label": "Скидки",
             "name": "c-b-s",
             "type": "true_false",
@@ -1944,7 +2041,7 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_5de92e31b28fd",
+            "key": "field_5de92a7f4c481",
             "label": "Скидки (текст)",
             "name": "c-b-st",
             "type": "wysiwyg",
@@ -1953,7 +2050,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5de92e31afdec",
+                        "field": "field_5de929a14c47f",
                         "operator": "==",
                         "value": "1"
                     }
@@ -1971,7 +2068,7 @@
             "delay": 0
         },
         {
-            "key": "field_5de92e31b6afc",
+            "key": "field_5de9299e4c47e",
             "label": "Прочее",
             "name": "c-b-p",
             "type": "true_false",
@@ -1990,7 +2087,7 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_5de92e31b871a",
+            "key": "field_5de92a8a4c482",
             "label": "Прочее (текст)",
             "name": "c-b-pt",
             "type": "wysiwyg",
@@ -1999,7 +2096,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5de92e31b6afc",
+                        "field": "field_5de9299e4c47e",
                         "operator": "==",
                         "value": "1"
                     }
@@ -2017,7 +2114,7 @@
             "delay": 0
         },
         {
-            "key": "field_5de92e31ba719",
+            "key": "field_5de92ae1166fa",
             "label": "Преимущества и недостатки",
             "name": "",
             "type": "tab",
@@ -2033,7 +2130,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5de92e31bce5c",
+            "key": "field_5de92aef166fb",
             "label": "Плюсы",
             "name": "c-pl",
             "type": "repeater",
@@ -2052,7 +2149,7 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5de92e31bf5eb",
+                    "key": "field_5de92b03166fc",
                     "label": "Пункт описания",
                     "name": "c-pl-i",
                     "type": "text",
@@ -2073,7 +2170,7 @@
             ]
         },
         {
-            "key": "field_5de92e31c224b",
+            "key": "field_5de92b1f166fd",
             "label": "Минусы",
             "name": "c-ml",
             "type": "repeater",
@@ -2092,7 +2189,7 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_5de92e31c3b1b",
+                    "key": "field_5de92b31166fe",
                     "label": "Пункт описания",
                     "name": "c-ml-i",
                     "type": "text",
@@ -2113,22 +2210,14 @@
             ]
         }
     ],
-    "location": [
-        [
-            {
-                "param": "post_template",
-                "operator": "==",
-                "value": "page-debit-card.php"
-            }
-        ]
-    ],
-    "menu_order": 2,
-    "position": "acf_after_title",
-    "style": "seamless",
+    "location": [],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": 1,
+    "hide_on_screen": [],
+    "active": true,
     "description": "",
-    "modified": 1576805791
+    "modified": 1576808755
 }

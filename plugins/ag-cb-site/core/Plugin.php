@@ -3,10 +3,6 @@
 namespace AG_Cb_Site;
 
 class Plugin {
-	/**
-	 * Card Post Type
-	 */
-	const CARD_POST_TYPE = 'cb_card';
 
 	/**
 	 * Init
@@ -29,6 +25,12 @@ class Plugin {
 		add_action('acf/init', array( __CLASS__, 'register_acf_options_pages' ) );
 
 		/**
+		 * Change local JSON path settings for load/save
+		 */
+		add_filter( 'acf/settings/load_json', array( __CLASS__, 'set_dir_json_for_load' ) );
+		add_filter( 'acf/settings/save_json', array( __CLASS__, 'set_dir_json_for_save' ) );
+
+		/**
 		 * Include field type for ACF5
 		 */
 		add_action( 'acf/include_field_types', array( __CLASS__, 'include_field_types' ) );
@@ -47,7 +49,7 @@ class Plugin {
 		/**
 		 * Card Post Type
 		 */
-		register_post_type( self::CARD_POST_TYPE, array(
+		register_post_type( CARD_POST_TYPE, array(
 			'labels' => array(
 				'name'               => __( 'Cards', TEXT_DOMAIN ),
 				'singular_name'      => __( 'Card', TEXT_DOMAIN ),
@@ -98,7 +100,7 @@ class Plugin {
 	}
 
 	/**
-	 * 1
+	 * Register ACF Option page
 	 */
 	public static function register_acf_options_pages() {
 		if ( ! function_exists('acf_add_options_page') ) {
@@ -111,6 +113,22 @@ class Plugin {
 			'menu_slug'   => 'addict-options',
 			'parent_slug' => 'themes.php',
 		));
+	}
+
+	/**
+	 * Change local JSON settings path for load
+	 */
+	public static function set_dir_json_for_load() {
+		return (array) ACF_LOCAL_JSON_DIR;
+	}
+
+	/**
+	 * Create and change local JSON path settings for save
+	 */
+	public static function set_dir_json_for_save() {
+		wp_mkdir_p( ACF_LOCAL_JSON_DIR );
+
+		return ACF_LOCAL_JSON_DIR;
 	}
 
 	/**
@@ -163,7 +181,7 @@ class Plugin {
 		 * @var object WP_Query
 		 */
 		$card_object = new \WP_Query( array(
-			'post_type' => self::CARD_POST_TYPE,
+			'post_type' => CARD_POST_TYPE,
 			'p'         => $post_id,
 		) );
 

@@ -30,11 +30,33 @@ $plugin_folder_name = 'ag-cb-site';
 
 
 /**
- * Main constants
+ * Text domain
  */
 define( $plugin_prefix . 'TEXT_DOMAIN', 'cbsite' );
+
+
+/**
+ * Plugin folder
+ */
 define( $plugin_prefix . 'PLUGIN_FOLDER', WP_PLUGIN_DIR . '/' . $plugin_folder_name );
+
+
+/**
+ * Plugin URI
+ */
 define( $plugin_prefix . 'PLUGIN_URI', plugins_url( $plugin_folder_name ) );
+
+
+/**
+ * Card Post Type
+ */
+define( $plugin_prefix . 'CARD_POST_TYPE', 'cb_card' );
+
+
+/**
+ * ACF folder for load/save local JSON
+ */
+define( $plugin_prefix . 'ACF_LOCAL_JSON_DIR', WP_PLUGIN_DIR . '/' . $plugin_folder_name . '/acf' );
 
 
 /**
