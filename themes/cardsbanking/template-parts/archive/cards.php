@@ -15,10 +15,10 @@ $cards_query = AG_Cb_Site\Card::get_cards_by_term(
 
 <?php if ( $cards_query->have_posts() ) : ?>
 	<div class="card-wide-list">
-		<?php while ( $cards_query->have_posts() ) : ?>
-			<?php $cards_query->the_post(); ?>
+		<?php
 
-			<?php
+		while ( $cards_query->have_posts() ) :
+			$cards_query->the_post();
 
 			set_query_var( 'card-type', 'column' );
 			set_query_var( 'card-icon', 'yes' );
@@ -26,7 +26,10 @@ $cards_query = AG_Cb_Site\Card::get_cards_by_term(
 
 			get_template_part( 'template-parts/card/loop/item-wide' );
 
-			?>
-		<?php endwhile; ?>
+		endwhile;
+
+		wp_reset_postdata();
+
+		?>
 	</div>
 <?php endif; ?>
