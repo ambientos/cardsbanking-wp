@@ -54,6 +54,12 @@ define( $plugin_prefix . 'CARD_POST_TYPE', 'cb_card' );
 
 
 /**
+ * Card Taxonomy
+ */
+define( $plugin_prefix . 'CARD_TAXONOMY', 'category' );
+
+
+/**
  * ACF folder for load/save local JSON
  */
 define( $plugin_prefix . 'ACF_LOCAL_JSON_DIR', WP_PLUGIN_DIR . '/' . $plugin_folder_name . '/acf' );

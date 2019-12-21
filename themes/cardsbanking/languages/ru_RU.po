@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CardsBanking Theme 1.0\n"
-"POT-Creation-Date: 2019-12-19 05:03+0500\n"
-"PO-Revision-Date: 2019-12-19 05:03+0500\n"
+"POT-Creation-Date: 2019-12-21 03:18+0500\n"
+"PO-Revision-Date: 2019-12-21 03:19+0500\n"
 "Last-Translator: Anton Grakhov <ant.grakhov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -43,9 +43,9 @@ msgstr ""
 msgid "Go to <a href=\"%1$s\">Homepage</a>."
 msgstr ""
 
-#: acf/init.php:13 acf/init.php:14
-msgid "Additional Options"
-msgstr "Дополнительные настройки"
+#: archive.php:25
+msgid "Latest Bank Articles"
+msgstr "Последние статьи о банке"
 
 #: comments.php:18 template-parts/content-single.php:86
 msgid "Comments"
@@ -101,23 +101,23 @@ msgstr "Навигатор по банковским картам"
 msgid "To Top"
 msgstr "Вверх"
 
-#: functions.php:11
+#: functions.php:21
 msgid "Header Menu"
 msgstr ""
 
-#: functions.php:12
+#: functions.php:22
 msgid "Pages Menu"
 msgstr ""
 
-#: functions.php:13
+#: functions.php:23
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:106
+#: functions.php:128
 msgid "Footer Menu List"
 msgstr ""
 
-#: functions.php:197
+#: functions.php:219
 msgid "Card Ratings"
 msgstr "Рейтинги карт"
 
@@ -190,11 +190,29 @@ msgstr "Актуальные обзоры банковских продукто�
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/card/loop/item-wide.php:34
+#: template-parts/archive/banks-type.php:8
+msgid "Debit category"
+msgstr "Дебетовые"
+
+#: template-parts/archive/banks-type.php:9
+msgid "Show all Debit Cards"
+msgstr "Смотреть все дебетовые карты"
+
+#: template-parts/archive/banks-type.php:12
+msgid "Credit category"
+msgstr "Кредитные"
+
+#: template-parts/archive/banks-type.php:13
+msgid "Show all Credit Cards"
+msgstr "Смотреть все кредитные карты"
+
+#: template-parts/card/loop/item-short.php:46
+#: template-parts/card/loop/item-wide.php:46
 msgid "Order"
 msgstr "Оформить"
 
-#: template-parts/card/loop/item-wide.php:38
+#: template-parts/card/loop/item-short.php:52
+#: template-parts/card/loop/item-wide.php:52
 msgid "More"
 msgstr "Подробнее"
 
@@ -267,11 +285,11 @@ msgstr "Необходимые документы"
 msgid "Introduction"
 msgstr "Описание"
 
-#: template-parts/card/single/title.php:27
+#: template-parts/card/single/title.php:33
 msgid "Order Card"
 msgstr "Оформить карту"
 
-#: template-parts/card/single/title.php:28
+#: template-parts/card/single/title.php:35
 msgid "Compare"
 msgstr "Сравнить"
 
@@ -314,3 +332,6 @@ msgstr "Избранное"
 #: template-parts/related-posts.php:98
 msgid "Related articles"
 msgstr ""
+
+#~ msgid "Additional Options"
+#~ msgstr "Дополнительные настройки"

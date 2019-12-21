@@ -16,6 +16,11 @@ $size_class = '_'. get_query_var( 'card-size', 'md' );
 $is_icon = get_query_var( 'card-icon', 'none' );
 
 /**
+ * Limit number options
+ */
+$card_options_limit = get_query_var( 'card-options-limit', 6 );
+
+/**
  * Meta field prefix
  */
 $meta_prefix = 'single' === $type ? 'c-l-' : 'c-s-';
@@ -31,17 +36,10 @@ $type_class = ' _'. $type;
 $parent_class = 'column' === $type ? ' row'. $type_class : $type_class;
 $item_class   = 'column' === $type ? ' col-4'. $type_class : $type_class;
 
-
-
 /**
  * Label type
  */
 $label_type = 'single' === $type ? 'label_long' : 'label_short';
-
-/**
- * Limit number options
- */
-$card_options_limit = get_query_var( 'card-loop-limit', 6 );
 
 /**
  * Get defined card options
@@ -63,7 +61,7 @@ $index = 0;
 
 		$card_option_value = get_post_meta( get_the_ID(), $meta_prefix . $card_option_id, true );
 
-		$addict_condition = 'single' !== $type ? $index < 6 : 1;
+		$addict_condition = 'single' !== $type ? $index < $card_options_limit : 1;
 
 		if ( $addict_condition && ! empty($card_option_value) ) :
 			$index++;

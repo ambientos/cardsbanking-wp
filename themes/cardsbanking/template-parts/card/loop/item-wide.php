@@ -25,7 +25,7 @@ $more_link      = ! empty($more_link_meta) ? $more_link_meta : get_permalink();
 <article class="card-item-container<?php echo esc_attr( $classes ) ?>">
 	<div class="row align-items-center">
 		<figure class="card-item-thumb<?php echo esc_attr( $classes ) ?> col-md-4">
-			<?php the_post_thumbnail( 'card-thumb' ) ?>
+			<?php the_post_thumbnail( 'card-thumb', array( 'class' => 'img-fluid img-block' ) ) ?>
 		</figure>
 
 		<div class="card-item-content<?php echo esc_attr( $classes ) ?> col-md-8">
@@ -41,13 +41,17 @@ $more_link      = ! empty($more_link_meta) ? $more_link_meta : get_permalink();
 			<?php get_template_part( 'template-parts/card/loop/options' ); ?>
 
 			<footer class="card-item-footer<?php echo esc_attr( $classes ) ?> d-flex align-items-center">
-				<div class="card-item-order<?php echo esc_attr( $classes ) ?>">
-					<a href="<?php echo esc_url( $order_link ) ?>" class="btn-primary btn"><?php _e( 'Order', 'cardsbanking' ) ?></a>
-				</div>
+				<?php if ( ! empty($order_link) ) : ?>
+					<div class="card-item-order<?php echo esc_attr( $classes ) ?>">
+						<a href="<?php echo esc_url( $order_link ) ?>" class="btn-primary btn"><?php _e( 'Order', 'cardsbanking' ) ?></a>
+					</div>
+				<?php endif; ?>
 
-				<div class="card-item-more<?php echo esc_attr( $classes ) ?>">
-					<a href="<?php echo esc_url( $more_link ) ?>" class="btn-link btn"><?php _e( 'More', 'cardsbanking' ) ?></a>
-				</div>
+				<?php if ( ! empty($more_link) ) : ?>
+					<div class="card-item-more<?php echo esc_attr( $classes ) ?>">
+						<a href="<?php echo esc_url( $more_link ) ?>" class="btn-link btn"><?php _e( 'More', 'cardsbanking' ) ?></a>
+					</div>
+				<?php endif; ?>
 			</footer>
 		</div>
 	</div>

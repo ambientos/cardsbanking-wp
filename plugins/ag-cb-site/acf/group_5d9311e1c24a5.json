@@ -27,6 +27,25 @@
             "mime_types": ""
         },
         {
+            "key": "field_5dfc43caf4da6",
+            "label": "Страница банка",
+            "name": "c-b",
+            "type": "true_false",
+            "instructions": "Отметьте, если это страница банка",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5d9312dc05653",
             "label": "Описание нижнее",
             "name": "c-d",
@@ -63,5 +82,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1576808774
+    "modified": 1576813612
 }

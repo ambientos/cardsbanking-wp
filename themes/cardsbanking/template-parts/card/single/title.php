@@ -29,7 +29,9 @@ $order_link = get_post_meta( get_the_ID(), 'c-order', true );
 					<?php echo $thumb ?>
 				<?php endif; ?>
 				<div class="card-single-buttons d-flex justify-content-between">
-					<a href="<?php echo esc_url( $order_link ) ?>" class="btn-primary btn"><?php _e( 'Order Card', 'cardsbanking' ) ?></a> 
+					<?php if ( ! empty($order_link) ) : ?>
+						<a href="<?php echo esc_url( $order_link ) ?>" class="btn-primary btn"><?php _e( 'Order Card', 'cardsbanking' ) ?></a> 
+					<?php endif; ?>
 					<a href="#" class="btn-contrast btn"><?php _e( 'Compare', 'cardsbanking' ) ?></a>
 				</div>
 			</div>
