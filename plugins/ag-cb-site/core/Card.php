@@ -13,12 +13,12 @@ class Card {
 	 *
 	 * @return object WP_Query
 	 */
-	public static function get_cards_by_term( $bank_term, $query_args = array() ) {
+	public static function get_cards_by_term( $term, $query_args = array() ) {
 
 		/**
 		 * Return false if term not exists
 		 */
-		if ( ! is_object($bank_term) && empty($bank_term) ) {
+		if ( ! is_object($term) && empty($term) ) {
 			return false;
 		}
 
@@ -29,7 +29,7 @@ class Card {
 		 */
 		$_query_args = array(
 			'post_type'      => CARD_POST_TYPE,
-			'cat'            => $bank_term->term_id,
+			'cat'            => $term->term_id,
 			'posts_per_page' => '6',
 		);
 
@@ -56,9 +56,9 @@ class Card {
 		 *
 		 * @var string
 		 */
-		$is_term_bank = get_term_meta( $bank_term->term_id, 'c-b', true );
+		$is_bank_term = get_term_meta( $bank_term->term_id, 'c-b', true );
 
-		if ( ! (bool) $is_term_bank ) {
+		if ( ! (bool) $is_bank_term ) {
 			return false;
 		}
 

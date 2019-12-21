@@ -15,15 +15,11 @@
 		<?php get_template_part( 'template-parts/archive/banks', 'type' ); ?>
 
 		<div class="container">
-			<?php
-
-			$is_term_bank = get_term_meta( get_queried_object_id(), 'c-b', true );
-
-			if ( (bool) $is_term_bank ) :
-
-			?>
+			<?php if ( is_bank_term( get_queried_object_id() ) ) : ?>
 				<h2 class="widget-title"><?php _e( 'Latest Bank Articles', 'cardsbanking' ) ?></h2>
 			<?php endif; ?>
+
+			<?php get_template_part( 'template-parts/archive/cards' ); ?>
 
 			<?php get_template_part( 'template-parts/archive/posts' ); ?>
 		</div>

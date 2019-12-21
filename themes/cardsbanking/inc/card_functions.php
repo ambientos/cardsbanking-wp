@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Predefined Card General Options
+ */
 function get_card_options() {
 	return array(
 		'common' => array(
@@ -60,4 +63,56 @@ function get_card_options() {
 			),
 		),
 	);
+}
+
+/**
+ * Check for is Bank term
+ */
+function is_bank_term( $term_id = 0 ) {
+
+	/**
+	 * If isn't integer, return
+	 */
+	if ( ! (int) $term_id ) {
+		return false;
+	}
+
+	/**
+	 * Get term meta for check
+	 *
+	 * @var string
+	 */
+	$is_bank_term = get_term_meta( $term_id, 'c-b', true );
+
+	/**
+	 * Return checking result
+	 *
+	 * @var bool
+	 */
+	return (bool) $is_bank_term ? true : false;
+}
+
+/**
+ * Check for is Bank sub-term
+ */
+function is_sub_bank_term() {
+
+	/**
+	 * Get Queried Object
+	 *
+	 * @var object WP_Term
+	 */
+	$queried_object = get_queried_object();
+
+	/**
+	 * Check for is sub-term, this is cannot be zero
+	 */
+	if ( ! isset($queried_object->parent) || 0 === $queried_object->parent ) {
+		return false;
+	}
+
+	/**
+	 * Return result of checking
+	 */
+	return is_bank_term( $queried_object->parent );
 }
