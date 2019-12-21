@@ -311,6 +311,15 @@ add_filter( 'wp_postratings_image_extension', 'cb_rating_image_extension' );
 
 
 /**
+ * Remove 'post_type' param from breadcrumbs links
+ */
+function cb_add_post_type_arg_filt($add_query_arg, $type, $taxonomy) {
+	return false;
+}
+add_filter('bcn_add_post_type_arg', 'cb_add_post_type_arg_filt', 10, 3);
+
+
+/**
  * Pages Menu
  */
 
