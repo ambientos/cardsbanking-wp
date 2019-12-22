@@ -24,6 +24,10 @@ $more_link      = ! empty($more_link_meta) ? $more_link_meta : get_permalink();
 <article class="card-item-container d-flex flex-column<?php echo esc_attr( $classes ) ?>">
 	<figure class="card-item-thumb<?php echo esc_attr( $classes ) ?>">
 		<?php the_post_thumbnail( 'card-thumb', array( 'class' => 'img-fluid img-block' ) ) ?>
+
+		<div class="card-item-nav <?php echo $type_class ?>">
+			<?php get_template_part( 'template-parts/card/loop/nav' ) ?>
+		</div>
 	</figure>
 
 	<div class="card-item-content d-flex flex-column<?php echo esc_attr( $classes ) ?>">

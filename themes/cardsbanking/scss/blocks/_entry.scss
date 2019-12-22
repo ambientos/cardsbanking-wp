@@ -35,7 +35,7 @@
 		table {
 			@include media-breakpoint-down('md') {
 				display: block;
-				max-width: min-content;
+				//max-width: min-content;
 				overflow-x: auto;
 				-webkit-overflow-scrolling: touch;
 			}

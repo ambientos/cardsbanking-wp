@@ -23,7 +23,7 @@ $order_link = get_post_meta( get_the_ID(), 'c-order', true );
 
 <div class="row justify-content-md-center">
 	<?php if ( ! $thumb_hide ) : ?>
-		<div class="col-md-4">
+		<div class="col-xl-4 col-lg-5 col-md-6">
 			<div class="card-single-thumb">
 				<?php $thumb = get_the_post_thumbnail( $post->ID, 'card-thumb', array('class' => 'img-fluid img-block', 'itemprop'=>'image') ); if ( ! empty($thumb) && $is_show_thumb ): ?>
 					<?php echo $thumb ?>
@@ -38,7 +38,7 @@ $order_link = get_post_meta( get_the_ID(), 'c-order', true );
 		</div>
 	<?php endif; ?>
 
-	<div class="col-md-6">
+	<div class="col-xl-6 col-lg-6 col-md-6">
 		<?php
 
 		set_query_var( 'card-type', 'single' );
