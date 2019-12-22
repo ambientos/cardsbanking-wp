@@ -291,6 +291,10 @@
 					border-bottom: 1px solid $gray-200;
 				}
 			}
+
+			&._short {
+				margin-bottom: 1.2em;
+			}
 		}
 
 		&-item {
@@ -337,7 +341,7 @@
 				}
 			}
 
-			&-icon {
+			&._icon {
 				&::before {
 					content: '';
 					border-radius: 50%;
@@ -390,6 +394,25 @@
 					&._#{$icon}::before {
 						background-image: url('#{$img-dir}card/#{$icon}.svg');
 					}
+				}
+			}
+
+			&._list {
+				$size: .3125em;
+
+				position: relative;
+				margin: .7em 0;
+				padding-left: 1em;
+
+				&::before {
+					position: absolute;
+					left: 0;
+					top: .45em;
+					width: $size;
+					height: $size;
+					content: '';
+					border-radius: 50%;
+					background-color: $primary;
 				}
 			}
 
@@ -485,11 +508,15 @@
 					}
 				}
 			}
+
+			&._short {
+				flex-grow: 1;
+			}
 		}
 
 		&-footer {
 			&._short {
-				margin-top: 1.2em;
+				margin-top: auto;
 			}
 		}
 

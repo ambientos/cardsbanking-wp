@@ -17,6 +17,10 @@
 		background-color: $gray-100;
 	}
 
+	&._carousel {
+		overflow: hidden;
+	}
+
 	&-title {
 		margin-bottom: 1em;
 		font-weight: $font-weight-medium;

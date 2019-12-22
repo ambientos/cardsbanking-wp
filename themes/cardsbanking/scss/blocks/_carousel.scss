@@ -1,0 +1,87 @@
+.carousel {
+	&._wide {
+		.owl {
+			&-stage,
+			&-item {
+				display: flex;
+			}
+
+			&-stage {
+				align-items: stretch;
+
+				&-outer {
+					overflow: visible;
+				}
+			}
+
+			&-item {
+				opacity: 0;
+
+				@include transition;
+
+				&.active {
+					opacity: 1;
+				}
+
+				.box-item {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&-nav {
+		margin-bottom: 1.5em;
+
+		@include media-breakpoint-down('md') {
+			text-align: right;
+		}
+
+		.owl {
+			&-prev,
+			&-next {
+				$size: 3em;
+				$color: $gray-300;
+				$color-hover: $primary;
+				$color-invert-hover: $black;
+
+				width: $size;
+				height: $size;
+				border: {
+					width: $border-width;
+					style: solid;
+					color: $color;
+				}
+				background-color: transparent;
+
+				@include transition;
+
+				&:hover {
+					border-color: $color-hover;
+					background-color: $color-hover;
+
+					.icon {
+						fill: $color-invert-hover;
+					}
+				}
+
+				.icon {
+					width: 60%;
+					fill: $color;
+
+					@include transition;
+				}
+			}
+
+			&-prev {
+				margin-right: .5em;
+			}
+		}
+	}
+
+	.owl-item {
+		.posts-item {
+			margin-bottom: 0;
+		}
+	}
+}

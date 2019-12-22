@@ -21,12 +21,12 @@ $more_link      = ! empty($more_link_meta) ? $more_link_meta : get_permalink();
 
 ?>
 
-<article class="card-item-container<?php echo esc_attr( $classes ) ?>">
+<article class="card-item-container d-flex flex-column<?php echo esc_attr( $classes ) ?>">
 	<figure class="card-item-thumb<?php echo esc_attr( $classes ) ?>">
 		<?php the_post_thumbnail( 'card-thumb', array( 'class' => 'img-fluid img-block' ) ) ?>
 	</figure>
 
-	<div class="card-item-content<?php echo esc_attr( $classes ) ?>">
+	<div class="card-item-content d-flex flex-column<?php echo esc_attr( $classes ) ?>">
 		<header class="card-item-header">
 			<h1 class="card-item-title<?php echo esc_attr( $classes ) ?>">
 				<?php the_title() ?>

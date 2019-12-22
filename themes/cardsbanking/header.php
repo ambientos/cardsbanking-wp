@@ -55,6 +55,19 @@
 
         <?php get_template_part( 'template-parts/boxes/menu-rating', 'home' ); ?>
 
+        <?php get_template_part( 'template-parts/boxes/cards' ); ?>
+
+        <?php
+
+        set_query_var( 'cards-home-type', 'd' );
+        set_query_var( 'navigate-id', 'nav-2' );
+
+        get_template_part( 'template-parts/boxes/cards' );
+
+        ?>
+
+        <?php get_template_part( 'template-parts/boxes/banks' ); ?>
+
         <?php get_template_part( 'template-parts/boxes/menu-info' ); ?>
 
     <?php endif; ?>

@@ -41,7 +41,7 @@ $cards = array(
 						$output_data[ $cards_type ]['query']->the_post();
 					?>
 						<div class="col-lg-4 col-md-6 d-sm-flex">
-							<div class="card-grid-item box-item">
+							<div class="card-grid-item box-item d-flex">
 								<?php
 
 								set_query_var( 'card-options-limit', 4 );

@@ -70,9 +70,7 @@ $index = 0;
 
 			$classes_arr[] = 'single' === $type ? 'align-items-center' : 'align-items-start';
 
-			if ( 'none' !== $is_icon ) {
-				$classes_arr[] = 'd-flex card-option-item-icon ' .' _'. $card_option_data['icon'];
-			}
+			$classes_arr[] = 'none' !== $is_icon ? 'd-flex _icon _'. $card_option_data['icon'] : '_list';
 
 			$classes = implode( ' ', $classes_arr );
 
