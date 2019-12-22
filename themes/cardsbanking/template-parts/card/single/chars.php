@@ -159,9 +159,9 @@
 
 			ob_start(); ?>
 
-			<ul class="card-single-chars-item-list _wide">
+			<ul class="card-single-chars-item-list _wide row">
 				<?php foreach ($funcs['value'] as $funcs_id) : ?>
-					<li><?php echo esc_html( $funcs['choices'][$funcs_id] ) ?></li>
+					<li class="col-xl-3 col-lg-4 col-md-6"><?php echo esc_html( $funcs['choices'][$funcs_id] ) ?></li>
 				<?php endforeach; ?>
 			</ul>
 

@@ -16,6 +16,7 @@
 	&-single {
 		&-thumb {
 			max-width: 315px;
+			margin-bottom: $grid-gutter-width;
 		}
 
 		&-buttons {
@@ -135,8 +136,15 @@
 
 		&-chars {
 			&-item {
-				padding-left: $grid-gutter-width * 2;
 				font-size: .875rem;
+
+				@include media-breakpoint-down('md') {
+					padding-left: $grid-gutter-width;
+				}
+
+				@include media-breakpoint-up('lg') {
+					padding-left: $grid-gutter-width * 2;
+				}
 
 				&:not(:first-child) {
 					margin-top: 2.5em;
@@ -168,16 +176,6 @@
 
 					&.row {
 						margin-left: 0;
-					}
-
-					&._wide {
-						display: flex;
-						flex-wrap: wrap;
-
-						li {
-							width: calc(25% - #{$grid-gutter-width});
-							margin-right: $grid-gutter-width;
-						}
 					}
 
 					&._check {
@@ -442,6 +440,7 @@
 			}
 
 			&._short {
+				width: 100%;
 				padding: 1.5em;
 			}
 		}

@@ -34,7 +34,7 @@ $type_class = ' _'. $type;
  * Parent class
  */
 $parent_class = 'column' === $type ? ' row'. $type_class : $type_class;
-$item_class   = 'column' === $type ? ' col-4'. $type_class : $type_class;
+$item_class   = 'column' === $type ? ' col-lg-4 col-md-6'. $type_class : $type_class;
 
 /**
  * Label type

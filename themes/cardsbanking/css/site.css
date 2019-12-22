@@ -1093,7 +1093,8 @@ blockquote.danger {
     background-position: 50% 50%; }
 
 .card-single-thumb {
-  max-width: 315px; }
+  max-width: 315px;
+  margin-bottom: 30px; }
 
 .card-single-buttons {
   margin-top: 2em; }
@@ -1164,8 +1165,13 @@ blockquote.danger {
     margin-bottom: .5em; }
 
 .card-single-chars-item {
-  padding-left: 60px;
   font-size: .875rem; }
+  @media (max-width: 991.98px) {
+    .card-single-chars-item {
+      padding-left: 30px; } }
+  @media (min-width: 992px) {
+    .card-single-chars-item {
+      padding-left: 60px; } }
   .card-single-chars-item:not(:first-child) {
     margin-top: 2.5em; }
   .card-single-chars-item-title::before {
@@ -1197,15 +1203,6 @@ blockquote.danger {
     padding-left: 0 !important; }
     .card-single-chars-item-list.row {
       margin-left: 0; }
-    .card-single-chars-item-list._wide {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-      .card-single-chars-item-list._wide li {
-        width: calc(25% - 30px);
-        margin-right: 30px; }
     .card-single-chars-item-list._check li {
       padding-left: 1em; }
       .card-single-chars-item-list._check li::before {
@@ -1391,6 +1388,7 @@ blockquote.danger {
   min-width: 800px; }
 
 .card-item-container._short {
+  width: 100%;
   padding: 1.5em; }
 
 .card-item-title._sm {
