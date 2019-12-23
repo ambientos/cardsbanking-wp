@@ -586,6 +586,19 @@
       .entry-pages-menu a:hover {
         color: #262626;
         border-color: #fec803; }
+  .entry-more {
+    margin-top: 2.5em;
+    font-size: .875rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase; }
+    .entry-more a {
+      display: inline-block;
+      color: #cccccc;
+      border-bottom-width: 1px;
+      border-bottom-style: solid; }
+      .entry-more a:hover {
+        color: inherit; }
   .entry-none {
     min-height: 250px; }
 

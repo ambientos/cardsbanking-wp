@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CardsBanking Theme 1.0\n"
-"POT-Creation-Date: 2019-12-23 09:09+0500\n"
-"PO-Revision-Date: 2019-12-23 09:09+0500\n"
+"POT-Creation-Date: 2019-12-23 19:42+0500\n"
+"PO-Revision-Date: 2019-12-23 19:43+0500\n"
 "Last-Translator: Anton Grakhov <ant.grakhov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -218,6 +218,10 @@ msgid ""
 msgstr ""
 "Вы не добавили ни одной карты в список избранных. Перейдите в <a href=\"%s"
 "\">раздел карт</a> и выберите нужные."
+
+#: template-parts/boxes/banks.php:41
+msgid "All Banks"
+msgstr "Все банки"
 
 #: template-parts/card/loop/item-short.php:45
 #: template-parts/card/loop/item-wide.php:46

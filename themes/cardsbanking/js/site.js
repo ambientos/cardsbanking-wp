@@ -61,6 +61,7 @@
 			options.autoplay = true
 			options.autoplaySpeed = 800
 			options.autoplayTimeout = 7000
+			options.autoplayHoverPause = true
 		}
 
 		if ( items === 3 ) {

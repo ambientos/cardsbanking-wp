@@ -229,6 +229,31 @@
 		}
 	}
 
+	&-more {
+		margin-top: 2.5em;
+		font: {
+			size: .875rem;
+			weight: 700;
+		}
+		text: {
+			align: center;
+			transform: uppercase;
+		}
+
+		a {
+			display: inline-block;
+			color: $gray-400;
+			border-bottom: {
+				width: 1px;
+				style: solid;
+			}
+
+			&:hover {
+				color: inherit;
+			}
+		}
+	}
+
 	&-none {
 		min-height: 250px;
 	}
