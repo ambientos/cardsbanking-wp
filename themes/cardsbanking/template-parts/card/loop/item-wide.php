@@ -14,12 +14,6 @@ $classes     = ' '. implode(' ', $classes_arr);
  */
 $order_link = get_post_meta( get_the_ID(), 'c-order', true );
 
-/**
- * More link
- */
-$more_link_meta = get_post_meta( get_the_ID(), 'c-overview', true );
-$more_link      = ! empty($more_link_meta) ? $more_link_meta : get_permalink();
-
 ?>
 
 <article class="card-item-container<?php echo esc_attr( $classes ) ?>">
@@ -43,15 +37,13 @@ $more_link      = ! empty($more_link_meta) ? $more_link_meta : get_permalink();
 			<footer class="card-item-footer<?php echo esc_attr( $classes ) ?> d-flex align-items-center">
 				<?php if ( ! empty($order_link) ) : ?>
 					<div class="card-item-order<?php echo esc_attr( $classes ) ?>">
-						<a href="<?php echo esc_url( $order_link ) ?>" class="btn-primary btn"><?php _e( 'Order', 'cardsbanking' ) ?></a>
+						<a href="<?php echo esc_url( $order_link ) ?>" class="btn-primary btn" target="_blank"><?php _e( 'Order', 'cardsbanking' ) ?></a>
 					</div>
 				<?php endif; ?>
 
-				<?php if ( ! empty($more_link) ) : ?>
-					<div class="card-item-more<?php echo esc_attr( $classes ) ?>">
-						<a href="<?php echo esc_url( $more_link ) ?>" class="btn-link btn"><?php _e( 'More', 'cardsbanking' ) ?></a>
-					</div>
-				<?php endif; ?>
+				<div class="card-item-more<?php echo esc_attr( $classes ) ?>">
+					<a href="<?php echo esc_url( get_permalink() ) ?>" class="btn-link btn"><?php _e( 'More', 'cardsbanking' ) ?></a>
+				</div>
 			</footer>
 		</div>
 	</div>

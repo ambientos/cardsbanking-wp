@@ -37,8 +37,8 @@ $banks_list = get_field('bs-l', 'option');
 			</div>			
 		</div>
 
-		<div class="entry-more">
-			<a href=""><?php _e( 'All Banks', 'cardsbanking' ) ?></a>
+		<div class="entry-more d-flex justify-content-center">
+			<a href="<?php echo site_url( '/banks' ) ?>"><?php _e( 'All Banks', 'cardsbanking' ) ?></a>
 		</div>
 	</aside>
 <?php endif; ?>

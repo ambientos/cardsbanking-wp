@@ -590,7 +590,6 @@
     margin-top: 2.5em;
     font-size: .875rem;
     font-weight: 700;
-    text-align: center;
     text-transform: uppercase; }
     .entry-more a {
       display: inline-block;
@@ -1562,20 +1561,6 @@ blockquote.danger {
   display: block;
   width: 100%;
   margin-bottom: 30px; }
-
-.card-grid-more {
-  margin-top: .5em;
-  font-size: .875rem;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase; }
-  .card-grid-more a {
-    display: inline-block;
-    color: #cccccc;
-    border-bottom-width: 1px;
-    border-bottom-style: solid; }
-    .card-grid-more a:hover {
-      color: inherit; }
 
 .carousel._wide .owl-stage, .carousel._wide .owl-item {
   display: -webkit-box;

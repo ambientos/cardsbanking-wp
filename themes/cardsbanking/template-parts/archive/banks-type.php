@@ -58,7 +58,7 @@ $cards = array(
 					<?php endwhile; wp_reset_postdata(); ?>
 				</div>
 
-				<div class="card-grid-more">
+				<div class="entry-more d-flex justify-content-center">
 					<a href="<?php echo esc_url( get_term_link( $output_data[ $cards_type ]['term'], 'category' ) ) ?>"><?php echo $cards_item['more_title'] ?></a>
 				</div>
 			</div>

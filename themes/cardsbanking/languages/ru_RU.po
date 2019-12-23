@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CardsBanking Theme 1.0\n"
-"POT-Creation-Date: 2019-12-23 19:42+0500\n"
-"PO-Revision-Date: 2019-12-23 19:43+0500\n"
+"POT-Creation-Date: 2019-12-23 20:02+0500\n"
+"PO-Revision-Date: 2019-12-23 20:02+0500\n"
 "Last-Translator: Anton Grakhov <ant.grakhov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -223,13 +223,13 @@ msgstr ""
 msgid "All Banks"
 msgstr "Все банки"
 
-#: template-parts/card/loop/item-short.php:45
-#: template-parts/card/loop/item-wide.php:46
+#: template-parts/card/loop/item-short.php:39
+#: template-parts/card/loop/item-wide.php:40
 msgid "Order"
 msgstr "Оформить"
 
-#: template-parts/card/loop/item-short.php:51
-#: template-parts/card/loop/item-wide.php:52
+#: template-parts/card/loop/item-short.php:44
+#: template-parts/card/loop/item-wide.php:45
 msgid "More"
 msgstr "Подробнее"
 
@@ -310,9 +310,13 @@ msgstr "Возраст"
 msgid "Required documents"
 msgstr "Необходимые документы"
 
-#: template-parts/card/single/intro.php:10
+#: template-parts/card/single/intro.php:18
 msgid "Introduction"
 msgstr "Описание"
+
+#: template-parts/card/single/intro.php:28
+msgid "Detailed review"
+msgstr "Подробный обзор"
 
 #: template-parts/card/single/title.php:33
 msgid "Order Card"
