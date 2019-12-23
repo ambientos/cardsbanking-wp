@@ -4,10 +4,6 @@ namespace AG_Cb_Site;
 
 class Card {
 
-	public function __construct() {
-		echo 'noo ok.';
-	}
-
 	/**
 	 * Get Cards query by term
 	 *
