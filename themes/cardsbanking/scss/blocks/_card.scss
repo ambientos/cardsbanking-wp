@@ -514,22 +514,6 @@
 				$color: $gray-400;
 				$color-hover: $primary;
 
-				border: {
-					width: $border-width;
-					style: solid;
-					color: $color;
-					radius: 50%;
-				}
-				text-align: center;
-
-				&:hover {
-					border-color: $color-hover;
-
-					.icon {
-						fill: $color-hover;
-					}
-				}
-
 				&:not(._column) {
 					display: block;
 				}
@@ -545,19 +529,23 @@
 				}
 
 				&._sm {
-					$size: 1.7em;
+					> button {
+						$size: 1.7em;
 
-					width: $size;
-					height: $size;
-					line-height: 1.5;
+						width: $size;
+						height: $size;
+						line-height: 1.5;
+					}
 				}
 
 				&._md {
-					$size: 2em;
+					> button {
+						$size: 2em;
 
-					width: $size;
-					height: $size;
-					line-height: 1.7;
+						width: $size;
+						height: $size;
+						line-height: 1.7;
+					}
 				}
 
 				.icon {
@@ -568,6 +556,29 @@
 					fill: $color;
 
 					@include transition;
+				}
+
+				> button {
+					@include transition;
+
+					padding: 0;
+					border: {
+						width: $border-width;
+						style: solid;
+						color: $color;
+						radius: 50%;
+					}
+					text-align: center;
+					background-color: transparent;
+
+					&.active,
+					&:hover {
+						border-color: $color-hover;
+
+						.icon {
+							fill: $color-hover;
+						}
+					}
 				}
 			}
 		}

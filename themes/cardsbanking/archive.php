@@ -9,7 +9,9 @@
 <main class="main">
 	<div class="widget">
 		<div class="container">
-			<?php get_template_part( 'template-parts/archive/title' ); ?>
+			<header>
+				<?php get_template_part( 'template-parts/archive/title' ); ?>
+			</header>
 		</div>
 
 		<?php get_template_part( 'template-parts/archive/banks', 'type' ); ?>

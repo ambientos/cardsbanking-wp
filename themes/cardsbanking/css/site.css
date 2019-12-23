@@ -586,6 +586,8 @@
       .entry-pages-menu a:hover {
         color: #262626;
         border-color: #fec803; }
+  .entry-none {
+    min-height: 250px; }
 
 #toc_container {
   margin-bottom: 30px;
@@ -1432,40 +1434,54 @@ blockquote.danger {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
 
-.card-item-nav-item {
+.card-item-nav-item:not(._column) {
+  display: block; }
+
+.card-item-nav-item._column {
+  display: inline-block; }
+
+.card-item-nav-item._short:not(:last-child) {
+  margin-bottom: .5em; }
+
+.card-item-nav-item._sm > button {
+  width: 1.7em;
+  height: 1.7em;
+  line-height: 1.5; }
+
+.card-item-nav-item._md > button {
+  width: 2em;
+  height: 2em;
+  line-height: 1.7; }
+
+.card-item-nav-item .icon {
+  width: 15px;
+  height: 15px;
+  fill: #cccccc;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  @media (prefers-reduced-motion: reduce) {
+    .card-item-nav-item .icon {
+      -webkit-transition: none;
+      transition: none; } }
+
+.card-item-nav-item > button {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 0;
   border-width: 1px;
   border-style: solid;
   border-color: #cccccc;
   border-radius: 50%;
-  text-align: center; }
-  .card-item-nav-item:hover {
+  text-align: center;
+  background-color: transparent; }
+  @media (prefers-reduced-motion: reduce) {
+    .card-item-nav-item > button {
+      -webkit-transition: none;
+      transition: none; } }
+  .card-item-nav-item > button.active, .card-item-nav-item > button:hover {
     border-color: #fec803; }
-    .card-item-nav-item:hover .icon {
+    .card-item-nav-item > button.active .icon, .card-item-nav-item > button:hover .icon {
       fill: #fec803; }
-  .card-item-nav-item:not(._column) {
-    display: block; }
-  .card-item-nav-item._column {
-    display: inline-block; }
-  .card-item-nav-item._short:not(:last-child) {
-    margin-bottom: .5em; }
-  .card-item-nav-item._sm {
-    width: 1.7em;
-    height: 1.7em;
-    line-height: 1.5; }
-  .card-item-nav-item._md {
-    width: 2em;
-    height: 2em;
-    line-height: 1.7; }
-  .card-item-nav-item .icon {
-    width: 15px;
-    height: 15px;
-    fill: #cccccc;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
-    @media (prefers-reduced-motion: reduce) {
-      .card-item-nav-item .icon {
-        -webkit-transition: none;
-        transition: none; } }
 
 .card-item-thumb {
   margin-bottom: 0; }

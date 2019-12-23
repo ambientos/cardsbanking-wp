@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CardsBanking Theme 1.0\n"
-"POT-Creation-Date: 2019-12-21 03:18+0500\n"
-"PO-Revision-Date: 2019-12-21 03:19+0500\n"
+"POT-Creation-Date: 2019-12-23 09:09+0500\n"
+"PO-Revision-Date: 2019-12-23 09:09+0500\n"
 "Last-Translator: Anton Grakhov <ant.grakhov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -43,7 +43,7 @@ msgstr ""
 msgid "Go to <a href=\"%1$s\">Homepage</a>."
 msgstr ""
 
-#: archive.php:25
+#: archive.php:21
 msgid "Latest Bank Articles"
 msgstr "Последние статьи о банке"
 
@@ -117,63 +117,67 @@ msgstr ""
 msgid "Footer Menu List"
 msgstr ""
 
-#: functions.php:219
+#: functions.php:222
 msgid "Card Ratings"
 msgstr "Рейтинги карт"
 
-#: inc/card_functions.php:7 inc/card_functions.php:8
+#: functions.php:331 template-parts/header/nav.php:6
+msgid "Favorites"
+msgstr "Избранное"
+
+#: inc/card_functions.php:10 inc/card_functions.php:11
 msgid "Service cost"
 msgstr "Стоимость обслуживания"
 
-#: inc/card_functions.php:12 inc/card_functions.php:13
+#: inc/card_functions.php:15 inc/card_functions.php:16
 msgid "Requirements"
 msgstr "Требования"
 
-#: inc/card_functions.php:17 inc/card_functions.php:18
+#: inc/card_functions.php:20 inc/card_functions.php:21
 msgid "Cashback"
 msgstr "Кэшбэк"
 
-#: inc/card_functions.php:22
+#: inc/card_functions.php:25
 msgid "Miles"
 msgstr "Мили"
 
-#: inc/card_functions.php:23
+#: inc/card_functions.php:26
 msgid "Earning miles"
 msgstr "Начисление миль"
 
-#: inc/card_functions.php:27
+#: inc/card_functions.php:30
 msgid "Bonuses for purchases"
 msgstr "Бонусы за покупки"
 
-#: inc/card_functions.php:28
+#: inc/card_functions.php:31
 msgid "Bonuses"
 msgstr "Бонусы"
 
-#: inc/card_functions.php:32 inc/card_functions.php:33
+#: inc/card_functions.php:35 inc/card_functions.php:36
 msgid "Percent on balance"
 msgstr "Процент на остаток"
 
-#: inc/card_functions.php:37 inc/card_functions.php:38
+#: inc/card_functions.php:40 inc/card_functions.php:41
 msgid "Overdraft"
 msgstr "Овердрафт"
 
-#: inc/card_functions.php:42 inc/card_functions.php:43
+#: inc/card_functions.php:45 inc/card_functions.php:46
 msgid "Cash withdrawal"
 msgstr "Снятие наличных"
 
-#: inc/card_functions.php:47 inc/card_functions.php:48
+#: inc/card_functions.php:50 inc/card_functions.php:51
 msgid "Percent rate"
 msgstr "Процентная ставка"
 
-#: inc/card_functions.php:52
+#: inc/card_functions.php:55
 msgid "Limit"
 msgstr "Лимит"
 
-#: inc/card_functions.php:53
+#: inc/card_functions.php:56
 msgid "Credit limit"
 msgstr "Кредитный лимит"
 
-#: inc/card_functions.php:57 inc/card_functions.php:58
+#: inc/card_functions.php:60 inc/card_functions.php:61
 msgid "Grace period"
 msgstr "Льготный период"
 
@@ -190,31 +194,52 @@ msgstr "Актуальные обзоры банковских продукто�
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/archive/banks-type.php:8
+#: template-parts/archive/banks-type.php:20
 msgid "Debit category"
 msgstr "Дебетовые"
 
-#: template-parts/archive/banks-type.php:9
+#: template-parts/archive/banks-type.php:21
 msgid "Show all Debit Cards"
 msgstr "Смотреть все дебетовые карты"
 
-#: template-parts/archive/banks-type.php:12
+#: template-parts/archive/banks-type.php:24
 msgid "Credit category"
 msgstr "Кредитные"
 
-#: template-parts/archive/banks-type.php:13
+#: template-parts/archive/banks-type.php:25
 msgid "Show all Credit Cards"
 msgstr "Смотреть все кредитные карты"
 
-#: template-parts/card/loop/item-short.php:46
+#: template-parts/archive/favorites-none.php:5
+#, php-format
+msgid ""
+"You have not added any cards to your favorites list. Go to <a href=\"%s"
+"\">the map section</a> and select the ones you need."
+msgstr ""
+"Вы не добавили ни одной карты в список избранных. Перейдите в <a href=\"%s"
+"\">раздел карт</a> и выберите нужные."
+
+#: template-parts/card/loop/item-short.php:45
 #: template-parts/card/loop/item-wide.php:46
 msgid "Order"
 msgstr "Оформить"
 
-#: template-parts/card/loop/item-short.php:52
+#: template-parts/card/loop/item-short.php:51
 #: template-parts/card/loop/item-wide.php:52
 msgid "More"
 msgstr "Подробнее"
+
+#: template-parts/card/loop/nav.php:14
+msgid "Add to Comparison"
+msgstr "Добавить в сравнение"
+
+#: template-parts/card/loop/nav.php:17
+msgid "Comparison"
+msgstr "Сравнение"
+
+#: template-parts/card/loop/nav.php:21
+msgid "Add Card to Favorite List"
+msgstr "Добавить карту в список избранных"
 
 #: template-parts/card/single/advdis.php:27
 msgid "Advantages and disadvantages"
@@ -324,10 +349,6 @@ msgstr "Понравилась статья? Оцените её и подели
 #: template-parts/header/nav.php:3
 msgid "Сard comparison"
 msgstr "Сравнение карт"
-
-#: template-parts/header/nav.php:6
-msgid "Favorites"
-msgstr "Избранное"
 
 #: template-parts/related-posts.php:98
 msgid "Related articles"

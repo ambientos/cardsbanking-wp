@@ -310,6 +310,7 @@ add_filter('wp_check_filetype_and_ext', 'cb_allow_upload_svg', 10, 4);
 function cb_rating_image_extension() {
     return 'png';
 }
+
 add_filter( 'wp_postratings_image_extension', 'cb_rating_image_extension' );
 
 
@@ -319,7 +320,18 @@ add_filter( 'wp_postratings_image_extension', 'cb_rating_image_extension' );
 function cb_add_post_type_arg_filt($add_query_arg, $type, $taxonomy) {
 	return false;
 }
-add_filter('bcn_add_post_type_arg', 'cb_add_post_type_arg_filt', 10, 3);
+
+add_filter( 'bcn_add_post_type_arg', 'cb_add_post_type_arg_filt', 10, 3 );
+
+
+/**
+ * Replace default Favorite button html
+ */
+function cb_favorite_button_html( $html, $post_id, $favorited, $site_id ) {
+	return file_get_contents( get_stylesheet_directory_uri() .'/i/favorites.svg' ) . '<span class="screen-reader-text">'. __( 'Favorites', 'cardsbanking' ) .'</span>';
+}
+
+add_filter( 'favorites/button/html', 'cb_favorite_button_html', 10, 4 );
 
 
 /**
