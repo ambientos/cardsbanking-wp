@@ -5,6 +5,28 @@ namespace AG_Cb_Site;
 class Card {
 
 	/**
+	 * Get Card by Post ID
+	 *
+	 * @return object WP_Query
+	 */
+	public static function get_card_by_post_id( $post_id = 0 ) {
+
+		/**
+		 * Return false if Post ID is zero
+		 */
+		if ( ! (int) $post_id ) {
+			return false;
+		}
+
+		$card_object = new \WP_Query( array(
+			'post_type' => CARD_POST_TYPE,
+			'p'         => $post_id,
+		) );
+
+		return $card_object;
+	}
+
+	/**
 	 * Get Cards query by term
 	 *
 	 * @return object WP_Query

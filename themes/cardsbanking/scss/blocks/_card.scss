@@ -328,10 +328,6 @@
 
 				&._md {
 					font-size: .875rem;
-
-					b {
-						font-size: 1rem;
-					}
 				}
 
 				b {
@@ -445,13 +441,6 @@
 					&:hover {
 						box-shadow: 1px 5px 29px 0 rgba($black, .1);
 					}
-				}
-			}
-
-			&._column._sm {
-				@include media-breakpoint-up('lg') {
-					min-width: 800px;
-					z-index: 1;
 				}
 			}
 

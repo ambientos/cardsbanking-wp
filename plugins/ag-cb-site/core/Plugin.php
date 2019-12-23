@@ -36,9 +36,19 @@ class Plugin {
 		add_action( 'acf/include_field_types', array( __CLASS__, 'include_field_types' ) );
 
 		/**
-		 * Add shortcodes to show Card Item
+		 * Add shortcode A to show Card Item
+		 */
+		add_shortcode( 'card_a', array( __CLASS__, 'card_a_shortcode_func' ) );
+
+		/**
+		 * Add shortcode B to show Card Item
 		 */
 		add_shortcode( 'card_b', array( __CLASS__, 'card_b_shortcode_func' ) );
+
+		/**
+		 * Add shortcode C to show Card Item
+		 */
+		add_shortcode( 'card_c', array( __CLASS__, 'card_c_shortcode_func' ) );
 	}
 
 	/**
@@ -139,7 +149,93 @@ class Plugin {
 	}
 
 	/**
-	 * Add shortcode to show Card Item
+	 * Add shortcode A to show Card Item
+	 */
+	public static function card_a_shortcode_func( $atts ) {
+		$atts = shortcode_atts( array(
+			'ids'  => '',
+			'size' => 'sm',
+		), $atts );
+
+		/**
+		 * Size
+		 */
+		set_query_var( 'card-size', $atts['size'] );
+
+		/**
+		 * Add custom type additional class
+		 */
+		set_query_var( 'card-type', 'short' );
+
+		/**
+		 * Options limit to show
+		 */
+		set_query_var( 'card-options-limit', 4 );
+
+		/**
+		 * Options with icons
+		 */
+		set_query_var( 'card-icon', 'yes' );
+
+		/**
+		 * Card Post IDs list
+		 *
+		 * @var integer
+		 */
+		$post_ids_string = $atts['ids'];
+
+		/**
+		 * Get array of Post IDs
+		 */
+		$post_ids_array = explode(',', $post_ids_string);
+
+		/**
+		 * Get Card Post data
+		 */
+		$card_object_array = array();
+
+		foreach ($post_ids_array as $post_id) {
+			$post_id = (int) $post_id;
+
+			if ( $post_id ) {
+				$card_object_array[] = Card::get_card_by_post_id( $post_id );
+			}
+		}
+
+		/**
+		 * If empty cards array, exiting
+		 */
+		if ( empty($card_object_array) ) {
+			return;
+		}
+
+		/**
+		 * Echo content
+		 */
+		ob_start();
+
+		?>
+
+		<div class="card-grid-list _short row">
+			<?php foreach ($card_object_array as $card_object) : $card_object->the_post(); ?>
+				<div class="col-lg-4 col-md-6 d-sm-flex">
+					<div class="card-grid-item box-item d-flex">
+						<?php get_template_part( 'template-parts/card/loop/item', 'short' ); ?>
+					</div>
+				</div>
+
+			<?php endforeach; ?>
+		</div>
+
+		<?php
+
+		wp_reset_postdata();
+
+		return ob_get_clean();
+	}
+
+	/**
+	 * Add shortcode B to show Card Item
 	 */
 	public static function card_b_shortcode_func( $atts ) {
 		$atts = shortcode_atts( array(
@@ -178,12 +274,69 @@ class Plugin {
 
 		/**
 		 * Get Card Post data
+		 *
 		 * @var object WP_Query
 		 */
-		$card_object = new \WP_Query( array(
-			'post_type' => CARD_POST_TYPE,
-			'p'         => $post_id,
-		) );
+		$card_object = Card::get_card_by_post_id( $post_id );
+
+		/**
+		 * Echo content
+		 */
+		ob_start();
+
+		$card_object->the_post();
+
+		get_template_part( 'template-parts/card/loop/item', 'wide' );
+
+		wp_reset_postdata();
+
+		return ob_get_clean();
+	}
+
+	/**
+	 * Add shortcode C to show Card Item
+	 */
+	public static function card_c_shortcode_func( $atts ) {
+		$atts = shortcode_atts( array(
+			'id'   => 0,
+			'size' => 'md',
+		), $atts );
+
+		/**
+		 * Size
+		 */
+		set_query_var( 'card-size', $atts['size'] );
+
+		/**
+		 * Add custom type additional class
+		 */
+		set_query_var( 'card-type', 'column' );
+
+		/**
+		 * Options with icons
+		 */
+		set_query_var( 'card-icon', 'yes' );
+
+		/**
+		 * Card Post ID
+		 *
+		 * @var integer
+		 */
+		$post_id = (int) $atts['id'];
+
+		/**
+		 * Return nothing if Post ID is zero
+		 */
+		if ( $post_id === 0 ) {
+			return;
+		}
+
+		/**
+		 * Get Card Post data
+		 *
+		 * @var object WP_Query
+		 */
+		$card_object = Card::get_card_by_post_id( $post_id );
 
 		/**
 		 * Echo content

@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AG Cardsbanking Site Plugin 1.0\n"
-"POT-Creation-Date: 2019-12-20 06:26+0500\n"
-"PO-Revision-Date: 2019-12-20 06:26+0500\n"
+"POT-Creation-Date: 2019-12-23 21:33+0500\n"
+"PO-Revision-Date: 2019-12-23 21:33+0500\n"
 "Last-Translator: Anton Grakhov <ant.grakhov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -24,46 +24,58 @@ msgstr ""
 msgid "Card Shortcodes"
 msgstr "Шорткоды карт"
 
-#: core/Plugin.php:52 core/Plugin.php:62
+#: core/Card_Shortcode_ACF_Field.php:47
+msgid "Vertical, with multiple ids"
+msgstr "Вертикальный, несколько ID"
+
+#: core/Card_Shortcode_ACF_Field.php:51
+msgid "Horizontal, within sidebar"
+msgstr "Горизонтальный, без сайдбара"
+
+#: core/Card_Shortcode_ACF_Field.php:55
+msgid "Horizontal, without sidebar"
+msgstr "Горизонтальный, с сайдбаром"
+
+#: core/Plugin.php:64 core/Plugin.php:74
 msgid "Cards"
 msgstr "Карты"
 
-#: core/Plugin.php:53
+#: core/Plugin.php:65
 msgid "Card"
 msgstr "Карта"
 
-#: core/Plugin.php:54
+#: core/Plugin.php:66
 msgid "Add New Card"
 msgstr "Добавить новую карту"
 
-#: core/Plugin.php:55
+#: core/Plugin.php:67
 msgid "Add New Card item"
 msgstr "Добавить новую карту"
 
-#: core/Plugin.php:56
+#: core/Plugin.php:68
 msgid "Edit Card Item"
 msgstr "Редактировать карту"
 
-#: core/Plugin.php:57
+#: core/Plugin.php:69
 msgid "New Card Item"
 msgstr "Новая карта"
 
-#: core/Plugin.php:58
+#: core/Plugin.php:70
 msgid "View Card Item"
 msgstr "Посмотреть карту"
 
-#: core/Plugin.php:59
+#: core/Plugin.php:71
 msgid "Search Cards"
 msgstr "Поиск карт"
 
-#: core/Plugin.php:60
+#: core/Plugin.php:72
 msgid "Nothing found Cards"
 msgstr "Карт не найдено"
 
-#: core/Plugin.php:61
+#: core/Plugin.php:73
 msgid "Nothing found Cards in Trash"
 msgstr "Карт в корзине не найдено"
 
-#: core/Plugin.php:109 core/Plugin.php:110
+#: core/Plugin.php:121 core/Plugin.php:122
 msgid "Additional Options"
 msgstr "Дополнительные настройки"

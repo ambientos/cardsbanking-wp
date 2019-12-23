@@ -1318,8 +1318,6 @@ blockquote.danger {
       font-size: .875rem; }
   .card-option-item._column._md {
     font-size: .875rem; }
-    .card-option-item._column._md b {
-      font-size: 1rem; }
   .card-option-item._column b {
     display: block; }
   .card-option-item._icon::before {
@@ -1402,11 +1400,6 @@ blockquote.danger {
     .card-item-container._column:hover {
       -webkit-box-shadow: 1px 5px 29px 0 rgba(0, 0, 0, 0.1);
               box-shadow: 1px 5px 29px 0 rgba(0, 0, 0, 0.1); } }
-
-@media (min-width: 992px) {
-  .card-item-container._column._sm {
-    min-width: 800px;
-    z-index: 1; } }
 
 .card-item-container._short {
   width: 100%;

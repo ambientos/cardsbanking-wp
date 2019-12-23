@@ -44,12 +44,15 @@ class Card_Shortcode_ACF_Field extends \acf_field {
 
 		$shortcodes = array(
 			'sc-1' => array(
-				'value' => '[card_a id="'. $card_id .'"]',
+				'label' => __( 'Vertical, with multiple ids', TEXT_DOMAIN ),
+				'value' => '[card_a ids="'. $card_id .'"]',
 			),
 			'sc-2' => array(
+				'label' => __( 'Horizontal, within sidebar', TEXT_DOMAIN ),
 				'value' => '[card_b id="'. $card_id .'"]',
 			),
 			'sc-3' => array(
+				'label' => __( 'Horizontal, without sidebar', TEXT_DOMAIN ),
 				'value' => '[card_c id="'. $card_id .'"]',
 			),
 		);
@@ -59,6 +62,9 @@ class Card_Shortcode_ACF_Field extends \acf_field {
 		<div class="acf-fields">
 			<?php foreach ($shortcodes as $shortcode_id => $shortcode_item) : ?>
 				<div class="acf-field" style="width: 33.3334%;" data-width="33.3334">
+					<div class="acf-label">
+						<label><?php echo esc_attr( $shortcode_item['label'] ) ?></label>
+					</div>
 					<div class="acf-input">
 						<div class="acf-input-wrap">
 							<input type="text" id="<?php echo esc_attr( $shortcode_id ) ?>" value="<?php echo esc_attr( $shortcode_item['value'] ) ?>" readonly>
