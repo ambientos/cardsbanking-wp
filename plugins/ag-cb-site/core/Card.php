@@ -49,6 +49,8 @@ class Card {
 			'post_type'      => CARD_POST_TYPE,
 			'cat'            => $term->term_id,
 			'posts_per_page' => '6',
+			'orderby'        => 'menu_order',
+			'order'          => 'ASC',
 		);
 
 		return new \WP_Query( array_merge( $_query_args, $query_args ) );

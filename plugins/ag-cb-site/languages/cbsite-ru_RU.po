@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AG Cardsbanking Site Plugin 1.0\n"
-"POT-Creation-Date: 2019-12-23 21:33+0500\n"
-"PO-Revision-Date: 2019-12-23 21:33+0500\n"
+"POT-Creation-Date: 2019-12-24 13:50+0500\n"
+"PO-Revision-Date: 2019-12-24 14:32+0500\n"
 "Last-Translator: Anton Grakhov <ant.grakhov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -30,52 +30,60 @@ msgstr "Вертикальный, несколько ID"
 
 #: core/Card_Shortcode_ACF_Field.php:51
 msgid "Horizontal, within sidebar"
-msgstr "Горизонтальный, без сайдбара"
-
-#: core/Card_Shortcode_ACF_Field.php:55
-msgid "Horizontal, without sidebar"
 msgstr "Горизонтальный, с сайдбаром"
 
-#: core/Plugin.php:64 core/Plugin.php:74
+#: core/Card_Shortcode_ACF_Field.php:55
+msgid "Card Order button"
+msgstr "Кнопка Оформить карту"
+
+#: core/Card_Shortcode_ACF_Field.php:59
+msgid "Horizontal, without sidebar"
+msgstr "Горизонтальный, без сайдбара"
+
+#: core/Plugin.php:69 core/Plugin.php:79
 msgid "Cards"
 msgstr "Карты"
 
-#: core/Plugin.php:65
+#: core/Plugin.php:70
 msgid "Card"
 msgstr "Карта"
 
-#: core/Plugin.php:66
+#: core/Plugin.php:71
 msgid "Add New Card"
 msgstr "Добавить новую карту"
 
-#: core/Plugin.php:67
+#: core/Plugin.php:72
 msgid "Add New Card item"
 msgstr "Добавить новую карту"
 
-#: core/Plugin.php:68
+#: core/Plugin.php:73
 msgid "Edit Card Item"
 msgstr "Редактировать карту"
 
-#: core/Plugin.php:69
+#: core/Plugin.php:74
 msgid "New Card Item"
 msgstr "Новая карта"
 
-#: core/Plugin.php:70
+#: core/Plugin.php:75
 msgid "View Card Item"
 msgstr "Посмотреть карту"
 
-#: core/Plugin.php:71
+#: core/Plugin.php:76
 msgid "Search Cards"
 msgstr "Поиск карт"
 
-#: core/Plugin.php:72
+#: core/Plugin.php:77
 msgid "Nothing found Cards"
 msgstr "Карт не найдено"
 
-#: core/Plugin.php:73
+#: core/Plugin.php:78
 msgid "Nothing found Cards in Trash"
 msgstr "Карт в корзине не найдено"
 
-#: core/Plugin.php:121 core/Plugin.php:122
+#: core/Plugin.php:126 core/Plugin.php:127
 msgid "Additional Options"
 msgstr "Дополнительные настройки"
+
+#: core/Plugin.php:342
+msgid "Card Order"
+msgstr "Оформить карту"

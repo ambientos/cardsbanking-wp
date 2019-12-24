@@ -145,6 +145,34 @@
     opacity: 1;
     visibility: visible; } }
 
+div.alike-compare-widget-wrapper {
+  bottom: 110px; }
+
+div.rq-alike-compare .rq-alike-items .rq-alike-items-list.alike-image .rq-alike-top-data h2 {
+  font-size: inherit; }
+
+div.rq-alike-compare .rq-alike-items .rq-alike-items-list.alike-image,
+div.rq-alike-compare .rq-alike-topic-p .rq-alike-topic.alike-image {
+  height: 241px; }
+
+.rq-alike-compare .rq-alike-topic-p .rq-alike-topic {
+  font-size: .8125rem; }
+
+.rq-alike-compare .rq-alike-items div.rq-alike-items-list.alike-image {
+  padding-top: 15px; }
+
+a.alike-compare-widget-button,
+a.rq-alike-show-difference {
+  color: inherit;
+  background-color: #fec803; }
+  a.alike-compare-widget-button:hover,
+  a.rq-alike-show-difference:hover {
+    color: inherit;
+    background-color: #fed336; }
+
+span.alike-compare-widget-post-remove-button, span.alike-compare-widget-counter {
+  color: inherit; }
+
 @font-face {
   font-family: "GothamPro";
   font-weight: 300;
@@ -446,6 +474,8 @@
     .entry-content .important {
       font-size: 1.125rem;
       font-weight: 700; }
+    .entry-content .card-item-container {
+      margin-bottom: 1.5em; }
     .entry-content img {
       max-width: 100%;
       height: auto; }

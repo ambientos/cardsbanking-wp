@@ -49,6 +49,11 @@ class Plugin {
 		 * Add shortcode C to show Card Item
 		 */
 		add_shortcode( 'card_c', array( __CLASS__, 'card_c_shortcode_func' ) );
+
+		/**
+		 * Add shortcode D to show Card Item
+		 */
+		add_shortcode( 'card_d', array( __CLASS__, 'card_d_shortcode_func' ) );
 	}
 
 	/**
@@ -297,6 +302,52 @@ class Plugin {
 	 * Add shortcode C to show Card Item
 	 */
 	public static function card_c_shortcode_func( $atts ) {
+		$atts = shortcode_atts( array(
+			'id'   => 0,
+		), $atts );
+
+		/**
+		 * Card Post ID
+		 *
+		 * @var integer
+		 */
+		$post_id = (int) $atts['id'];
+
+		/**
+		 * Return nothing if Post ID is zero
+		 */
+		if ( $post_id === 0 ) {
+			return;
+		}
+
+		/**
+		 * Get Order link
+		 *
+		 * @var string
+		 */
+		$order_link = get_post_meta( $post_id, 'c-order', true );
+
+		/**
+		 * Return nothing if Order link is empty
+		 */
+		if ( empty($order_link) ) {
+			return;
+		}
+
+		/**
+		 * Echo content
+		 */
+		ob_start();
+
+		?><p class="d-flex justify-content-center"><a href="<?php echo esc_url( $order_link ) ?>" class="btn-primary btn" target="_blank"><?php _e( 'Card Order', TEXT_DOMAIN ) ?></a></p><?php
+
+		return ob_get_clean();
+	}
+
+	/**
+	 * Add shortcode C to show Card Item
+	 */
+	public static function card_d_shortcode_func( $atts ) {
 		$atts = shortcode_atts( array(
 			'id'   => 0,
 			'size' => 'md',

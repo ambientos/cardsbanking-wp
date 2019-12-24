@@ -209,6 +209,18 @@ add_action( 'wp_enqueue_scripts', 'cb_scripts_styles' );
 
 
 /**
+ * Remove some assets from Alike plugin
+ */
+
+function cb_scripts_styles_deregister() {
+	wp_deregister_script( 'mousewheel' );
+	wp_deregister_script( 'mCustomScrollbar' );
+}
+
+//add_action( 'wp_enqueue_scripts', 'cb_scripts_styles_deregister', 21, 1 );
+
+
+/**
  * Add menu item to header menu
  */
 

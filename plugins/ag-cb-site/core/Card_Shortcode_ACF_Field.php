@@ -52,8 +52,12 @@ class Card_Shortcode_ACF_Field extends \acf_field {
 				'value' => '[card_b id="'. $card_id .'"]',
 			),
 			'sc-3' => array(
-				'label' => __( 'Horizontal, without sidebar', TEXT_DOMAIN ),
+				'label' => __( 'Card Order button', TEXT_DOMAIN ),
 				'value' => '[card_c id="'. $card_id .'"]',
+			),
+			'sc-4' => array(
+				'label' => __( 'Horizontal, without sidebar', TEXT_DOMAIN ),
+				'value' => '[card_d id="'. $card_id .'"]',
 			),
 		);
 
@@ -61,7 +65,7 @@ class Card_Shortcode_ACF_Field extends \acf_field {
 
 		<div class="acf-fields">
 			<?php foreach ($shortcodes as $shortcode_id => $shortcode_item) : ?>
-				<div class="acf-field" style="width: 33.3334%;" data-width="33.3334">
+				<div class="acf-field" style="width: 25%;" data-width="25">
 					<div class="acf-label">
 						<label><?php echo esc_attr( $shortcode_item['label'] ) ?></label>
 					</div>

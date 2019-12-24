@@ -25,14 +25,14 @@
                     </div>
                 </a>
             </div>
-            <div class="d-none d-md-block col-md-5 col-lg-4">
+            <div class="d-none d-md-block col-md-5 col-lg-5">
                 <div class="header-search">
                     <form action="<?php echo esc_url( home_url( '/' ) ) ?>" method="get" role="search">
                         <input class="header-search-control form-control" type="text" name="s" placeholder="<?php echo esc_attr( __( 'Site search', 'cardsbanking' ) ) ?>" value="">
                     </form>
                 </div>
             </div>
-            <div class="d-none d-lg-block col-lg-4">
+            <div class="d-none d-lg-block col-lg-3">
                 <?php get_template_part( 'template-parts/header/nav' ); ?>
             </div>
             <div class="d-flex d-lg-none justify-content-end col-3 col-md navbar-light">

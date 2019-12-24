@@ -177,3 +177,42 @@
 		visibility: visible;
 	}
 }
+
+div.alike-compare-widget-wrapper {
+	bottom: 110px;
+}
+
+div.rq-alike-compare .rq-alike-items .rq-alike-items-list.alike-image .rq-alike-top-data h2 {
+	font-size: inherit;
+}
+
+div.rq-alike-compare .rq-alike-items .rq-alike-items-list.alike-image,
+div.rq-alike-compare .rq-alike-topic-p .rq-alike-topic.alike-image {
+	height: 241px;
+}
+
+.rq-alike-compare .rq-alike-topic-p .rq-alike-topic {
+	font-size: .8125rem;
+}
+
+.rq-alike-compare .rq-alike-items div.rq-alike-items-list.alike-image {
+	padding-top: $grid-gutter-width * .5;
+}
+
+a.alike-compare-widget-button,
+a.rq-alike-show-difference {
+	color: inherit;
+	background-color: $primary;
+
+	&:hover {
+		color: inherit;
+		background-color: lighten($primary, 10%);
+	}
+}
+
+span.alike-compare-widget {
+	&-post-remove-button,
+	&-counter {
+		color: inherit;
+	}
+}
