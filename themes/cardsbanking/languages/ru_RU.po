@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CardsBanking Theme 1.0\n"
-"POT-Creation-Date: 2019-12-24 07:14+0500\n"
-"PO-Revision-Date: 2019-12-24 07:14+0500\n"
+"POT-Creation-Date: 2019-12-24 07:20+0500\n"
+"PO-Revision-Date: 2019-12-24 07:20+0500\n"
 "Last-Translator: Anton Grakhov <ant.grakhov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -124,6 +124,14 @@ msgstr "Рейтинги карт"
 #: functions.php:331 template-parts/header/nav.php:6
 msgid "Favorites"
 msgstr "Избранное"
+
+#: header.php:31
+msgid "Site search"
+msgstr "Поиск по сайту"
+
+#: header.php:39
+msgid "Expand menu"
+msgstr "Раскрыть меню"
 
 #: inc/card_functions.php:10 inc/card_functions.php:11
 msgid "Service cost"

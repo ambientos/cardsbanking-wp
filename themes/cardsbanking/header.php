@@ -28,7 +28,7 @@
             <div class="d-none d-md-block col-md-5 col-lg-4">
                 <div class="header-search">
                     <form action="<?php echo esc_url( home_url( '/' ) ) ?>" method="get" role="search">
-                        <input class="header-search-control form-control" type="text" name="s" placeholder="Поиск по сайту" value="">
+                        <input class="header-search-control form-control" type="text" name="s" placeholder="<?php echo esc_attr( __( 'Site search', 'cardsbanking' ) ) ?>" value="">
                     </form>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 <?php get_template_part( 'template-parts/header/nav' ); ?>
             </div>
             <div class="d-flex d-lg-none justify-content-end col-3 col-md navbar-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Раскрыть меню"><span class="navbar-toggler-icon"></span></button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="<?php echo esc_attr( __( 'Expand menu', 'cardsbanking' ) ) ?>"><span class="navbar-toggler-icon"></span></button>
             </div>
         </div>
     </div>
