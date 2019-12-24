@@ -25,14 +25,22 @@ $order_link = get_post_meta( get_the_ID(), 'c-order', true );
 	<?php if ( ! $thumb_hide ) : ?>
 		<div class="col-xl-4 col-lg-5 col-md-6">
 			<div class="card-single-thumb">
-				<?php $thumb = get_the_post_thumbnail( $post->ID, 'card-thumb', array('class' => 'img-fluid img-block', 'itemprop'=>'image') ); if ( ! empty($thumb) && $is_show_thumb ): ?>
+				<?php $thumb = get_the_post_thumbnail( get_the_ID(), 'card-thumb', array('class' => 'img-fluid img-block', 'itemprop'=>'image') ); if ( ! empty($thumb) && $is_show_thumb ): ?>
 					<?php echo $thumb ?>
 				<?php endif; ?>
 				<div class="card-single-buttons d-flex justify-content-between">
 					<?php if ( ! empty($order_link) ) : ?>
 						<a href="<?php echo esc_url( $order_link ) ?>" class="btn-primary btn" target="_blank"><?php _e( 'Order Card', 'cardsbanking' ) ?></a> 
 					<?php endif; ?>
-					<a href="#" class="btn-contrast btn"><?php _e( 'Compare', 'cardsbanking' ) ?></a>
+
+					<a
+						href="#"
+						data-post-id="<?php the_ID() ?>"
+						data-post-title="<?php echo esc_attr( get_the_title() ) ?>"
+						data-post-thumb="<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'card-thumb' ) ) ?>"
+						data-post-link="<?php echo esc_url( get_permalink() ) ?>"
+						title="<?php echo esc_attr( __( 'Add Card to Comparison', 'cardsbanking' ) ) ?>"
+						class="alike-button alike-button-style btn-contrast btn"><?php _e( 'Compare', 'cardsbanking' ) ?></a>
 				</div>
 			</div>
 		</div>

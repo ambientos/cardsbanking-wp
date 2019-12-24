@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CardsBanking Theme 1.0\n"
-"POT-Creation-Date: 2019-12-23 20:02+0500\n"
-"PO-Revision-Date: 2019-12-23 20:02+0500\n"
+"POT-Creation-Date: 2019-12-24 07:14+0500\n"
+"PO-Revision-Date: 2019-12-24 07:14+0500\n"
 "Last-Translator: Anton Grakhov <ant.grakhov@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -233,15 +233,15 @@ msgstr "Оформить"
 msgid "More"
 msgstr "Подробнее"
 
-#: template-parts/card/loop/nav.php:14
-msgid "Add to Comparison"
-msgstr "Добавить в сравнение"
+#: template-parts/card/loop/nav.php:21 template-parts/card/single/title.php:42
+msgid "Add Card to Comparison"
+msgstr "Добавить карту в сравнение"
 
-#: template-parts/card/loop/nav.php:17
+#: template-parts/card/loop/nav.php:24
 msgid "Comparison"
 msgstr "Сравнение"
 
-#: template-parts/card/loop/nav.php:21
+#: template-parts/card/loop/nav.php:28
 msgid "Add Card to Favorite List"
 msgstr "Добавить карту в список избранных"
 
@@ -322,7 +322,7 @@ msgstr "Подробный обзор"
 msgid "Order Card"
 msgstr "Оформить карту"
 
-#: template-parts/card/single/title.php:35
+#: template-parts/card/single/title.php:43
 msgid "Compare"
 msgstr "Сравнить"
 
@@ -361,6 +361,3 @@ msgstr "Сравнение карт"
 #: template-parts/related-posts.php:98
 msgid "Related articles"
 msgstr ""
-
-#~ msgid "Additional Options"
-#~ msgstr "Дополнительные настройки"
