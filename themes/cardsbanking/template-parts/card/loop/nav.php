@@ -25,6 +25,8 @@ $classes     = ' '. implode(' ', $classes_arr);
 	</button>
 </a>
 
-<span class="card-item-nav-item<?php echo $classes ?>" title="<?php echo esc_attr( __( 'Add Card to Favorite List', 'cardsbanking' ) ) ?>">
-	<?php the_favorites_button() ?>
-</span>
+<?php if ( function_exists('the_favorites_button') ) : ?>
+	<span class="card-item-nav-item<?php echo $classes ?>" title="<?php echo esc_attr( __( 'Add Card to Favorite List', 'cardsbanking' ) ) ?>">
+		<?php the_favorites_button() ?>
+	</span>
+<?php endif; ?>
