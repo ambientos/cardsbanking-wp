@@ -9,9 +9,7 @@
 <main class="main">
 	<div class="widget">
 		<div class="container">
-			<header>
-				<?php get_template_part( 'template-parts/archive/title' ); ?>
-			</header>
+			<?php get_template_part( 'template-parts/archive/title' ); ?>
 		</div>
 
 		<?php get_template_part( 'template-parts/archive/banks', 'type' ); ?>
